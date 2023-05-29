@@ -1,0 +1,26 @@
+.header {
+  width: 1200px;
+  padding-top: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+.header__navList {
+  display: flex;
+}
+.header__navItem:not(:last-of-type) {
+  margin-right: 40px;
+}
+.header__navLink {
+  color: var(--primaryWhiteColor);
+  background-color: transparent;
+  border: none;
+  transition: color 500ms;
+}
+.header__navLink:hover,
+.header__navLink:focus {
+  color: var(--activeColor);
+}

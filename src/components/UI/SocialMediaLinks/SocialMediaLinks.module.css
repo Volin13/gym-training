@@ -1,0 +1,21 @@
+.socialMediaListItem {
+  height: 27px;
+  width: 27px;
+}
+.socialMedialink {
+  fill: var(--secondaryWhiteColor);
+}
+.socialMediaListItem:not(last-of-type) {
+  margin-right: 19px;
+}
+.socialMedialink:hover,
+.socialMedialink:focus {
+  fill: var(--activeColor);
+}
+.socialMediaList {
+  display: flex;
+  justify-content: center;
+}
+.socialMediaListFormat {
+  margin-bottom: 40px;
+}

@@ -1,0 +1,39 @@
+.heroImg {
+  padding: 281px 0 253px 120px;
+  margin: 0 auto;
+  width: 1440px;
+  height: 960px;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.2),
+      rgba(0, 0, 0, 0.2)
+    ),
+    url('../assets/images/hero/heroImage1x-min.jpg');
+}
+@media screen and (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .authBackgroundImg {
+    background-image: url('../assets/images/hero/heroImage2x-min.jpg');
+  }
+}
+.heroText {
+  color: var(--primaryWhiteColor);
+  width: 682px;
+  height: 426px;
+}
+.heroTitle {
+  width: 494px;
+  height: 218px;
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 700;
+  font-size: 64px;
+  margin-bottom: 35px;
+}
+.heroLegend {
+  font-weight: 500;
+  margin-bottom: 35px;
+}

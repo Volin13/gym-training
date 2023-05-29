@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/gym-training/static/css/main.d1223086.css",
+    "main.js": "/gym-training/static/js/main.89c2c4eb.js",
+    "static/media/heroImage2x-min.jpg": "/gym-training/static/media/heroImage2x-min.30af11716466412032b7.jpg",
+    "static/media/heroImage1x-min.jpg": "/gym-training/static/media/heroImage1x-min.a5caea1e094a715cd837.jpg",
+    "static/media/footerImage2x-min.jpg": "/gym-training/static/media/footerImage2x-min.c39d8ebc54e051555314.jpg",
+    "static/media/footerImage1x-min.jpg": "/gym-training/static/media/footerImage1x-min.a500a00c3e96c11526c5.jpg",
+    "static/media/tiktok-fill-svgrepo-com.svg": "/gym-training/static/media/tiktok-fill-svgrepo-com.d32c2f3b60200c865078ec2fbfa3032b.svg",
+    "static/media/twitter-154-svgrepo-com.svg": "/gym-training/static/media/twitter-154-svgrepo-com.33490be76303681a402d4ccaea90ba5b.svg",
+    "index.html": "/gym-training/index.html",
+    "static/media/instagram-svgrepo-com.svg": "/gym-training/static/media/instagram-svgrepo-com.fa772d8b9d816de1cd04e7fad9890a39.svg",
+    "static/media/facebook-svgrepo-com.svg": "/gym-training/static/media/facebook-svgrepo-com.c407bb52388000b62ae899b57c5540db.svg",
+    "main.d1223086.css.map": "/gym-training/static/css/main.d1223086.css.map",
+    "main.89c2c4eb.js.map": "/gym-training/static/js/main.89c2c4eb.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d1223086.css",
+    "static/js/main.89c2c4eb.js"
+  ]
+}

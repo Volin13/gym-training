@@ -1,6 +1,6 @@
 import React from 'react';
 
-Title = () => {
+const Title = () => {
   return <div>Title</div>;
 };
 

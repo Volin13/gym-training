@@ -1,0 +1,26 @@
+.btn__container {
+  position: relative;
+  clip-path: polygon(0 0, 100% 0%, 93% 100%, 0% 100%);
+  background-color: var(--secondaryActiveColir);
+  height: 45px;
+  width: 185px;
+}
+
+.btnStyle {
+  position: absolute;
+  clip-path: polygon(0 0, 100% 0%, 86% 100%, 0% 100%);
+  background-color: var(--activeColor);
+  height: 100%;
+  width: 100%;
+  border: none;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.25;
+  color: var(--primaryWhiteColor);
+  transition: all 500ms;
+}
+.btnStyle:hover,
+.btnStyle:focus {
+  color: var(--activeColor);
+  background-color: var(--primaryWhiteColor);
+}

@@ -1,5 +1,6 @@
 .heroImg {
   padding: 281px 0 253px 120px;
+  position: relative;
   margin: 0 auto;
   width: 1440px;
   height: 960px;
@@ -11,13 +12,13 @@
       rgba(0, 0, 0, 0.2),
       rgba(0, 0, 0, 0.2)
     ),
-    url('../assets/images/hero/heroImage1x-min.jpg');
+    url('../../assets/images/hero/heroImage1x-min.jpg');
 }
 @media screen and (min-device-pixel-ratio: 2),
   (min-resolution: 192dpi),
   (min-resolution: 2dppx) {
   .authBackgroundImg {
-    background-image: url('../assets/images/hero/heroImage2x-min.jpg');
+    background-image: url('../../assets/images/hero/heroImage2x-min.jpg');
   }
 }
 .heroText {
@@ -36,4 +37,16 @@
 .heroLegend {
   font-weight: 500;
   margin-bottom: 35px;
+}
+.gradientBox {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 171px;
+  background-image: linear-gradient(
+    180deg,
+    rgba(24, 23, 26, 0) 0%,
+    #18171a 100%
+  );
 }

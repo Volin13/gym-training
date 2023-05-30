@@ -15,7 +15,8 @@ const Hero = () => {
           fitness levels and provide a fun and motivating environment to help
           you reach your peak performance.
         </p>
-        <Button />
+        <Button text="Start free trail" mainBtn />
+        <div className={css.gradientBox}></div>
       </div>
     </div>
   );

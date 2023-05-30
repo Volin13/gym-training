@@ -1,0 +1,14 @@
+.title__container {
+  padding-top: 100px;
+  padding-bottom: 36px;
+  text-align: center;
+}
+
+.title__text {
+  color: var(--titleColor);
+  font-weight: 600;
+  font-size: 48px;
+}
+.title__text::first-letter {
+  text-transform: capitalize;
+}

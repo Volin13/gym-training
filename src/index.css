@@ -156,7 +156,9 @@ body.openModal {
   --bgColor: #18171a;
   --primaryWhiteColor: #ffffff;
   --secondaryWhiteColor: rgba(255, 255, 255, 0.8);
+  --titleColor: rgba(255, 255, 255, 0.9);
   --activeColor: #ff4601;
+  --secondaryActiveColir: rgba(255, 98, 1, 0.5);
 }
 @media screen and (min-width: 768px) {
   .container {
@@ -168,7 +170,7 @@ body.openModal {
 
 @media screen and (min-width: 1440px) {
   .container {
-    max-width: 1200px;
+    max-width: 1440px;
     padding-left: 120px;
     padding-right: 120px;
   }

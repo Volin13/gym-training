@@ -24,7 +24,7 @@ const Header = () => {
           </li>
         </ul>
       </nav>
-      <Button />
+      <Button text="Contact Us" mainBtn />
     </div>
   );
 };

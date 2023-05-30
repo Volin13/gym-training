@@ -11,13 +11,13 @@
       rgba(0, 0, 0, 0.6),
       rgba(0, 0, 0, 0.6)
     ),
-    url('../assets/images/footer/footerImage1x-min.jpg');
+    url('../../assets/images/footer/footerImage1x-min.jpg');
 }
 @media screen and (min-device-pixel-ratio: 2),
   (min-resolution: 192dpi),
   (min-resolution: 2dppx) {
   .authBackgroundImg {
-    background-image: url('../assets/images/footer/footerImage2x-min.jpg');
+    background-image: url('../../assets/images/footer/footerImage2x-min.jpg');
   }
 }
 .footer__logoFormatting {

@@ -1,0 +1,41 @@
+.team__container {
+  display: flex;
+  padding-bottom: 102px;
+}
+.jacobJones {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url('../../assets/images/team/jacobJones1x-min.jpg');
+}
+.leslieAlexander {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url('../../assets/images/team/leslieAlexander1x-min.jpg');
+}
+.cameronWilliamson {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url('../../assets/images/team/cameronWilliamson1x-min.jpg');
+}
+.janeCooper {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url('../../assets/images/team/janeCooper1x-min.jpg');
+}
+
+@media screen and (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .jacobJones {
+    background-image: url('../../assets/images/team/jacobJones2x-min.jpg');
+  }
+  .leslieAlexander {
+    background-image: url('../../assets/images/team/leslieAlexander2x-min.jpg');
+  }
+  .cameronWilliamson {
+    background-image: url('../../assets/images/team/cameronWilliamson2x-min.jpg');
+  }
+  .janeCooper {
+    background-image: url('../../assets/images/team/janeCooper2x-min.jpg');
+  }
+}

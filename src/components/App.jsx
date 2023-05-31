@@ -4,6 +4,7 @@ import Header from './Header/Header';
 import Hero from './Hero/Hero';
 import Team from './Team/Team';
 import Title from './UI/Title/Title';
+import VideoSection from './VideoSection/VideoSection';
 
 export const App = () => {
   return (
@@ -13,6 +14,7 @@ export const App = () => {
       <Title text="instructors" />
       <Team />
       <DownloadApp />
+      <VideoSection />
       <Footer />
     </>
   );

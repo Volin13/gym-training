@@ -21,4 +21,21 @@
   display: inline-block;
   width: 186px;
   height: 60px;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: all 500ms;
+}
+.downloadApp__links:first-of-type {
+  margin-right: 24px;
+}
+.downloadApp__links:hover,
+.downloadApp__links:focus {
+  scale: 1.1;
+}
+.appAddImage {
+  position: absolute;
+  right: 111px;
+  top: 0;
+  width: 543px;
+  height: 520px;
 }

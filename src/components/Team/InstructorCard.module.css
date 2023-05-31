@@ -25,7 +25,6 @@
 .instructorCard__container:hover,
 .instructorCard__container:focus {
   scale: 1.05;
-  cursor: pointer;
 }
 .instructor__image_format {
   margin-bottom: 20px;
@@ -40,4 +39,24 @@
 .instructor__image_format:focus {
   box-shadow: 0px 1px 21px var(--activeColor);
   opacity: 1;
+}
+.instructor__LegendBtn {
+  height: 100%;
+  width: 100%;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+  backdrop-filter: blur(10px);
+  background-color: transparent;
+  border: none;
+  padding: 5px;
+}
+.visible {
+  opacity: 1;
+}
+
+.hidden {
+  opacity: 0;
+}
+.instructor__legend {
+  color: var(--primaryWhiteColor);
 }

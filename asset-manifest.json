@@ -1,7 +1,8 @@
 {
   "files": {
-    "main.css": "/gym-training/static/css/main.cfcc161b.css",
-    "main.js": "/gym-training/static/js/main.914f2d08.js",
+    "main.css": "/gym-training/static/css/main.e38cfddf.css",
+    "main.js": "/gym-training/static/js/main.581ff420.js",
+    "static/media/styledBackground2x-min.jpg": "/gym-training/static/media/styledBackground2x-min.52f671edbe468dca6075.jpg",
     "static/media/desktopAppAdvertising2x-min.png": "/gym-training/static/media/desktopAppAdvertising2x-min.8a158d410b2e9becf10c.png",
     "static/media/heroImage2x-min.jpg": "/gym-training/static/media/heroImage2x-min.30af11716466412032b7.jpg",
     "static/media/desktopAppAdvertising1x-min.png": "/gym-training/static/media/desktopAppAdvertising1x-min.caff3c475d113b25caab.png",
@@ -10,6 +11,7 @@
     "static/media/leslieAlexander2x-min.jpg": "/gym-training/static/media/leslieAlexander2x-min.739d497aa6b45981c814.jpg",
     "static/media/jacobJones2x-min.jpg": "/gym-training/static/media/jacobJones2x-min.04c940e4777f2a770522.jpg",
     "static/media/janeCooper2x-min.jpg": "/gym-training/static/media/janeCooper2x-min.088bba583f87cd8f3ae1.jpg",
+    "static/media/styledBackground1x-min.jpg": "/gym-training/static/media/styledBackground1x-min.ffe999b6122cece74023.jpg",
     "static/media/cameronWilliamson2x-min.jpg": "/gym-training/static/media/cameronWilliamson2x-min.01b547c73b4191105ef7.jpg",
     "static/media/footerImage1x-min.jpg": "/gym-training/static/media/footerImage1x-min.a500a00c3e96c11526c5.jpg",
     "static/media/leslieAlexander1x-min.jpg": "/gym-training/static/media/leslieAlexander1x-min.a4d47497b4f9c34e4ff9.jpg",
@@ -21,13 +23,15 @@
     "static/media/tiktok-fill-svgrepo-com.svg": "/gym-training/static/media/tiktok-fill-svgrepo-com.d32c2f3b60200c865078ec2fbfa3032b.svg",
     "static/media/twitter-154-svgrepo-com.svg": "/gym-training/static/media/twitter-154-svgrepo-com.33490be76303681a402d4ccaea90ba5b.svg",
     "index.html": "/gym-training/index.html",
+    "static/media/studentIcon.svg": "/gym-training/static/media/studentIcon.2c568f627b5fff76c155a4d83fb49ac7.svg",
+    "static/media/timerIcon.svg": "/gym-training/static/media/timerIcon.f12466b177375ceda3b56f0ea46454fc.svg",
     "static/media/instagram-svgrepo-com.svg": "/gym-training/static/media/instagram-svgrepo-com.fa772d8b9d816de1cd04e7fad9890a39.svg",
     "static/media/facebook-svgrepo-com.svg": "/gym-training/static/media/facebook-svgrepo-com.c407bb52388000b62ae899b57c5540db.svg",
-    "main.cfcc161b.css.map": "/gym-training/static/css/main.cfcc161b.css.map",
-    "main.914f2d08.js.map": "/gym-training/static/js/main.914f2d08.js.map"
+    "main.e38cfddf.css.map": "/gym-training/static/css/main.e38cfddf.css.map",
+    "main.581ff420.js.map": "/gym-training/static/js/main.581ff420.js.map"
   },
   "entrypoints": [
-    "static/css/main.cfcc161b.css",
-    "static/js/main.914f2d08.js"
+    "static/css/main.e38cfddf.css",
+    "static/js/main.581ff420.js"
   ]
 }

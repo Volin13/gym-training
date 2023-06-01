@@ -1,3 +1,4 @@
+import Classes from './Classes/Classes';
 import DownloadApp from './DownLoadApp/DownloadApp';
 import Footer from './Footer/Footer';
 import Header from './Header/Header';
@@ -11,6 +12,7 @@ export const App = () => {
     <>
       <Header />
       <Hero />
+      <Classes />
       <Title text="instructors" />
       <Team />
       <DownloadApp />

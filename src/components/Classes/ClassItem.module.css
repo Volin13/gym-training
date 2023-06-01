@@ -1,0 +1,58 @@
+.classItem__thumb {
+  width: 374px;
+  height: 531px;
+  text-align: start;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--secondaryWhiteColor);
+}
+.classItem__mainPositioning {
+  display: flex;
+  margin-bottom: 10px;
+  justify-content: space-between;
+  align-items: center;
+}
+.classItem__secondaryPositioning {
+  display: flex;
+  align-items: center;
+}
+.classItem__image {
+  width: 364px;
+  height: 258px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.classItem__icon {
+  display: inline-block;
+  height: 25px;
+  width: 25px;
+  margin-right: 5px;
+}
+.classItem__clasesName {
+  font-weight: 600;
+  font-size: 24px;
+  color: var(--primaryWhiteColor);
+}
+
+.classItem__instructor {
+  margin-bottom: 10px;
+}
+.classItem__list {
+  margin-bottom: 20px;
+  list-style-type: disc;
+}
+.classItem__btnGroup {
+  display: flex;
+  justify-content: space-between;
+}
+.classItem__learnMoreBtn {
+  width: 140px;
+  height: 45px;
+}
+.classItem__freeTrialBtn {
+  width: 206px;
+  height: 45px;
+  position: relative;
+  clip-path: polygon(7% 0, 100% 0%, 93% 100%, 0% 100%);
+  background-color: var(--primaryWhiteColor);
+}

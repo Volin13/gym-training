@@ -1,5 +1,5 @@
 import React from 'react';
-import Button from 'components/UI/Button/Button';
+import MainBtn from 'components/UI/MainBtn/MainBtn';
 import Logo from 'components/UI/Logo/Logo';
 import css from './Header.module.css';
 import NavLink from './NavLink';
@@ -24,7 +24,7 @@ const Header = () => {
           </li>
         </ul>
       </nav>
-      <Button text="Contact Us" mainBtn />
+      <MainBtn text="Contact Us" />
     </div>
   );
 };

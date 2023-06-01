@@ -1,4 +1,4 @@
-import Button from 'components/UI/Button/Button';
+import MainBtn from 'components/UI/MainBtn/MainBtn';
 import React from 'react';
 import css from './Hero.module.css';
 
@@ -15,7 +15,7 @@ const Hero = () => {
           fitness levels and provide a fun and motivating environment to help
           you reach your peak performance.
         </p>
-        <Button text="Start free trail" mainBtn />
+        <MainBtn text="Start free trail" />
         <div className={css.gradientBox}></div>
       </div>
     </div>

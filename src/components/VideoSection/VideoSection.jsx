@@ -8,6 +8,7 @@ const VideoSection = () => {
     playerVars: {
       // https://developers.google.com/youtube/player_parameters
       autoplay: 1,
+      enablejsapi: 1,
       controls: 0,
       modestbranding: 1,
       showinfo: 0,
@@ -17,7 +18,9 @@ const VideoSection = () => {
     },
   };
   const onPlayerReady = event => {
+    event.target.playVideo();
     event.target.setVolume(50);
+    event.target.setPlaybackQuality('hd1080');
   };
   return (
     <div className={`${css.vidSection__container} container`}>

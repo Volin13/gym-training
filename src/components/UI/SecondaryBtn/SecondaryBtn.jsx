@@ -3,7 +3,7 @@ import css from './SecondaryBtn.module.css';
 
 const SecondaryBtn = ({ text, activeColor, secondaryBtnConatiner = '' }) => {
   return (
-    <div className={secondaryBtnConatiner}>
+    <div className={`${secondaryBtnConatiner} ${css.secondaryBtnConatiner}`}>
       <button
         type="button"
         className={`${css.secondaryBtn} ${

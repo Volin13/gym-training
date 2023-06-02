@@ -1,6 +1,7 @@
 .styledWrapper__contaner {
   text-align: center;
   margin: 0 auto;
+  padding-bottom: 36px;
   width: 1440px;
   background-size: cover;
   background-repeat: no-repeat;

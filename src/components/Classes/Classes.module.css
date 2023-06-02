@@ -1,3 +1,9 @@
 .classes__container {
   text-align: center;
 }
+.classes__classesList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 38px;
+  margin-bottom: 50px;
+}

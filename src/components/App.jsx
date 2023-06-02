@@ -1,10 +1,10 @@
 import Classes from './Classes/Classes';
 import DownloadApp from './DownLoadApp/DownloadApp';
 import Footer from './Footer/Footer';
+import FreeTrial from './FreeTrial/FreeTrial';
 import Header from './Header/Header';
 import Hero from './Hero/Hero';
 import Team from './Team/Team';
-import Title from './UI/Title/Title';
 import VideoSection from './VideoSection/VideoSection';
 
 export const App = () => {
@@ -13,10 +13,10 @@ export const App = () => {
       <Header />
       <Hero />
       <Classes />
-      <Title text="instructors" />
       <Team />
       <DownloadApp />
       <VideoSection />
+      <FreeTrial />
       <Footer />
     </>
   );

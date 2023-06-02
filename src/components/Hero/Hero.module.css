@@ -21,6 +21,11 @@
     background-image: url('../../assets/images/hero/heroImage2x-min.jpg');
   }
 }
+.styledText {
+  color: transparent;
+  -webkit-text-stroke-width: 1.5px;
+  -webkit-text-stroke-color: var(--activeColor);
+}
 .heroText {
   color: var(--primaryWhiteColor);
   width: 682px;

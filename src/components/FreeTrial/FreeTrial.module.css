@@ -1,0 +1,24 @@
+.freeTrial__container {
+  background-color: var(--activeColor);
+  width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 65px 25px 110px;
+  clip-path: polygon(7% 0, 100% 0%, 93% 100%, 0% 100%);
+}
+.freeTrial__freeTrialBtn {
+  width: 317px;
+  height: 50px;
+  background-color: var(--primaryWhiteColor);
+  clip-path: polygon(7% 0, 100% 0%, 93% 100%, 0% 100%);
+}
+.freeTrial__title {
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 1.6;
+}
+.freeTrial__text {
+  width: 525px;
+  line-height: 1.6;
+}

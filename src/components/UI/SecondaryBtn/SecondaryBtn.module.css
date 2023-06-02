@@ -26,3 +26,6 @@
   left: 1px;
   background-color: var(--primaryDarkColor);
 }
+.secondaryBtnConatiner {
+  position: relative;
+}

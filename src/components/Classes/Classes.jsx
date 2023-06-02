@@ -7,6 +7,9 @@ import MainBtn from 'components/UI/MainBtn/MainBtn';
 import classesList from './clasessList';
 
 const Classes = () => {
+  const getRandomInt = () => {
+    return Math.floor(Math.random() * 100);
+  };
   console.log(classesList);
   return (
     <StyledtWrapper>
@@ -25,7 +28,7 @@ const Classes = () => {
               noOfClasses,
             }) => (
               <ClassItem
-                key={clasesName}
+                key={getRandomInt()}
                 classImage={classImage}
                 clasesName={clasesName}
                 studentsQnt={studentsQnt}

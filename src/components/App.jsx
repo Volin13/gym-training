@@ -4,6 +4,7 @@ import Footer from './Footer/Footer';
 import FreeTrial from './FreeTrial/FreeTrial';
 import Header from './Header/Header';
 import Hero from './Hero/Hero';
+import QuestionsAndAnswers from './Q&A/QA';
 import Team from './Team/Team';
 import VideoSection from './VideoSection/VideoSection';
 
@@ -16,6 +17,7 @@ export const App = () => {
       <Team />
       <DownloadApp />
       <VideoSection />
+      <QuestionsAndAnswers />
       <FreeTrial />
       <Footer />
     </>

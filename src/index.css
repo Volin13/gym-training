@@ -134,7 +134,9 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
-
+hr {
+  margin: 0;
+}
 .navLink.active {
   color: var(--greenColor);
   stroke: var(--greenColor);

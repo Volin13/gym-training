@@ -1,0 +1,49 @@
+.qa__container {
+  padding-bottom: 100px;
+}
+
+.qa__list {
+  list-style-type: none;
+  width: 100%;
+}
+.qa__list li:not(:last-of-type) {
+  margin-bottom: 5px;
+}
+.qaListItem__container {
+  background-color: var(--bgColor);
+  padding-top: 5px;
+  height: 60px;
+  overflow: hidden;
+  transition: height 0.3s ease-in-out;
+  position: relative;
+}
+.qaListItem__textPosition {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.qaListItem__container hr {
+  margin-bottom: 13px;
+}
+.qaListItem__answerTextContainer {
+  clip-path: polygon(6% 0, 100% 0%, 94% 100%, 0% 100%);
+  background-color: var(--secondaryActiveColir);
+  padding: 40px 70px;
+  /* transform: translate(10px, -304px); */
+}
+.qaListItem__plusBtn {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  fill: var(--primaryWhiteColor);
+  border: 1px solid transparent;
+}
+
+.qaListItem__plusBtn:focus,
+.qaListItem__plusBtn:hover {
+  border: 1px solid var(--primaryDarkColor);
+  fill: var(--activeColor);
+}

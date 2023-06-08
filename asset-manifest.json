@@ -1,11 +1,12 @@
 {
   "files": {
-    "main.css": "/gym-training/static/css/main.d6703e57.css",
-    "main.js": "/gym-training/static/js/main.2f518734.js",
+    "main.css": "/gym-training/static/css/main.d4b480e0.css",
+    "main.js": "/gym-training/static/js/main.40a7bfea.js",
     "static/media/styledBackground2x-min.jpg": "/gym-training/static/media/styledBackground2x-min.52f671edbe468dca6075.jpg",
     "static/media/desktopAppAdvertising2x-min.png": "/gym-training/static/media/desktopAppAdvertising2x-min.8a158d410b2e9becf10c.png",
     "static/media/heroImage2x-min.jpg": "/gym-training/static/media/heroImage2x-min.30af11716466412032b7.jpg",
     "static/media/desktopAppAdvertising1x-min.png": "/gym-training/static/media/desktopAppAdvertising1x-min.caff3c475d113b25caab.png",
+    "static/media/gymImageDesktop2x-min.jpg": "/gym-training/static/media/gymImageDesktop2x-min.f057a7b5d98698e61cc4.jpg",
     "static/media/heroImage1x-min.jpg": "/gym-training/static/media/heroImage1x-min.a5caea1e094a715cd837.jpg",
     "static/media/footerImage2x-min.jpg": "/gym-training/static/media/footerImage2x-min.c39d8ebc54e051555314.jpg",
     "static/media/leslieAlexander2x-min.jpg": "/gym-training/static/media/leslieAlexander2x-min.739d497aa6b45981c814.jpg",
@@ -25,14 +26,14 @@
     "index.html": "/gym-training/index.html",
     "static/media/studentIcon.svg": "/gym-training/static/media/studentIcon.2c568f627b5fff76c155a4d83fb49ac7.svg",
     "static/media/timerIcon.svg": "/gym-training/static/media/timerIcon.f12466b177375ceda3b56f0ea46454fc.svg",
-    "static/media/plusIcon.svg": "/gym-training/static/media/plusIcon.dcee38d216286989052c7e9e0d680b24.svg",
+    "static/media/plusIcon.svg": "/gym-training/static/media/plusIcon.52bf5935babd7d563a5bc81e70fc3977.svg",
     "static/media/instagram-svgrepo-com.svg": "/gym-training/static/media/instagram-svgrepo-com.fa772d8b9d816de1cd04e7fad9890a39.svg",
     "static/media/facebook-svgrepo-com.svg": "/gym-training/static/media/facebook-svgrepo-com.c407bb52388000b62ae899b57c5540db.svg",
-    "main.d6703e57.css.map": "/gym-training/static/css/main.d6703e57.css.map",
-    "main.2f518734.js.map": "/gym-training/static/js/main.2f518734.js.map"
+    "main.d4b480e0.css.map": "/gym-training/static/css/main.d4b480e0.css.map",
+    "main.40a7bfea.js.map": "/gym-training/static/js/main.40a7bfea.js.map"
   },
   "entrypoints": [
-    "static/css/main.d6703e57.css",
-    "static/js/main.2f518734.js"
+    "static/css/main.d4b480e0.css",
+    "static/js/main.40a7bfea.js"
   ]
 }

@@ -1,4 +1,5 @@
 import Classes from './Classes/Classes';
+import DisciplinesList from './DisciplinesList/DisciplinesList';
 import DownloadApp from './DownLoadApp/DownloadApp';
 import Footer from './Footer/Footer';
 import FreeTrial from './FreeTrial/FreeTrial';
@@ -13,6 +14,7 @@ export const App = () => {
     <>
       <Header />
       <Hero />
+      <DisciplinesList />
       <Classes />
       <Team />
       <DownloadApp />

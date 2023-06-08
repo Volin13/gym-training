@@ -18,9 +18,12 @@ const ClassItem = ({
     <div className={css.classItem__thumb}>
       <div className={css.classItem__image}>
         <img src={classImage} alt={discipline} />
+        <div className={css.classItem__imageBackground}></div>
       </div>
       <div className={css.classItem__mainPositioning}>
-        <span className={css.classItem__discipline}>{discipline}</span>
+        <span className={css.classItem__discipline}>
+          {discipline}
+        </span>
         <div className={css.classItem__secondaryPositioning}>
           <span className={css.classItem__icon}>
             <StudentIcon />
@@ -37,7 +40,9 @@ const ClassItem = ({
           <span>{duration}</span>
         </div>
       </div>
-      <p className={css.classItem__instructor}>Instructor: {instructor}</p>
+      <p className={css.classItem__instructor}>
+        Instructor: {instructor}
+      </p>
       <ul className={css.classItem__list}>
         <li>No. of Classes: {noOfClasses}</li>
         <li>Difficalty: {difficalty}</li>

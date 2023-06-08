@@ -7,7 +7,7 @@ const QAListItem = forwardRef(function QAListItem(props, ref) {
   const [styled, setStyled] = useState(false);
   const changeStyle = () => {
     if (!styled) {
-      ref.current.style.height = '262px';
+      ref.current.style.height = '300px';
       setStyled(true);
       return;
     }
@@ -22,8 +22,10 @@ const QAListItem = forwardRef(function QAListItem(props, ref) {
           <p>{questionText}</p>
           <button
             type="button"
+            className={`${css.qaListItem__plusBtn} ${
+              styled ? css.activeBtn : ''
+            }`}
             onClick={changeStyle}
-            className={css.qaListItem__plusBtn}
           >
             <PlusIcon />
           </button>

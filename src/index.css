@@ -114,14 +114,14 @@ button {
   font: inherit;
 }
 /* Make images and embedded objects responsive */
-img,
+/* img,
 embed,
 object,
 video {
   max-width: 100%;
   height: auto;
   display: block;
-}
+} */
 
 input,
 textarea,
@@ -136,14 +136,6 @@ table {
 }
 hr {
   margin: 0;
-}
-.navLink.active {
-  color: var(--greenColor);
-  stroke: var(--greenColor);
-}
-
-.linkFooter.active {
-  color: var(--activeFooterLink);
 }
 
 body.openModal {

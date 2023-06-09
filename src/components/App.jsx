@@ -1,6 +1,7 @@
 import Classes from './Classes/Classes';
 import DisciplinesList from './DisciplinesList/DisciplinesList';
 import DownloadApp from './DownLoadApp/DownloadApp';
+import FeedBack from './FeedBack/FeedBack';
 import Footer from './Footer/Footer';
 import FreeTrial from './FreeTrial/FreeTrial';
 import Header from './Header/Header';
@@ -19,6 +20,7 @@ export const App = () => {
       <Team />
       <DownloadApp />
       <VideoSection />
+      <FeedBack />
       <QuestionsAndAnswers />
       <FreeTrial />
       <Footer />

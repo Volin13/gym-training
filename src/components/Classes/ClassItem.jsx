@@ -18,6 +18,12 @@ const ClassItem = ({
     <div className={css.classItem__thumb}>
       <div className={css.classItem__image}>
         <img src={classImage} alt={discipline} />
+        <div
+          className={`${css.classItem__imageBackgroundItem} ${css.classItem__imageBackgroundItemFirst}`}
+        ></div>
+        <div
+          className={`${css.classItem__imageBackgroundItem} ${css.classItem__imageBackgroundItemSecond}`}
+        ></div>
         <div className={css.classItem__imageBackground}></div>
       </div>
       <div className={css.classItem__mainPositioning}>

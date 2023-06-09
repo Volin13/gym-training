@@ -1,14 +1,3 @@
-.instructor__name {
-  text-transform: capitalize;
-  margin-bottom: 5px;
-  font-weight: 500;
-  font-size: 24px;
-  color: var(--secondaryWhiteColor);
-}
-.instructor__name:hover,
-.instructor__name:focus {
-  color: var(--primaryWhiteColor);
-}
 .instructor__position::first-letter {
   text-transform: uppercase;
 }
@@ -49,6 +38,21 @@
   background-color: transparent;
   border: none;
   padding: 5px;
+}
+.instructor__name {
+  margin-bottom: 5px;
+}
+.instructor__nameBtn {
+  border: none;
+  background-color: transparent;
+  color: var(--secondaryWhiteColor);
+  text-transform: capitalize;
+  font-weight: 500;
+  font-size: 24px;
+}
+.instructor__nameBtn:hover,
+.instructor__nameBtn:focus {
+  color: var(--primaryWhiteColor);
 }
 .visible {
   opacity: 1;

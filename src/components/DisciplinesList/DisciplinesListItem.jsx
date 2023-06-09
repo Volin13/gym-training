@@ -1,37 +1,49 @@
-import React, { forwardRef, useState } from 'react';
+import React, { forwardRef, useEffect, useState } from 'react';
 import css from './DisciplinesList.module.css';
 
 const DisciplinesListItem = forwardRef(function DisciplinesListItem(
   props,
   ref
 ) {
-  const { titleText, description, image = '' } = props;
+  const {
+    titleText,
+    description,
+    image = '',
+    scaledFirstEl = false,
+  } = props;
+
   const [scaled, setScaledEl] = useState(false);
+  useEffect(() => {
+    if (scaledFirstEl) setScaledEl(!scaled);
+  }, []);
   const scaleUpEl = () => {
     setScaledEl(!scaled);
+    setScaledEl(!scaled);
   };
-  //   const scaleDownEl = () => {
-  //     setScaledEl(false);
-  //   };
+  const scaleDownEl = () => {
+    setScaledEl(false);
+  };
+  console.log(ref);
 
   return (
     <div
       onMouseOver={scaleUpEl}
+      ref={ref}
       //   onMouseEnter={scaleUpEl}
       //   onMouseOut={scaleDownEl}
       className={`${css.disciplinesListItem__container} 
     ${
-      !scaled
-        ? css.disciplinesListItem__containerRegular
-        : css.disciplinesListItem__containerScaled
+      scaled
+        ? css.disciplinesListItem__containerScaled
+        : css.disciplinesListItem__containerRegular
     }`}
     >
       <div
         className={`${css.disciplinesListItem__imageContainer} 
        ${
-         !scaled
-           ? css.disciplinesListItem__imageContainerRegular
-           : css.disciplinesListItem__imageContainerScaled
+         scaled
+           ? css.disciplinesListItem__imageContainerScaled
+           : css.disciplinesListItem__imageContainerRegular
        }`}
       >
         <picture>
@@ -67,14 +79,24 @@ const DisciplinesListItem = forwardRef(function DisciplinesListItem(
           <img
             className={`
             ${
-              !scaled
-                ? css.disciplinesListItem__imageRegular
-                : css.disciplinesListItem__imageScaled
+              scaled
+                ? css.disciplinesListItem__imageScaled
+                : css.disciplinesListItem__imageRegular
             }`}
             src={image}
             alt="Mobile app advertising"
           />
         </picture>
+        <h3
+          className={`${css.disciplinesListItem__imageContainer} 
+       ${
+         scaled
+           ? css.disciplinesListItem__demoTitleHide
+           : css.disciplinesListItem__demoTitleShow
+       }`}
+        >
+          {titleText}
+        </h3>
       </div>
       <div style={{ display: scaled ? 'block' : 'none' }}>
         <div className={css.gradientBox}></div>

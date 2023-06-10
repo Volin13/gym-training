@@ -14,7 +14,7 @@ const DisciplinesListItem = forwardRef(function DisciplinesListItem(
 
   const [scaled, setScaledEl] = useState(false);
   useEffect(() => {
-    if (scaledFirstEl) setScaledEl(!scaled);
+    if (scaledFirstEl) setScaledEl(true);
   }, [scaled, scaledFirstEl]);
   const scaleUpEl = () => {
     setScaledEl(!scaled);

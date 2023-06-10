@@ -13,15 +13,16 @@ const DisciplinesList = () => {
   const thirdElRef = useRef(null);
   const fourthElRef = useRef(null);
   const [scaledFirstEl, scaleUpFirstEl] = useState(true);
-  const [scaledSecondEl, scaleUpSecondEl] = useState(false);
-  const [scaledThirdEl, scaleUpThirdEl] = useState(false);
-  const [scaledFourth, scaleUpFourthEl] = useState(false);
+  // const [scaledSecondEl, scaleUpSecondEl] = useState(false);
+  // const [scaledThirdEl, scaleUpThirdEl] = useState(false);
+  // const [scaledFourth, scaleUpFourthEl] = useState(false);
   return (
     <div className={`container ${css.disciplinesList_container}`}>
       <Title text="Find what moves you" />
       <ul className={css.disciplinesList_list}>
         <li>
           <DisciplinesListItem
+            scaleUpFirstEl={scaleUpFirstEl}
             scaledFirstEl={scaledFirstEl}
             ref={firstElRef}
             image={gymImage}

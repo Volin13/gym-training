@@ -172,3 +172,15 @@ body.openModal {
     padding-right: 120px;
   }
 }
+.swiper-pagination-bullet {
+  clip-path: polygon(35% 0, 100% 0%, 65% 100%, 0% 100%) !important;
+}
+.swiper-pagination-bullet-active {
+  width: 45px !important;
+  height: 8px !important;
+  clip-path: polygon(12% 0, 100% 0%, 88% 100%, 0% 100%) !important;
+}
+
+.swiper {
+  padding-bottom: 68px;
+}

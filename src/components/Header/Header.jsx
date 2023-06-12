@@ -4,23 +4,49 @@ import Logo from 'components/UI/Logo/Logo';
 import css from './Header.module.css';
 import NavLink from './NavLink';
 
-const Header = () => {
+const Header = ({
+  scrollFunc,
+  classesSectionRef,
+  teamSectionRef,
+  aboutUsSectionRef,
+  gallerySectionRef,
+}) => {
   return (
     <div className={css.header}>
       <Logo />
       <nav>
         <ul className={css.header__navList}>
           <li className={css.header__navItem}>
-            <NavLink navLinkClassName={css.header__navLink} text="Classes" />
+            <NavLink
+              navLinkClassName={css.header__navLink}
+              text="Classes"
+              scrollFunc={scrollFunc}
+              refEl={classesSectionRef}
+            />
           </li>
           <li className={css.header__navItem}>
-            <NavLink navLinkClassName={css.header__navLink} text="Team" />
+            <NavLink
+              navLinkClassName={css.header__navLink}
+              text="Team"
+              scrollFunc={scrollFunc}
+              refEl={teamSectionRef}
+            />
           </li>
           <li className={css.header__navItem}>
-            <NavLink navLinkClassName={css.header__navLink} text="About Us" />
+            <NavLink
+              navLinkClassName={css.header__navLink}
+              text="About Us"
+              scrollFunc={scrollFunc}
+              refEl={aboutUsSectionRef}
+            />
           </li>
           <li className={css.header__navItem}>
-            <NavLink navLinkClassName={css.header__navLink} text="Gallery" />
+            <NavLink
+              navLinkClassName={css.header__navLink}
+              text="Gallery"
+              scrollFunc={scrollFunc}
+              refEl={gallerySectionRef}
+            />
           </li>
         </ul>
       </nav>

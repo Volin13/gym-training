@@ -1,9 +1,3 @@
-.instructor__position::first-letter {
-  text-transform: uppercase;
-}
-.instructor__position {
-  font-size: 16px;
-}
 .instructorCard__container {
   text-align: center;
   transition: all 500ms;
@@ -63,4 +57,11 @@
 }
 .instructor__legend {
   color: var(--primaryWhiteColor);
+}
+.instructor__position::first-letter {
+  text-transform: uppercase;
+  color: var(--secondaryWhiteColor);
+}
+.instructor__position {
+  font-size: 16px;
 }

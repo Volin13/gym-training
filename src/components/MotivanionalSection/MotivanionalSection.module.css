@@ -1,0 +1,100 @@
+.motivationalSection__container {
+  padding-bottom: 90px;
+}
+.motivationalSection__text {
+  width: 784px;
+  font-size: 20px;
+  margin: 0 auto;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.motivationalSection__image {
+  width: 600px;
+  height: 400px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: 50%;
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+  z-index: 2;
+  transform: translate(-50%, 0);
+}
+.motivationalSection__image img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  position: relative;
+  border-radius: 5px;
+  z-index: 4;
+}
+.motivationalSection__imageBackground {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--activeColor);
+  position: absolute;
+  clip-path: polygon(0 35%, 100% 73%, 100% 100%, 0% 100%);
+  transition: all 500ms;
+  animation: changeBackground 5s infinite ease-out;
+}
+.motivationalSection__imageBackgroundItem {
+  height: 20px;
+  position: absolute;
+  width: 20px;
+  border-radius: 50%;
+  background-color: var(--activeColor);
+}
+.motivationalSection__imageBackgroundItemFirst {
+  left: 1px;
+  bottom: 0px;
+  animation: changeFirstItemPosition 4s infinite linear normal;
+  animation-delay: 4s;
+}
+.motivationalSection__imageBackgroundItemSecond {
+  right: 1px;
+  bottom: 0px;
+  animation: changeSecondItemPosition 5s infinite linear normal;
+  animation-delay: 3s;
+}
+@keyframes changeFirstItemPosition {
+  0% {
+    transform: translateY(0);
+  }
+  30% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-60px);
+  }
+  100% {
+    transform: translateY(-300px);
+  }
+}
+@keyframes changeSecondItemPosition {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-60px);
+  }
+  100% {
+    transform: translateY(-300px);
+  }
+}
+@keyframes changeBackground {
+  0% {
+    clip-path: polygon(0 35%, 100% 73%, 100% 100%, 0% 100%);
+  }
+  50% {
+    clip-path: polygon(0 81%, 100% 33%, 100% 100%, 0% 100%);
+  }
+  100% {
+    clip-path: polygon(0 35%, 100% 73%, 100% 100%, 0% 100%);
+  }
+}

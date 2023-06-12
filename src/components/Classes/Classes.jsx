@@ -1,19 +1,18 @@
 import StyledtWrapper from 'components/UI/StyledWrapper/StyledWrapper';
 import Title from 'components/UI/Title/Title';
-import React from 'react';
+import React, { forwardRef } from 'react';
 import ClassItem from './ClassItem';
 import css from './Classes.module.css';
 import MainBtn from 'components/UI/MainBtn/MainBtn';
 import classesList from './clasessList';
-
-const Classes = () => {
+const Classes = forwardRef(function Classes(props, ref) {
   const getRandomInt = () => {
     return Math.floor(Math.random() * 100);
   };
   console.log(classesList);
   return (
     <StyledtWrapper>
-      <Title text="Classes" />
+      <Title text="Classes" ref={ref} />
       <div className={`container ${css.classes__container}`}>
         <ul className={css.classes__classesList}>
           {classesList.map(
@@ -55,5 +54,5 @@ const Classes = () => {
       </div>
     </StyledtWrapper>
   );
-};
+});
 export default Classes;

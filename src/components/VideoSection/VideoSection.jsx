@@ -3,8 +3,8 @@ import css from './VideoSection.module.css';
 import YouTube from 'react-youtube';
 const VideoSection = () => {
   const opts = {
-    height: '548',
-    width: '1200',
+    height: '100%',
+    width: '100%',
     playerVars: {
       // https://developers.google.com/youtube/player_parameters
       autoplay: 1,
@@ -17,15 +17,21 @@ const VideoSection = () => {
       loop: 1,
     },
   };
+  const styles = {
+    width: '1200px',
+    height: '548px',
+  };
+
   const onPlayerReady = event => {
     event.target.playVideo();
-    event.target.setVolume(50);
+    event.target.setVolume(30);
     event.target.setPlaybackQuality('hd1080');
   };
   return (
     <div className={`${css.vidSection__container} container`}>
       <YouTube
         opts={opts}
+        style={styles}
         videoId="wnHW6o8WMas"
         onReady={onPlayerReady}
         className={`${css.vidSection__youtubeVideo}`}

@@ -175,6 +175,7 @@ body.openModal {
 .swiper-pagination-bullet {
   clip-path: polygon(35% 0, 100% 0%, 65% 100%, 0% 100%) !important;
 }
+/* slider  */
 .swiper-pagination-bullet-active {
   width: 45px !important;
   height: 8px !important;
@@ -184,3 +185,18 @@ body.openModal {
 .swiper {
   padding-bottom: 68px;
 }
+/* video */
+.ytp-pause-overlay {
+  display: none !important;
+}
+.ytp-title {
+  display: none !important;
+}
+
+/* modal
+.freeTrialModal__overlay {
+  backdrop-filter: blur(10px);
+  transition: all 500ms;
+  position: fixed;
+  inset: 0px;
+} */

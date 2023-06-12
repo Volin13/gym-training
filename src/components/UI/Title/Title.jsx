@@ -1,12 +1,12 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import css from './Title.module.css';
-
-const Title = ({ text }) => {
+const Title = forwardRef(function Title(props, ref) {
+  const { text } = props;
   return (
-    <div className={css.title__container}>
+    <div className={css.title__container} ref={ref}>
       <h2 className={css.title__text}>{text}</h2>
     </div>
   );
-};
+});
 
 export default Title;

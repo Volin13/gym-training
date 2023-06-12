@@ -12,7 +12,7 @@
 .qaListItem__container {
   background-color: var(--bgColor);
   padding-top: 5px;
-  height: 60px;
+  height: 52px;
   overflow: hidden;
   transition: height 0.3s ease-in-out;
   position: relative;
@@ -24,19 +24,11 @@
   align-items: center;
 }
 .qaListItem__container hr {
-  margin-bottom: 13px;
   margin-top: 5px;
 }
 .qaListItem__answerTextContainer {
-  clip-path: polygon(
-    6% 0,
-    100% 0%,
-    94% 100%,
-    0% 100%
-  );
-  background-color: var(
-    --secondaryActiveColir
-  );
+  clip-path: polygon(6% 0, 100% 0%, 94% 100%, 0% 100%);
+  background-color: var(--secondaryActiveColir);
   padding: 40px 70px;
 }
 .qaListItem__plusBtn {
@@ -55,8 +47,7 @@
 }
 .activeBtn {
   transform: rotate(180deg);
-  border: 1px solid
-    var(--primaryDarkColor);
+  border: 1px solid var(--primaryDarkColor);
 }
 .activeBtn * {
   fill: var(--activeColor);

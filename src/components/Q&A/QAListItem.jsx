@@ -7,11 +7,11 @@ const QAListItem = forwardRef(function QAListItem(props, ref) {
   const [styled, setStyled] = useState(false);
   const changeStyle = () => {
     if (!styled) {
-      ref.current.style.height = '300px';
+      ref.current.style.height = '284px';
       setStyled(true);
       return;
     }
-    ref.current.style.height = '60px';
+    ref.current.style.height = '52px';
     setStyled(false);
   };
 

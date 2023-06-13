@@ -1,6 +1,8 @@
 import React from 'react';
 import css from './FreeTrialModal.module.css';
 import Modal from 'react-modal';
+import { ReactComponent as CloseIcon } from '../../../assets/images/MediaIcons/close-svgrepo-com.svg';
+import Logo from '../Logo/Logo';
 
 const FreeTrialModal = ({ closeModal, modalIsOpen }) => {
   return (
@@ -21,9 +23,14 @@ const FreeTrialModal = ({ closeModal, modalIsOpen }) => {
       overlayClassName={css.freeTrialModal__overlay}
     >
       <div className={css.freeTrialModal_modalContent}>
-        <button type="button" onClick={closeModal}>
-          Close
+        <button
+          type="button"
+          onClick={closeModal}
+          className={css.freeTrialModal_closeBtn}
+        >
+          <CloseIcon />
         </button>
+        <Logo logoFormattingClass={css.freeTrialModal_logo} />
       </div>
       <div className={css.freeTrialModal_container}>
         <div

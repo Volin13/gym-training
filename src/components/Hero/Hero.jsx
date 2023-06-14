@@ -26,9 +26,9 @@ const Hero = () => {
           and motivating environment to help you reach your peak
           performance.
         </p>
-        <MainBtn openModalFunc={openModal} text="Start free trail" />
+        <MainBtn onClickFnc={openModal} text="Start free trail" />
         <FreeTrialModal
-          onClickFnc={modalIsOpen}
+          modalIsOpen={modalIsOpen}
           closeModal={closeModal}
         />
         <div className={css.gradientBox}></div>

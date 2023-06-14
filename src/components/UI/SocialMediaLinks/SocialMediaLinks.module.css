@@ -4,6 +4,7 @@
 }
 .socialMedialink {
   fill: var(--secondaryWhiteColor);
+  transition: fill 500ms;
 }
 .socialMediaListItem:not(last-of-type) {
   margin-right: 19px;

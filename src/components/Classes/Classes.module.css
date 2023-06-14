@@ -6,4 +6,12 @@
   flex-wrap: wrap;
   gap: 38px;
   margin-bottom: 50px;
+  transition: all 500ms;
+}
+.classes__classesListOpenned {
+  height: 535px;
+  overflow: hidden;
+}
+.classes__classesListClosed {
+  height: 1670px;
 }

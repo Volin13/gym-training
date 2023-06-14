@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const NavLink = ({ text, navLinkClassName, scrollFunc, refEl }) => {
   return (
@@ -7,4 +8,11 @@ const NavLink = ({ text, navLinkClassName, scrollFunc, refEl }) => {
     </button>
   );
 };
+
+NavLink.propTypes = {
+  text: PropTypes.string,
+  navLinkClassName: PropTypes.string,
+  scrollFunc: PropTypes.func,
+};
+
 export default NavLink;

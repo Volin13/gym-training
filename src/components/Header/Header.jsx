@@ -3,6 +3,7 @@ import MainBtn from 'components/UI/MainBtn/MainBtn';
 import Logo from 'components/UI/Logo/Logo';
 import css from './Header.module.css';
 import NavLink from './NavLink';
+import PropTypes from 'prop-types';
 
 const Header = ({
   scrollFunc,
@@ -54,4 +55,9 @@ const Header = ({
     </div>
   );
 };
+
+Header.propTypes = {
+  scrollFunc: PropTypes.func,
+};
+
 export default Header;

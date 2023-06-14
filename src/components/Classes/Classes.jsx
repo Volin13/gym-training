@@ -1,6 +1,6 @@
 import StyledtWrapper from 'components/UI/StyledWrapper/StyledWrapper';
 import Title from 'components/UI/Title/Title';
-import React, { forwardRef } from 'react';
+import React, { forwardRef, useState } from 'react';
 import ClassItem from './ClassItem';
 import css from './Classes.module.css';
 import MainBtn from 'components/UI/MainBtn/MainBtn';
@@ -9,12 +9,23 @@ const Classes = forwardRef(function Classes(props, ref) {
   const getRandomInt = () => {
     return Math.floor(Math.random() * 100);
   };
-  console.log(classesList);
+
+  const [openSection, setOpenSection] = useState(false);
+  const changeStyle = () => {
+    setOpenSection(!openSection);
+  };
+
   return (
     <StyledtWrapper>
       <Title text="Classes" ref={ref} />
       <div className={`container ${css.classes__container}`}>
-        <ul className={css.classes__classesList}>
+        <ul
+          className={`${css.classes__classesList} ${
+            openSection
+              ? css.classes__classesListClosed
+              : css.classes__classesListOpenned
+          }`}
+        >
           {classesList.map(
             ({
               classImage,
@@ -50,7 +61,7 @@ const Classes = forwardRef(function Classes(props, ref) {
           difficalty={'beginner'}
           noOfClasses={'30'}
         /> */}
-        <MainBtn text="See all" />
+        <MainBtn text="See all" onClickFnc={changeStyle} />
       </div>
     </StyledtWrapper>
   );

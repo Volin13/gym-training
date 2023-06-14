@@ -154,6 +154,8 @@ body.openModal {
   --secondaryWhiteColor: rgba(255, 255, 255, 0.8);
   --titleColor: rgba(255, 255, 255, 0.9);
   --activeColor: #ff4601;
+  --errorColor: #e74a3b;
+  --successColor: #3cbc81;
   --primaryDarkColor: #050d0e;
   --secondaryActiveColir: rgba(255, 98, 1, 0.5);
 }

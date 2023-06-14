@@ -28,7 +28,7 @@ const Hero = () => {
         </p>
         <MainBtn openModalFunc={openModal} text="Start free trail" />
         <FreeTrialModal
-          modalIsOpen={modalIsOpen}
+          onClickFnc={modalIsOpen}
           closeModal={closeModal}
         />
         <div className={css.gradientBox}></div>

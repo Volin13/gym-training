@@ -1,32 +1,17 @@
-import { ReactComponent as SucsessIcon } from '../assets/images/formInputIcons/sucsess.svg';
-import { ReactComponent as WarningIcon } from '../assets/images/formInputIcons/warning.svg';
-import { ReactComponent as ErorrIcon } from '../assets/images/formInputIcons/erorr.svg';
-import { ReactComponent as EditIcon } from '../assets/images/formInputIcons/edit.svg';
-import warningValidation from './warningValidation';
+import { ReactComponent as UserIcon } from '../../../assets/images/MediaIcons/user.svg';
+import { ReactComponent as MailIcon } from '../../../assets/images/MediaIcons/mail.svg';
 
-const switchStateImages = (
-  erorr,
-  value,
-  formInputUserMenu,
-  name = '',
-  userInitName = ''
-) => {
-  if (
-    !erorr &&
-    value &&
-    !warningValidation(value) &&
-    name === 'password'
-  ) {
-    return <WarningIcon />;
-  } else if (erorr && value) {
-    return <ErorrIcon />;
-  } else if (!erorr && value && value !== userInitName) {
-    return <SucsessIcon />;
-  } else if (!erorr && formInputUserMenu && name === 'userName') {
-    return <EditIcon />;
-  } else {
-    return;
+const switchImages = name => {
+  switch (name) {
+    case 'text':
+      return <UserIcon />;
+
+    case 'email':
+      return <MailIcon />;
+
+    default:
+      return <UserIcon />;
   }
 };
 
-export default switchStateImages;
+export default switchImages;

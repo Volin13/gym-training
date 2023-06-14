@@ -1,6 +1,7 @@
 import React, { forwardRef, useState } from 'react';
 import css from './QA.module.css';
 import { ReactComponent as PlusIcon } from '../../assets/images/MediaIcons/plusIcon.svg';
+import PropTypes from 'prop-types';
 
 const QAListItem = forwardRef(function QAListItem(props, ref) {
   const { questionText, answerText } = props;
@@ -38,4 +39,9 @@ const QAListItem = forwardRef(function QAListItem(props, ref) {
     </>
   );
 });
+
+QAListItem.propTypes = {
+  answerText: PropTypes.string,
+  questionText: PropTypes.string,
+};
 export default QAListItem;

@@ -1,3 +1,5 @@
+/* modal */
+
 .freeTrialModal_container {
   width: 100%;
   height: 100%;
@@ -5,17 +7,17 @@
   justify-content: center;
   align-items: center;
   left: 50%;
-
+  box-shadow: 0px 1px 21px var(--activeColor);
   border-radius: 5px;
   overflow: hidden;
   position: relative;
   z-index: 2;
-
+  transition: all 500ms;
   transform: translate(-50%, 0);
 }
 
 .freeTrialModal_modalContent {
-  padding: 15px;
+  padding: 60px 15px 15px;
   left: 50%;
   transform: translateX(-50%);
   height: 98%;
@@ -34,19 +36,14 @@
   height: 35px;
   fill: var(--activeColor);
   border-radius: 50%;
+  transition: all 500ms;
 }
-.freeTrialModal_closeBtn:hover,
-.freeTrialModal_closeBtn:focus {
-  box-shadow: 0px 1px 21px var(--activeColor);
-}
-.freeTrialModal_logo {
-  text-align: center;
-  margin-bottom: 20px;
-}
+
 .freeTrialModal__overlay {
   backdrop-filter: blur(10px);
   transition: all 500ms;
   position: fixed;
+  z-index: 3;
   inset: 0px;
 }
 .freeTrialModal_modal {
@@ -59,6 +56,7 @@
   z-index: 3;
   background-color: var(--bgColor);
   transform: translate(-50%, -50%);
+  transition: all 1000ms;
 }
 
 .freeTrialModal__imageBackground {
@@ -75,49 +73,51 @@
 }
 
 .freeTrialModal__imageBackgroundItem {
-  height: 20px;
+  height: 13px;
   position: absolute;
-  width: 20px;
+  width: 13px;
   border-radius: 50%;
   background-color: var(--activeColor);
 }
 .freeTrialModal__imageBackgroundItemFirst {
   left: 1px;
   bottom: 0px;
-  animation: changeFirstItemPosition 4s infinite linear normal;
+  animation: changeItemPosition 6s infinite linear normal;
   animation-delay: 4s;
+}
+.freeTrialModal__imageBackgroundItemThird {
+  left: 1px;
+  bottom: 0px;
+  animation: changeItemPosition 5s infinite linear normal;
+  animation-delay: 2s;
 }
 .freeTrialModal__imageBackgroundItemSecond {
   right: 1px;
   bottom: 0px;
-  animation: changeSecondItemPosition 5s infinite linear normal;
+  animation: changeItemPosition 7s infinite linear normal;
   animation-delay: 3s;
 }
-@keyframes changeFirstItemPosition {
+.freeTrialModal__imageBackgroundItemFourth {
+  right: 1px;
+  bottom: 0px;
+  animation: changeItemPosition 5s infinite linear normal;
+  animation-delay: 2s;
+}
+@keyframes changeItemPosition {
   0% {
-    transform: translateY(0);
+    transform: translateY(-5px);
   }
   30% {
-    transform: translateY(0px);
+    transform: translateY(-5px);
   }
   50% {
-    transform: translateY(-60px);
+    transform: translateY(-20px);
   }
   100% {
-    transform: translateY(-300px);
+    transform: translateY(-560px);
   }
 }
-@keyframes changeSecondItemPosition {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-60px);
-  }
-  100% {
-    transform: translateY(-300px);
-  }
-}
+
 @keyframes changeBackground {
   0% {
     clip-path: polygon(0 35%, 100% 73%, 100% 100%, 0% 100%);
@@ -128,4 +128,95 @@
   100% {
     clip-path: polygon(0 35%, 100% 73%, 100% 100%, 0% 100%);
   }
+}
+.freeTrialModal_closeBtn:hover,
+.freeTrialModal_closeBtn:focus {
+  box-shadow: 0px 1px 21px var(--activeColor);
+}
+.freeTrialModal_logo {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* freeTrial form */
+
+.freeTrialForm {
+  width: 350px;
+  margin: 0 auto;
+  text-align: center;
+}
+.formIinputFormat {
+  position: relative;
+}
+.formInputArea {
+  position: relative;
+  height: 45px;
+  margin-bottom: 40px;
+}
+.avatarChanger {
+  display: flex;
+  position: relative;
+  flex-direction: row-reverse;
+  margin-bottom: 50px;
+}
+.inputTypeFile {
+  display: none;
+}
+.mockInput {
+  background-color: transparent;
+  outline: none;
+  opacity: 0.5;
+
+  height: 54px;
+  width: 297px;
+  padding-left: 16px;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+.mockInputActive {
+  border: 1px solid var(--activeColor);
+  color: var(--activeColor);
+}
+.mockInputInactive {
+  border: 1px solid var(--secondaryWhiteColor);
+  color: var(--secondaryWhiteColor);
+}
+.mockButton {
+  opacity: 0.8;
+  border: 1px solid var(--activeColor);
+  color: var(--activeColor);
+  height: 54px;
+  width: 83px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  transition: all 500ms;
+  cursor: pointer;
+  position: relative;
+  left: 1px;
+}
+
+.mockButton:hover,
+.mockButton:focus {
+  opacity: 1;
+  color: var(--activeColor);
+}
+
+.fileErorr {
+  color: var(--errorColor);
+  font-size: 12px;
+  line-height: 1.17;
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+.helpInfo {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  color: var(--activeColor);
 }

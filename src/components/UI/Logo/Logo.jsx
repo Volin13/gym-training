@@ -1,5 +1,6 @@
 import React from 'react';
 import css from './Logo.module.css';
+import PropTypes from 'prop-types';
 
 const Logo = ({ logoFormattingClass = '' }) => {
   return (
@@ -7,5 +8,9 @@ const Logo = ({ logoFormattingClass = '' }) => {
       <span className={css.logo}>spyro </span>
     </div>
   );
+};
+
+Logo.propTypes = {
+  logoFormattingClass: PropTypes.string,
 };
 export default Logo;

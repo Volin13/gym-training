@@ -1,5 +1,6 @@
 import React from 'react';
 import css from './FeedBack.module.css';
+import PropTypes from 'prop-types';
 
 const FeedBackItem = ({ feedBackText, starsCount, name, avatar }) => {
   return (
@@ -14,6 +15,13 @@ const FeedBackItem = ({ feedBackText, starsCount, name, avatar }) => {
       </div>
     </div>
   );
+};
+
+FeedBackItem.propTypes = {
+  feedBackText: PropTypes.string,
+  name: PropTypes.string,
+  avatar: PropTypes.string,
+  starsCount: PropTypes.number,
 };
 
 export default FeedBackItem;

@@ -1,11 +1,12 @@
 import React from 'react';
 import css from './MainBtn.module.css';
+import PropTypes from 'prop-types';
 
-const Button = ({ text, openModalFunc }) => {
+const MainBtn = ({ text, onClickFnc }) => {
   return (
     <div className={css.btn__container}>
       <button
-        onClick={openModalFunc}
+        onClick={onClickFnc}
         type="button"
         className={css.btnStyleActive}
       >
@@ -14,4 +15,10 @@ const Button = ({ text, openModalFunc }) => {
     </div>
   );
 };
-export default Button;
+
+MainBtn.propTypes = {
+  text: PropTypes.string,
+  onClickFnc: PropTypes.func,
+};
+
+export default MainBtn;

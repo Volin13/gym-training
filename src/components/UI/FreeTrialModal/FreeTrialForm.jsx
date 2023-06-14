@@ -1,20 +1,33 @@
+import React, { useRef, useState } from 'react';
 import { useFormik } from 'formik';
-import React, { useRef } from 'react';
-import FormInput from '../../reusableComponents/FormInput/FormInput';
-import css from './FreeTrialModal.module.css';
-import switchImages from '../FornInput/switchImages';
 import * as yup from 'yup';
+import css from './FreeTrialModal.module.css';
+import FormInput from '../FornInput/FormInput';
+import switchImages from '../FornInput/switchImages';
 import HelperText from '../FornInput/HelperText';
+import MainBtn from '../MainBtn/MainBtn';
 
 let initialValues = {
   name: '',
   email: '',
-  password: '',
+  position_id: null,
+  photo: null,
 };
 const FreeTrialForm = () => {
-  const emailInput = useRef(null);
   const nameInput = useRef(null);
+  const emailInput = useRef(null);
   // const [visibility, setVisibility] = useState(true);
+  const [photo, setPhoto] = useState(null);
+  const handleImageChange = e => {
+    const selectedFile = e.target.files[0];
+    if (selectedFile) {
+      formik.setFieldValue('photo', selectedFile);
+      setPhoto(selectedFile);
+    } else {
+      formik.setFieldValue('photo', null);
+      setPhoto(null);
+    }
+  };
   const myEmailRegex =
     /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/;
   let registrationSchema = yup.object().shape({
@@ -39,16 +52,23 @@ const FreeTrialForm = () => {
       .max(254, 'Your email is too long')
       .lowercase()
       .required('Type your email please'),
-    password: yup
-      .string()
-      .trim()
-      .matches(
-        /^[a-zA-Zа-яА-ЯА-ЩЬьЮюЯяЇїІіЄєҐґ0-9]+(([' -][a-zA-Zа-яА-Я0-9 ])?[a-zA-Zа-яА-Я0-9]*)*$/,
-        'Special symbols are not allowed'
+    position_id: yup.string().required('Choose your position'),
+    photo: yup
+      .mixed()
+      .nullable()
+      .test('type', 'Only jpg/jpeg files are allowed', value => {
+        return (
+          !value || (value && ['image/jpeg'].includes(value.type))
+        );
+      })
+      .test(
+        'size',
+        'The image weight must be less than 5 MB',
+        value => {
+          return !value || (value && value.size <= 5000000);
+        }
       )
-      .min(6, 'Your password is too short')
-      .max(16, 'Your password must be 16 characters max')
-      .required('Type your password please'),
+      .required('Add your photo please'),
   });
 
   const formik = useFormik({
@@ -66,14 +86,10 @@ const FreeTrialForm = () => {
       <div className="container">
         <div className={css.registrFormatting}>
           <div className={css.registrForm}>
-            <div className={css.registrationTitleFormat}></div>
             <form
               initialValues={formik.initialValues}
               schema={registrationSchema}
-              buttonLabel={'Sign Up'}
-              formik={formik}
-              isValid={isValid}
-              divButtonClass={css.divButtonClass}
+              className={css.freeTrialForm}
             >
               <div className={css.formFromat}>
                 <div className={css.formIinputFormat}>
@@ -123,7 +139,48 @@ const FreeTrialForm = () => {
                     />
                   )}
                 </div>
+                <div className={css.avatarChanger}>
+                  <input
+                    type="text"
+                    readOnly
+                    value={photo ? photo.name : 'Upload your photo'}
+                    className={`${css.mockInput} ${
+                      photo
+                        ? css.mockInputActive
+                        : css.mockInputInactive
+                    }`}
+                  />
+                  <label
+                    htmlFor="newAvatartURL"
+                    className={css.avatarChangerLebel}
+                  >
+                    <div className={css.mockButton}>Upload</div>
+
+                    <div>
+                      <input
+                        type="file"
+                        name="newAvatartURL"
+                        onChange={e => {
+                          handleImageChange(e);
+                        }}
+                        className={css.inputTypeFile}
+                        id="newAvatartURL"
+                        accept="image/*"
+                      />
+                      <small className={css.fileErorr}>
+                        {formik.errors.photo}
+                      </small>
+                    </div>
+                  </label>
+                </div>
               </div>
+              <MainBtn text="Get" />
+              {!isValid && (
+                <p className={css.helpInfo}>
+                  Fill up your data to get a free trial. We will send
+                  one-time pass to your email.
+                </p>
+              )}
             </form>
           </div>
         </div>

@@ -3,6 +3,8 @@ import css from './FreeTrialModal.module.css';
 import Modal from 'react-modal';
 import { ReactComponent as CloseIcon } from '../../../assets/images/MediaIcons/close-svgrepo-com.svg';
 import Logo from '../Logo/Logo';
+import FreeTrialForm from './FreeTrialForm';
+import PropTypes from 'prop-types';
 
 const FreeTrialModal = ({ closeModal, modalIsOpen }) => {
   return (
@@ -17,7 +19,8 @@ const FreeTrialModal = ({ closeModal, modalIsOpen }) => {
       //     width: '1000px',
       //     height: '600px',
       //   }}
-      contentLabel="FreeTrialModal"
+      contentLabel="Start Free Trial"
+      preventScroll={true}
       onRequestClose={closeModal}
       className={css.freeTrialModal_modal}
       overlayClassName={css.freeTrialModal__overlay}
@@ -31,6 +34,7 @@ const FreeTrialModal = ({ closeModal, modalIsOpen }) => {
           <CloseIcon />
         </button>
         <Logo logoFormattingClass={css.freeTrialModal_logo} />
+        <FreeTrialForm />
       </div>
       <div className={css.freeTrialModal_container}>
         <div
@@ -39,10 +43,21 @@ const FreeTrialModal = ({ closeModal, modalIsOpen }) => {
         <div
           className={`${css.freeTrialModal__imageBackgroundItem} ${css.freeTrialModal__imageBackgroundItemSecond}`}
         ></div>
+        <div
+          className={`${css.freeTrialModal__imageBackgroundItem} ${css.freeTrialModal__imageBackgroundItemThird}`}
+        ></div>
+        <div
+          className={`${css.freeTrialModal__imageBackgroundItem} ${css.freeTrialModal__imageBackgroundItemFourth}`}
+        ></div>
         <div className={css.freeTrialModal__imageBackground}></div>
       </div>
     </Modal>
   );
+};
+
+FreeTrialModal.propTypes = {
+  closeModal: PropTypes.func,
+  modalIsOpen: PropTypes.bool,
 };
 
 export default FreeTrialModal;

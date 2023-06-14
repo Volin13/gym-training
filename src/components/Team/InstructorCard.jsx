@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import css from './InstructorCard.module.css';
+import PropTypes from 'prop-types';
 
 const InstructorCard = ({
   instructorAvatar,
@@ -39,6 +40,13 @@ const InstructorCard = ({
       <span className={css.instructor__position}>{position}</span>
     </div>
   );
+};
+
+InstructorCard.propTypes = {
+  instructorAvatar: PropTypes.string,
+  name: PropTypes.string,
+  position: PropTypes.string,
+  instructorLegend: PropTypes.string,
 };
 
 export default InstructorCard;

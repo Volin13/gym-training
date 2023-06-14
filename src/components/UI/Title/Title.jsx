@@ -1,5 +1,7 @@
 import React, { forwardRef } from 'react';
 import css from './Title.module.css';
+import PropTypes from 'prop-types';
+
 const Title = forwardRef(function Title(props, ref) {
   const { text } = props;
   return (
@@ -8,5 +10,9 @@ const Title = forwardRef(function Title(props, ref) {
     </div>
   );
 });
+
+Title.propTypes = {
+  text: PropTypes.string,
+};
 
 export default Title;

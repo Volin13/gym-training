@@ -1,5 +1,6 @@
 import React, { forwardRef, useEffect, useState } from 'react';
 import css from './DisciplinesList.module.css';
+import PropTypes from 'prop-types';
 
 const DisciplinesListItem = forwardRef(function DisciplinesListItem(
   props,
@@ -113,4 +114,10 @@ const DisciplinesListItem = forwardRef(function DisciplinesListItem(
   );
 });
 
+DisciplinesListItem.propTypes = {
+  titleText: PropTypes.string,
+  description: PropTypes.string,
+  image: PropTypes.string,
+  scaledFirstEl: PropTypes.bool,
+};
 export default DisciplinesListItem;

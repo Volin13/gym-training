@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
+import PropTypes from 'prop-types';
+
 import css from './ClassItem.module.css';
 import { ReactComponent as StudentIcon } from '../../assets/images/MediaIcons/studentIcon.svg';
 import { ReactComponent as TimerIcon } from '../../assets/images/MediaIcons/timerIcon.svg';
 import SecondaryBtn from 'components/UI/SecondaryBtn/SecondaryBtn';
+import FreeTrialModal from 'components/UI/FreeTrialModal/FreeTrialModal';
 
 const ClassItem = ({
   clasesName,
@@ -14,6 +17,13 @@ const ClassItem = ({
   difficalty,
   noOfClasses,
 }) => {
+  const [modalIsOpen, setIsOpen] = useState(false);
+  function openModal() {
+    setIsOpen(true);
+  }
+  function closeModal() {
+    setIsOpen(false);
+  }
   return (
     <div className={css.classItem__thumb}>
       <div className={css.classItem__image}>
@@ -60,11 +70,27 @@ const ClassItem = ({
           secondaryBtnConatiner={css.classItem__learnMoreBtn}
         />
         <SecondaryBtn
+          onClickFunc={openModal}
           text="Start a free trail"
           secondaryBtnConatiner={css.classItem__freeTrialBtn}
+        />
+        <FreeTrialModal
+          modalIsOpen={modalIsOpen}
+          closeModal={closeModal}
         />
       </div>
     </div>
   );
 };
+ClassItem.propTypes = {
+  clasesName: PropTypes.string,
+  studentsQnt: PropTypes.string,
+  discipline: PropTypes.string,
+  classImage: PropTypes.string,
+  duration: PropTypes.string,
+  instructor: PropTypes.string,
+  difficalty: PropTypes.string,
+  noOfClasses: PropTypes.string,
+};
+
 export default ClassItem;

@@ -1,6 +1,6 @@
 import React from 'react';
 import css from './SocialMediaLinks.module.css';
-import { SocialMediaItem } from './SocialMediaItem';
+import SocialMediaItem from './SocialMediaItem';
 
 export const SocialMediaLinks = () => {
   return (

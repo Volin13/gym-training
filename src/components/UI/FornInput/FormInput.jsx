@@ -42,6 +42,7 @@ const FormInput = forwardRef(function FormInput(props, ref) {
         onClick={e => {
           e.stopPropagation();
         }}
+        className={css.formInput}
       />
       <span className={css.formIcon}>{switchImages(name)}</span>
       <span className={css.formStateIcon}>

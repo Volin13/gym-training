@@ -1,11 +1,11 @@
 import StyledtWrapper from 'components/UI/StyledWrapper/StyledWrapper';
 import Title from 'components/UI/Title/Title';
-import React, { forwardRef, useState } from 'react';
+import React, { useState } from 'react';
 import ClassItem from './ClassItem';
 import css from './Classes.module.css';
 import MainBtn from 'components/UI/MainBtn/MainBtn';
 import classesList from './clasessList';
-const Classes = forwardRef(function Classes(props, ref) {
+const Classes = ({ classesSectionRef }) => {
   const getRandomInt = () => {
     return Math.floor(Math.random() * 100);
   };
@@ -17,7 +17,7 @@ const Classes = forwardRef(function Classes(props, ref) {
 
   return (
     <StyledtWrapper>
-      <Title text="Classes" ref={ref} />
+      <Title text="Classes" ref={classesSectionRef} />
       <div className={`container ${css.classes__container}`}>
         <ul
           className={`${css.classes__classesList} ${
@@ -65,5 +65,5 @@ const Classes = forwardRef(function Classes(props, ref) {
       </div>
     </StyledtWrapper>
   );
-});
+};
 export default Classes;

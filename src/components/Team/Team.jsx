@@ -1,11 +1,11 @@
-import React, { forwardRef } from 'react';
+import React from 'react';
 import css from './Team.module.css';
 import InstructorCard from './InstructorCard';
 import Title from 'components/UI/Title/Title';
-const Team = forwardRef(function Team(props, ref) {
+const Team = ({ teamSectionRef }) => {
   return (
     <>
-      <Title text="instructors" ref={ref} />
+      <Title text="instructors" ref={teamSectionRef} />
 
       <div className={`${css.team__container} container`}>
         <InstructorCard
@@ -35,5 +35,5 @@ const Team = forwardRef(function Team(props, ref) {
       </div>
     </>
   );
-});
+};
 export default Team;

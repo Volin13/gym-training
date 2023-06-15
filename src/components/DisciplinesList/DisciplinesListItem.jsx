@@ -10,27 +10,89 @@ const DisciplinesListItem = forwardRef(function DisciplinesListItem(
     titleText,
     description,
     image = '',
-    scaledFirstEl = false,
+    firstElRef,
+    secondElRef,
+    thirdElRef,
+    fourthElRef,
   } = props;
-
+  const [scaledFirstEl, scaleUpFirstEl] = useState(true);
+  const [scaledSecondEl, scaleUpSecondEl] = useState(false);
+  const [scaledThirdEl, scaleUpThirdEl] = useState(false);
+  const [scaledFourth, scaleUpFourthEl] = useState(false);
   const [scaled, setScaledEl] = useState(false);
+
   useEffect(() => {
-    if (scaledFirstEl) setScaledEl(true);
-  }, [scaled, scaledFirstEl]);
-  const scaleUpEl = () => {
-    setScaledEl(!scaled);
-    setScaledEl(!scaled);
-  };
-  // const scaleDownEl = () => {
-  //   setScaledEl(false);
-  // };
-  console.log(ref);
+    const scaleUpEl = () => {
+      console.log('tap');
+
+      if (firstElRef) {
+        setScaledEl(true);
+
+        scaleUpFirstEl(true);
+        scaleUpSecondEl(false);
+        scaleUpThirdEl(false);
+        scaleUpFourthEl(false);
+        console.log('first');
+        return;
+      }
+      if (secondElRef) {
+        setScaledEl(true);
+
+        scaleUpFirstEl(false);
+        scaleUpSecondEl(true);
+        scaleUpThirdEl(false);
+        scaleUpFourthEl(false);
+        console.log('second');
+        return;
+      }
+      if (thirdElRef) {
+        setScaledEl(true);
+
+        scaleUpFirstEl(false);
+        scaleUpSecondEl(false);
+        scaleUpThirdEl(true);
+        scaleUpFourthEl(false);
+        console.log('third');
+        return;
+      }
+      if (fourthElRef) {
+        scaleUpFirstEl(false);
+        setScaledEl(true);
+
+        scaleUpSecondEl(false);
+        scaleUpThirdEl(false);
+        scaleUpFourthEl(true);
+        console.log('fourth');
+        return;
+      }
+      setScaledEl(false);
+
+      return;
+    };
+    if (ref) {
+      ref.current.addEventListener('mouseenter', scaleUpEl);
+    }
+    return () => {
+      document.removeEventListener('mouseenter', scaleUpEl);
+    };
+  }, [
+    setScaledEl,
+    scaledFirstEl,
+    scaledSecondEl,
+    scaledThirdEl,
+    scaledFourth,
+    firstElRef,
+    secondElRef,
+    thirdElRef,
+    fourthElRef,
+    ref,
+    scaled,
+  ]);
 
   return (
     <div
-      onMouseOver={scaleUpEl}
+      // onMouseOver={scaleUpEl}
       ref={ref}
-      //   onMouseEnter={scaleUpEl}
       //   onMouseOut={scaleDownEl}
       className={`${css.disciplinesListItem__container} 
     ${
@@ -80,7 +142,10 @@ const DisciplinesListItem = forwardRef(function DisciplinesListItem(
           <img
             className={`
             ${
-              scaled
+              (scaled && scaledFirstEl) ||
+              (scaled && scaledSecondEl) ||
+              (scaled && scaledThirdEl) ||
+              (scaled && scaledFourth)
                 ? css.disciplinesListItem__imageScaled
                 : css.disciplinesListItem__imageRegular
             }`}
@@ -91,7 +156,10 @@ const DisciplinesListItem = forwardRef(function DisciplinesListItem(
         <h3
           className={`${css.disciplinesListItem__imageContainer} 
        ${
-         scaled
+         (scaled && scaledFirstEl) ||
+         (scaled && scaledSecondEl) ||
+         (scaled && scaledThirdEl) ||
+         (scaled && scaledFourth)
            ? css.disciplinesListItem__demoTitleHide
            : css.disciplinesListItem__demoTitleShow
        }`}

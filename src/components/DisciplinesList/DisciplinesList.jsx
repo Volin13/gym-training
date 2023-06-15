@@ -1,5 +1,5 @@
 import Title from 'components/UI/Title/Title';
-import React, { useRef, useState } from 'react';
+import React, { useRef } from 'react';
 import css from './DisciplinesList.module.css';
 import DisciplinesListItem from './DisciplinesListItem';
 import gymImage from '../../assets/images/Desciplines/gymImageDesktop2x-min.jpg';
@@ -12,19 +12,15 @@ const DisciplinesList = () => {
   const secondElRef = useRef(null);
   const thirdElRef = useRef(null);
   const fourthElRef = useRef(null);
-  const [scaledFirstEl, scaleUpFirstEl] = useState(true);
-  // const [scaledSecondEl, scaleUpSecondEl] = useState(false);
-  // const [scaledThirdEl, scaleUpThirdEl] = useState(false);
-  // const [scaledFourth, scaleUpFourthEl] = useState(false);
+
   return (
     <div className={`container ${css.disciplinesList_container}`}>
       <Title text="Find what moves you" />
       <ul className={css.disciplinesList_list}>
         <li>
           <DisciplinesListItem
-            scaleUpFirstEl={scaleUpFirstEl}
-            scaledFirstEl={scaledFirstEl}
             ref={firstElRef}
+            firstElRef={firstElRef}
             image={gymImage}
             titleText="gym"
             description="Expect a heart-pumping workout that will 
@@ -35,6 +31,7 @@ const DisciplinesList = () => {
         <li>
           <DisciplinesListItem
             ref={secondElRef}
+            secondElRef={secondElRef}
             image={gymImage}
             titleText="gym"
             description="Expect a heart-pumping workout that will 
@@ -45,6 +42,7 @@ const DisciplinesList = () => {
         <li>
           <DisciplinesListItem
             ref={thirdElRef}
+            thirdElRef={thirdElRef}
             image={gymImage}
             titleText="gym"
             description="Expect a heart-pumping workout that will 
@@ -55,6 +53,7 @@ const DisciplinesList = () => {
         <li>
           <DisciplinesListItem
             ref={fourthElRef}
+            fourthElRef={fourthElRef}
             image={gymImage}
             titleText="gym"
             description="Expect a heart-pumping workout that will 

@@ -3,7 +3,12 @@ import PropTypes from 'prop-types';
 
 const NavLink = ({ text, navLinkClassName, scrollFunc, refEl }) => {
   return (
-    <button className={navLinkClassName} onClick={scrollFunc(refEl)}>
+    <button
+      className={navLinkClassName}
+      onClick={() => {
+        scrollFunc(refEl);
+      }}
+    >
       {text}
     </button>
   );

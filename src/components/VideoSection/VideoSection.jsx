@@ -7,7 +7,7 @@ const VideoSection = () => {
     width: '100%',
     playerVars: {
       // https://developers.google.com/youtube/player_parameters
-      autoplay: 1,
+      // autoplay: 1,
       enablejsapi: 1,
       controls: 0,
       modestbranding: 1,
@@ -23,7 +23,7 @@ const VideoSection = () => {
   };
 
   const onPlayerReady = event => {
-    event.target.playVideo();
+    // event.target.playVideo();
     event.target.setVolume(30);
     event.target.setPlaybackQuality('hd1080');
   };

@@ -12,6 +12,7 @@ const Hero = () => {
   function closeModal() {
     setIsOpen(false);
   }
+
   return (
     <div className={css.heroImg}>
       <div className={css.heroText}>

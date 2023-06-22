@@ -9,7 +9,9 @@ const HelperText = ({
   if (value && errorText) {
     return <small className={css.smallEror}> {errorText} </small>;
   } else if (value && !errorText) {
-    return <small className={css.smallSucsess}>{textSucsess}</small>;
+    return (
+      <small className={css.smallSucsess}> {textSucsess} </small>
+    );
   } else return <small></small>;
 };
 

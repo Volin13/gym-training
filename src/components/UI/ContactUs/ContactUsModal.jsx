@@ -14,8 +14,7 @@ import { SocialMediaLinks } from '../SocialMediaLinks/SocialMediaLinks';
 const ContactUsModal = ({ modalIsOpen, closeModal }) => {
   const apiKey = process.env.REACT_APP_API_KEY;
   const mapStyles = {
-    height: '400px',
-    width: '50%',
+    width: '100%',
     border: '1px solid #ff4601',
     borderRadius: '5px',
   };
@@ -47,15 +46,17 @@ const ContactUsModal = ({ modalIsOpen, closeModal }) => {
         <Logo logoFormattingClass={css.freeTrialModal_logo} />
 
         <div className={css.content_format}>
-          <LoadScript googleMapsApiKey={apiKey}>
-            <GoogleMap
-              mapContainerStyle={mapStyles}
-              zoom={15}
-              center={defaultCenter}
-            >
-              <Marker position={defaultCenter} />
-            </GoogleMap>
-          </LoadScript>
+          <div style={{ width: '400px', heigh: '100%' }}>
+            <LoadScript googleMapsApiKey={apiKey}>
+              <GoogleMap
+                mapContainerStyle={mapStyles}
+                zoom={15}
+                center={defaultCenter}
+              >
+                <Marker position={defaultCenter} />
+              </GoogleMap>
+            </LoadScript>
+          </div>
           <div className={css.addressSection}>
             <address>
               <ul className={css.addressList}>

@@ -1,20 +1,27 @@
 import StyledtWrapper from 'components/UI/StyledWrapper/StyledWrapper';
 import Title from 'components/UI/Title/Title';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import ClassItem from './ClassItem';
 import css from './Classes.module.css';
 import MainBtn from 'components/UI/MainBtn/MainBtn';
 import classesList from './clasessList';
+import { getClassesList } from 'servises/API';
 const Classes = ({ classesSectionRef }) => {
   const getRandomInt = () => {
     return Math.floor(Math.random() * 100);
   };
 
   const [openSection, setOpenSection] = useState(false);
+  const [classes, setClasses] = useState([]);
   const changeStyle = () => {
     setOpenSection(!openSection);
   };
-
+  useEffect(() => {
+    getClassesList().then(res => {
+      setClasses(res);
+    });
+  }, []);
+  console.log(classes);
   return (
     <StyledtWrapper>
       <Title text="Classes" ref={classesSectionRef} />

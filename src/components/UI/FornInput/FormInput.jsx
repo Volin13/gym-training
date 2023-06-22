@@ -39,10 +39,13 @@ const FormInput = forwardRef(function FormInput(props, ref) {
         autoComplete={autoComplete}
         value={value}
         id={id}
+        erorr
         onClick={e => {
           e.stopPropagation();
         }}
-        className={css.formInput}
+        className={`${css.formInput} ${
+          erorr ? css.formInputInvalid : css.formInputValid
+        }`}
       />
       <span className={css.formIcon}>{switchImages(name)}</span>
       <span className={css.formStateIcon}>

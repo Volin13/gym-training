@@ -95,7 +95,7 @@
 }
 .formInputValid:hover,
 .formInputValid:focus {
-  border: 1px solid var(--successColor);
+  border: 1px solid var(--activeColor);
 }
 
 @media screen and (min-width: 768px) {
@@ -125,4 +125,12 @@
   border: none;
   background-color: transparent;
   cursor: pointer;
+}
+/* helper text */
+.smallEror {
+  color: var(--errorColor);
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: -27px;
 }

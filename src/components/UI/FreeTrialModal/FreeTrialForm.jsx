@@ -87,7 +87,6 @@ const FreeTrialForm = () => {
         <div className={css.registrFormatting}>
           <div className={css.registrForm}>
             <form
-              initialValues={formik.initialValues}
               schema={registrationSchema}
               className={css.freeTrialForm}
             >

@@ -13,19 +13,19 @@ const Header = ({
   classesSectionRef,
   teamSectionRef,
   // aboutUsSectionRef,
-  // gallerySectionRef,
+  feedbackSectionRef,
 }) => {
   const [contactModalIsOpen, setContactsIsOpen] = useState(false);
   const [burgerModalIsOpen, setBurgerIsOpen] = useState(false);
   function openModal(name) {
-    // if (name === 'contacts') {
-    //   setContactsIsOpen(true);
-    //   return;
-    // }
-    // if (name === 'burger') {
-    //   setBurgerIsOpen(true);
-    //   return;
-    // }
+    if (name === 'contacts') {
+      setContactsIsOpen(true);
+      return;
+    }
+    if (name === 'burger') {
+      setBurgerIsOpen(true);
+      return;
+    }
     return;
   }
   function closeModal() {
@@ -65,16 +65,16 @@ const Header = ({
             <li className={css.header__navItem}>
               <NavLink
                 navLinkClassName={css.header__navLink}
-                text="Gallery"
+                text="Feedback"
                 scrollFunc={scrollFunc}
-                // refEl={gallerySectionRef}
+                refEl={feedbackSectionRef}
               />
             </li>
           </ul>
         </nav>
         <MainBtn
           text="Contact Us"
-          onClickFnc={openModal('contacts')}
+          onClickFnc={() => openModal('contacts')}
         />
         <ContactUsModal
           modalIsOpen={contactModalIsOpen}
@@ -84,7 +84,7 @@ const Header = ({
       <div className={css.burgerSection}>
         <button
           type="button"
-          onClick={openModal('burger')}
+          onClick={() => openModal('burger')}
           className={css.header__burgerBtn}
         >
           <BurgerIcon />

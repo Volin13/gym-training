@@ -12,7 +12,7 @@ import {
 import { SocialMediaLinks } from '../SocialMediaLinks/SocialMediaLinks';
 
 const ContactUsModal = ({ modalIsOpen, closeModal }) => {
-  const apiKey = process.env.REACT_APP_API_KEY;
+  const apiKey = process.env.REACT_APP_REST_API_KEY;
   const mapStyles = {
     width: '100%',
     border: '1px solid #ff4601',

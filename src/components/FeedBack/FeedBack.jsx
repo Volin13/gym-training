@@ -1,19 +1,29 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Title from 'components/UI/Title/Title';
 import StyledtWrapper from 'components/UI/StyledWrapper/StyledWrapper';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination } from 'swiper';
-import avatar from '../../assets/images/FeedBack/avatar1.png';
+import { Pagination, Autoplay } from 'swiper';
 import 'swiper/css';
 import 'swiper/css/pagination';
+import 'swiper/css/autoplay';
+
 import css from './FeedBack.module.css';
 
 import FeedBackItem from './FeedBackItem';
-const FeedBack = () => {
+import { getFeedBackList } from 'servises/API';
+const FeedBack = ({ feedbackSectionRef }) => {
+  const [feedbackList, setFeedbackList] = useState([]);
+
+  useEffect(() => {
+    getFeedBackList().then(res => {
+      setFeedbackList(res.records);
+    });
+  }, []);
+
   return (
     <StyledtWrapper>
       <div className="container">
-        <Title text="Client’s Feedback" />
+        <Title text="Client’s Feedback" ref={feedbackSectionRef} />
         <div className={css.sliderWrapper}>
           <Swiper
             style={{
@@ -27,7 +37,9 @@ const FeedBack = () => {
               '--swiper-pagination-bullet-border-radius': 'none',
               '--swiper-pagination-bullet-horizontal-gap': '2px',
             }}
-            modules={[Pagination]}
+            modules={[Pagination, Autoplay]}
+            autoplay
+            mousewheel={true}
             spaceBetween={60}
             slidesPerView={3}
             pagination={{ clickable: true }}
@@ -35,50 +47,20 @@ const FeedBack = () => {
             onSlideChange={() => console.log('slide change')}
             onSwiper={swiper => console.log(swiper)}
           >
-            <SwiperSlide>
-              <FeedBackItem
-                feedBackText="This a great 
-        historic site to visit. I rented
-         a little cart and the driver was a 
-         really good friendl"
-                starsCount={5}
-                name="Brooklyn Simmons"
-                avatar={avatar}
-              />
-            </SwiperSlide>
-            <SwiperSlide>
-              <FeedBackItem
-                feedBackText="This a great 
-        historic site to visit. I rented
-         a little cart and the driver was a 
-         really good friendl"
-                starsCount={5}
-                name="Brooklyn Simmons"
-                avatar={avatar}
-              />
-            </SwiperSlide>
-            <SwiperSlide>
-              <FeedBackItem
-                feedBackText="This a great 
-        historic site to visit. I rented
-         a little cart and the driver was a 
-         really good friendl"
-                starsCount={5}
-                name="Brooklyn Simmons"
-                avatar={avatar}
-              />
-            </SwiperSlide>
-            <SwiperSlide>
-              <FeedBackItem
-                feedBackText="This a great 
-        historic site to visit. I rented
-         a little cart and the driver was a 
-         really good friendl"
-                starsCount={5}
-                name="Brooklyn Simmons"
-                avatar={avatar}
-              />
-            </SwiperSlide>
+            {feedbackList.map(({ values }) => {
+              const { starsCount, name, feedBackText, avatar } =
+                values;
+              return (
+                <SwiperSlide>
+                  <FeedBackItem
+                    feedBackText={feedBackText}
+                    starsCount={starsCount}
+                    name={name}
+                    avatar={avatar}
+                  />
+                </SwiperSlide>
+              );
+            })}
           </Swiper>
         </div>
       </div>

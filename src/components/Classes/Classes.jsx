@@ -4,21 +4,17 @@ import React, { useEffect, useState } from 'react';
 import ClassItem from './ClassItem';
 import css from './Classes.module.css';
 import MainBtn from 'components/UI/MainBtn/MainBtn';
-import classesList from './clasessList';
 import { getClassesList } from 'servises/API';
-const Classes = ({ classesSectionRef }) => {
-  const getRandomInt = () => {
-    return Math.floor(Math.random() * 100);
-  };
-
+const Classes = ({ classesSectionRef, scrollFunc }) => {
   const [openSection, setOpenSection] = useState(false);
   const [classes, setClasses] = useState([]);
   const changeStyle = () => {
     setOpenSection(!openSection);
+    if (openSection === true) scrollFunc(classesSectionRef);
   };
   useEffect(() => {
     getClassesList().then(res => {
-      setClasses(res);
+      setClasses(res.records);
     });
   }, []);
   console.log(classes);
@@ -33,9 +29,10 @@ const Classes = ({ classesSectionRef }) => {
               : css.classes__classesListOpenned
           }`}
         >
-          {classesList.map(
-            ({
+          {classes.map(({ values }) => {
+            const {
               classImage,
+              classImg2x,
               clasesName,
               studentsQnt,
               discipline,
@@ -43,32 +40,28 @@ const Classes = ({ classesSectionRef }) => {
               duration,
               difficalty,
               noOfClasses,
-            }) => (
-              <ClassItem
-                key={getRandomInt()}
-                classImage={classImage}
-                clasesName={clasesName}
-                studentsQnt={studentsQnt}
-                discipline={discipline}
-                instructor={instructor}
-                duration={duration}
-                difficalty={difficalty}
-                noOfClasses={noOfClasses}
-              />
-            )
-          )}
+            } = values;
+            return (
+              <li key={noOfClasses}>
+                <ClassItem
+                  classImage={classImage}
+                  classImg2x={classImg2x}
+                  clasesName={clasesName}
+                  studentsQnt={studentsQnt}
+                  discipline={discipline}
+                  instructor={instructor}
+                  duration={duration}
+                  difficalty={difficalty}
+                  noOfClasses={noOfClasses}
+                />
+              </li>
+            );
+          })}
         </ul>
-        {/* <ClassItem
-          classImage=""
-          clasesName="Strength &#38; Sweat"
-          studentsQnt={'29'}
-          discipline={'yoga'}
-          instructor={'Esther Howard'}
-          duration={'2H'}
-          difficalty={'beginner'}
-          noOfClasses={'30'}
-        /> */}
-        <MainBtn text="See all" onClickFnc={changeStyle} />
+        <MainBtn
+          text={!openSection ? 'See all' : 'Hide'}
+          onClickFnc={changeStyle}
+        />
       </div>
     </StyledtWrapper>
   );

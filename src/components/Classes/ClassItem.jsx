@@ -12,6 +12,7 @@ const ClassItem = ({
   studentsQnt,
   discipline,
   classImage,
+  classImg2x,
   duration,
   instructor,
   difficalty,
@@ -27,7 +28,20 @@ const ClassItem = ({
   return (
     <div className={css.classItem__thumb}>
       <div className={css.classItem__image}>
-        <img src={classImage} alt={discipline} />
+        <picture>
+          <source
+            media="(min-width: 0px)"
+            srcSet={`
+        ${classImage} 1x,
+        ${classImg2x} 2x`}
+            type="image/png"
+          />
+          <img
+            className={css.classItem__picture}
+            src={classImg2x}
+            alt="gym class"
+          />
+        </picture>
         <div
           className={`${css.classItem__imageBackgroundItem} ${css.classItem__imageBackgroundItemFirst}`}
         ></div>

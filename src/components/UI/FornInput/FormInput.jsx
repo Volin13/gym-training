@@ -11,7 +11,7 @@ const FormInput = forwardRef(function FormInput(props, ref) {
     onBlur = () => {},
     onChange = () => {},
     name = '',
-    erorr,
+    erorr = '',
     value = '',
     formik,
     id,
@@ -39,7 +39,7 @@ const FormInput = forwardRef(function FormInput(props, ref) {
         autoComplete={autoComplete}
         value={value}
         id={id}
-        erorr
+        erorr=""
         onClick={e => {
           e.stopPropagation();
         }}

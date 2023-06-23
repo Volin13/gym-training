@@ -12,6 +12,7 @@
 .feedBackItem__text {
   max-width: 265px;
   margin-bottom: 24px;
+  min-height: 216px;
 }
 .feedBackItem__personalSection {
   display: flex;
@@ -21,6 +22,9 @@
   margin-right: 20px;
   width: 60px;
   height: 60px;
+  border-radius: 50%;
+}
+.feedBackItem__avatar img {
   border-radius: 50%;
 }
 .feedBackItem_name {

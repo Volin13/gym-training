@@ -16,7 +16,7 @@ export const App = () => {
   const classesSection = useRef(null);
   const teamSection = useRef(null);
   const aboutUsSection = useRef(null);
-  const gallerySection = useRef(null);
+  const feedbackSectionRef = useRef(null);
 
   const handleUsersSectionІScroll = ref => {
     if (ref) ref.current.scrollIntoView({ behavior: 'smooth' });
@@ -28,16 +28,19 @@ export const App = () => {
         classesSectionRef={classesSection}
         teamSectionRef={teamSection}
         aboutUsSectionRef={aboutUsSection}
-        gallerySectionRef={gallerySection}
+        feedbackSectionRef={feedbackSectionRef}
       />
       <Hero />
       <DisciplinesList />
       <MotivanionalSection />
-      <Classes classesSectionRef={classesSection} />
+      <Classes
+        classesSectionRef={classesSection}
+        scrollFunc={handleUsersSectionІScroll}
+      />
       <Team teamSectionRef={teamSection} />
       <DownloadApp />
       <VideoSection />
-      <FeedBack />
+      <FeedBack feedbackSectionRef={feedbackSectionRef} />
       <QuestionsAndAnswers />
       <FreeTrial />
       <Footer />

@@ -17,9 +17,7 @@
   margin-bottom: 30px;
 }
 .downloadApp__text {
-  font-weight: 600;
-  font-size: 20px;
-  margin-bottom: 60px;
+  display: none;
 }
 .downloadApp__links {
   display: inline-block;
@@ -44,6 +42,12 @@
 @media screen and (min-width: 768px) {
   .styledWrapper__contaner {
     width: 768px;
+  }
+  .downloadApp__text {
+    display: block;
+    font-weight: 600;
+    font-size: 20px;
+    margin-bottom: 60px;
   }
 }
 

@@ -30,6 +30,7 @@
     font-size: 40px;
   }
   .freeTrial__text {
+    display: block;
     width: 525px;
     line-height: 1.6;
   }

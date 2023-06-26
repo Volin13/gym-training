@@ -11,15 +11,11 @@
 .motivationalSection__image {
   margin: 0 auto;
   width: 368px;
-  display: flex;
-  justify-content: center;
   align-items: center;
   border-radius: 5px;
   overflow: hidden;
   position: relative;
-  left: 50%;
   z-index: 2;
-  transform: translate(-50%, 0);
 }
 .motivationalSection__image img {
   max-width: 96%;
@@ -75,7 +71,7 @@
     transform: translateY(-60px);
   }
   100% {
-    transform: translateY(-300px);
+    transform: translateY(-380px);
   }
 }
 @keyframes changeBackground {

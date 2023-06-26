@@ -1,5 +1,5 @@
 import React from 'react';
-import css from './Header.module.css';
+import css from './BurgerMenu.module.css';
 import NavLink from './NavLink';
 import { ReactComponent as CloseIcon } from '../../assets/images/MediaIcons/menu-hamburger-svgrepo-com.svg';
 import Logo from '../UI/Logo/Logo';
@@ -9,7 +9,8 @@ import MainBtn from 'components/UI/MainBtn/MainBtn';
 import ContactUsModal from 'components/UI/ContactUs/ContactUsModal';
 
 const BurgerMenu = ({
-  modalIsOpen,
+  contactModalIsOpen,
+  burgerModalIsOpen,
   closeModal,
   teamSectionRef,
   openModal,
@@ -18,13 +19,13 @@ const BurgerMenu = ({
 }) => {
   return (
     <Modal
-      shouldCloseOnOverlayClick={true}
-      isOpen={modalIsOpen}
+      // shouldCloseOnOverlayClick={true}
+      isOpen={burgerModalIsOpen}
       ariaHideApp={false}
-      contentLabel="Contact Us Section"
+      contentLabel="header navigation"
       preventScroll={true}
       onRequestClose={closeModal}
-      className={css.freeTrialModal_modal}
+      className={css.header_modal}
       overlayClassName={css.freeTrialModal__overlay}
     >
       <div className={css.freeTrialModal_modalContent}>
@@ -72,9 +73,11 @@ const BurgerMenu = ({
             </li>
           </ul>
         </nav>
-        <MainBtn text="Contact Us" onClickFnc={openModal} />
+        <div className={css.header__navButton}>
+          <MainBtn text="Contact Us" onClickFnc={openModal} />
+        </div>
         <ContactUsModal
-          modalIsOpen={modalIsOpen}
+          modalIsOpen={contactModalIsOpen}
           closeModal={closeModal}
         />
       </div>

@@ -6,7 +6,9 @@ import CrossfitImage2x from '../../assets/images/MotivationalSection/CrossfitImg
 
 const MotivanionalSection = () => {
   return (
-    <div className={css.motivationalSection__container}>
+    <div
+      className={`${css.motivationalSection__container} container`}
+    >
       <Title text="Fit for your lifestyle" />
       <p className={css.motivationalSection__text}>
         Wake up with a sunrise meditation, sweat it out with lunchtime

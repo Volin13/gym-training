@@ -2,7 +2,7 @@
   text-align: center;
   margin: 0 auto;
   padding-bottom: 36px;
-  width: 1440px;
+  width: 375px;
   background-size: cover;
   background-repeat: no-repeat;
   background-image: linear-gradient(
@@ -17,5 +17,17 @@
   (min-resolution: 2dppx) {
   .styledWrapper__contaner {
     background-image: url('../../../assets/images/UI/backgrounds/styledBackground2x-min.jpg');
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .styledWrapper__contaner {
+    width: 768px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .styledWrapper__contaner {
+    width: 1440px;
   }
 }

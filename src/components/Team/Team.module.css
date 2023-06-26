@@ -1,5 +1,5 @@
 .team__container {
-  display: flex;
+  text-align: center;
   padding-bottom: 102px;
 }
 .jacobJones {
@@ -37,5 +37,63 @@
   }
   .janeCooper {
     background-image: url('../../assets/images/team/janeCooper2x-min.jpg');
+  }
+}
+.teamList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+@media screen and (max-width: 767px) {
+  .teamList li {
+    margin-bottom: 20px;
+  }
+  .teamList {
+    overflow: hidden;
+  }
+}
+
+.teamList_openned {
+  height: auto;
+}
+.teamList_closed {
+  height: 510px;
+}
+
+@media screen and (min-width: 768px) {
+  .teamList_closed {
+    height: auto;
+  }
+  .team_hideBtn {
+    display: none;
+  }
+  .team__container {
+    padding-bottom: 102px;
+  }
+  .teamList li {
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1439px) {
+  .teamList li {
+    margin-right: 67px;
+    margin-bottom: 20px;
+  }
+  .teamList li:nth-last-child(2n -1) {
+    margin-right: 0;
+  }
+  .teamList li:nth-last-child(-n + 2) {
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .teamList {
+    flex-wrap: nowrap;
+  }
+  .teamList li:not(:last-of-type) {
+    margin-right: 20px;
   }
 }

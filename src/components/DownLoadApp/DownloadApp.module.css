@@ -1,10 +1,14 @@
 .downloadApp__container {
   background-color: var(--activeColor);
   position: relative;
-  padding: 80px 0 92px 120px;
+  padding: 80px 0 92px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
 }
 
 .downloadApp__title {
+  margin: 0 auto;
   font-weight: 600;
   font-size: 48px;
   color: var(--primaryWhiteColor);
@@ -33,9 +37,35 @@
   scale: 1.1;
 }
 .appAddImage {
-  position: absolute;
-  right: 111px;
-  top: 0;
   width: 543px;
   height: 520px;
+}
+
+@media screen and (min-width: 768px) {
+  .styledWrapper__contaner {
+    width: 768px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .downloadApp__container {
+    text-align: start;
+    display: block;
+    padding: 80px 0 92px 120px;
+  }
+  .downloadApp__title {
+    margin: 0;
+    font-weight: 600;
+    font-size: 48px;
+    width: 626px;
+    height: 164px;
+    margin-bottom: 30px;
+  }
+  .appAddImage {
+    position: absolute;
+    right: 111px;
+    top: 0;
+    width: 543px;
+    height: 520px;
+  }
 }

@@ -14,15 +14,21 @@ const DownloadApp = () => {
       <p className={css.downloadApp__text}>
         Start your fitness journey with us. Join the cult!
       </p>
-      <a
-        className={css.downloadApp__links}
-        href="https://play.google.com/store/games"
-      >
-        <GooglePlayIcon />
-      </a>
-      <a className={css.downloadApp__links} href="https://www.apple.com/store">
-        <AppleStoreIcon />
-      </a>
+      <div>
+        <a
+          className={css.downloadApp__links}
+          href="https://play.google.com/store/games"
+        >
+          <GooglePlayIcon />
+        </a>
+        <a
+          className={css.downloadApp__links}
+          href="https://www.apple.com/store"
+        >
+          <AppleStoreIcon />
+        </a>
+      </div>
+
       <picture>
         <source
           media="(min-width: 1440px)"

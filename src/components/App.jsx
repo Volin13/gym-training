@@ -37,7 +37,10 @@ export const App = () => {
         classesSectionRef={classesSection}
         scrollFunc={handleUsersSectionІScroll}
       />
-      <Team teamSectionRef={teamSection} />
+      <Team
+        teamSectionRef={teamSection}
+        scrollFunc={handleUsersSectionІScroll}
+      />
       <DownloadApp />
       <VideoSection />
       <FeedBack feedbackSectionRef={feedbackSectionRef} />

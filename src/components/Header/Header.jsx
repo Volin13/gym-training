@@ -91,8 +91,10 @@ const Header = ({
         </button>
 
         <BurgerMenu
-          modalIsOpen={burgerModalIsOpen}
+          contactModalIsOpen={contactModalIsOpen}
+          burgerModalIsOpen={burgerModalIsOpen}
           closeModal={closeModal}
+          openModal={openModal}
         />
       </div>
     </div>

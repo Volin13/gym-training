@@ -1,7 +1,9 @@
 .freeTrial__container {
   background-color: var(--activeColor);
-  width: 1200px;
+  width: 100%;
+  text-align: center;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
   padding: 24px 65px 25px 110px;
@@ -15,10 +17,38 @@
 }
 .freeTrial__title {
   font-weight: 600;
-  font-size: 40px;
+  font-size: 30px;
   line-height: 1.6;
+  margin-bottom: 20px;
 }
 .freeTrial__text {
-  width: 525px;
-  line-height: 1.6;
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .freeTrial__title {
+    font-size: 40px;
+  }
+  .freeTrial__text {
+    width: 525px;
+    line-height: 1.6;
+  }
+
+  .freeTrial__container {
+    background-color: var(--activeColor);
+    width: 1200px;
+    display: flex;
+    flex-direction: row;
+
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 65px 25px 110px;
+    clip-path: polygon(7% 0, 100% 0%, 93% 100%, 0% 100%);
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .secondaryBtn {
+    font-size: 20px;
+  }
 }

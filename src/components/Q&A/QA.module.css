@@ -56,3 +56,36 @@
 .qaListItem__plusBtn:hover {
   scale: 1.25;
 }
+
+.qaListItem__textPosition p {
+  font-size: 14px;
+}
+
+.qaListItem__answerTextContainer {
+  height: 211px;
+  overflow: scroll;
+  padding: 17px 50px;
+}
+
+@media screen and (min-width: 768px) {
+  .qaListItem__textPosition p {
+    font-size: inherit;
+  }
+  .qaListItem__answerTextContainer {
+    padding: 40px 70px;
+    height: auto;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1440px) {
+  .classItem__thumb {
+    width: 289px;
+    margin-right: 27px;
+    margin-left: 16px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .classItem__thumb {
+    width: 374px;
+  }
+}

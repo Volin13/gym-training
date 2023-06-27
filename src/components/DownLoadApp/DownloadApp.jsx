@@ -14,7 +14,7 @@ const DownloadApp = () => {
       <p className={css.downloadApp__text}>
         Start your fitness journey with us. Join the cult!
       </p>
-      <div>
+      <div className={css.downloadApp__storeLinks}>
         <a
           className={css.downloadApp__links}
           href="https://play.google.com/store/games"

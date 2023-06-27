@@ -43,10 +43,10 @@
 .freeTrialModal_modalContent {
   text-align: center;
   padding: 60px 15px 15px;
-  left: 50%;
+  left: 49.5%;
   transform: translateX(-50%);
   height: 98%;
-  width: 97%;
+  width: 96%;
   background-color: var(--bgColor);
   position: absolute;
   z-index: 5;
@@ -139,7 +139,7 @@
     transform: translateY(-20px);
   }
   100% {
-    transform: translateY(-560px);
+    transform: translateY(-960px);
   }
 }
 

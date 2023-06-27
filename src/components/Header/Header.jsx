@@ -28,9 +28,18 @@ const Header = ({
     }
     return;
   }
-  function closeModal() {
+  function closeModal(name) {
+    if (name === 'contacts') {
+      setContactsIsOpen(false);
+      return;
+    }
+    if (name === 'burger') {
+      setBurgerIsOpen(false);
+      return;
+    }
     setContactsIsOpen(false);
     setBurgerIsOpen(false);
+    return;
   }
   return (
     <div className={css.header}>
@@ -91,6 +100,10 @@ const Header = ({
         </button>
 
         <BurgerMenu
+          scrollFunc={scrollFunc}
+          classesSectionRef={classesSectionRef}
+          teamSectionRef={teamSectionRef}
+          feedbackSectionRef={feedbackSectionRef}
           contactModalIsOpen={contactModalIsOpen}
           burgerModalIsOpen={burgerModalIsOpen}
           closeModal={closeModal}

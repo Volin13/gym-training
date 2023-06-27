@@ -1,9 +1,10 @@
-.disciplinesList_container {
+/* .disciplinesList_container {
   height: 719px;
-}
+} */
 
 .disciplinesList_list {
   display: flex;
+  flex-wrap: wrap;
 }
 .disciplinesList_list li:not(:last-of-type) {
   margin-right: 60px;
@@ -42,13 +43,20 @@
   border: 1px solid transparent;
   transition: all 500ms;
 }
+
+.disciplinesListItem__imageContainer:hover,
+.disciplinesListItem__imageContainer:focus,
+.disciplinesListItem__imageContainer:active {
+  border: 1px solid var(--activeColor);
+  box-shadow: 0px 1px 21px var(--activeColor);
+}
+
 .disciplinesListItem__imageContainerRegular {
   height: 400px;
   width: 511px;
 }
 .disciplinesListItem__imageContainerScaled {
   height: 299px;
-  border: 1px solid var(--activeColor);
 
   width: 511px;
 }
@@ -104,4 +112,22 @@
   font-weight: 300;
   font-size: 16px;
   line-height: 1.5;
+}
+
+@media screen and (min-width: 768px) and (max-width: 767px) {
+  .disciplinesList_list li:not(:last-of-type) {
+    margin-right: 60px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .disciplinesList_list li {
+    margin-bottom: 30px;
+  }
+  .disciplinesList_list li:not(:nth-child(2n)) {
+    margin-bottom: 0;
+  }
+  .disciplinesList_list li:not(:last-of-type) {
+    margin-right: 60px;
+  }
 }

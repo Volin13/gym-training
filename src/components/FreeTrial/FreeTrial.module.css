@@ -31,16 +31,14 @@
   }
   .freeTrial__text {
     display: block;
-    width: 525px;
+    margin-bottom: 30px;
+    width: 465px;
     line-height: 1.6;
   }
 
   .freeTrial__container {
     background-color: var(--activeColor);
-    width: 1200px;
     display: flex;
-    flex-direction: row;
-
     justify-content: space-between;
     align-items: center;
     padding: 24px 65px 25px 110px;
@@ -49,7 +47,14 @@
 }
 
 @media screen and (min-width: 1440px) {
+  .freeTrial__container {
+    flex-direction: row;
+  }
   .secondaryBtn {
     font-size: 20px;
+  }
+  .freeTrial__text {
+    width: 525px;
+    margin-bottom: 0;
   }
 }

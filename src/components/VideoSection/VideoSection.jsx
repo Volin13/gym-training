@@ -7,7 +7,7 @@ const VideoSection = () => {
     width: '100%',
     playerVars: {
       // https://developers.google.com/youtube/player_parameters
-      // autoplay: 1,
+      autoplay: 1,
       enablejsapi: 1,
       controls: 0,
       modestbranding: 1,
@@ -18,7 +18,7 @@ const VideoSection = () => {
     },
   };
   const styles = {
-    width: '1200px',
+    width: '100%',
     height: '548px',
   };
 

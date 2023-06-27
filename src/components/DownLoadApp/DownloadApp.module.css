@@ -10,11 +10,10 @@
 .downloadApp__title {
   margin: 0 auto;
   font-weight: 600;
-  font-size: 48px;
+  font-size: 34px;
   color: var(--primaryWhiteColor);
-  width: 626px;
-  height: 164px;
-  margin-bottom: 30px;
+  width: 344px;
+  margin-bottom: 28px;
 }
 .downloadApp__text {
   display: none;
@@ -35,8 +34,17 @@
   scale: 1.1;
 }
 .appAddImage {
-  width: 543px;
-  height: 520px;
+  width: 230px;
+}
+@media screen and (max-width: 767px) {
+  .downloadApp__storeLinks {
+    display: flex;
+    width: 186px;
+    margin: 0 auto 40px;
+    overflow: hidden;
+    justify-content: center;
+    flex-direction: column;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -48,6 +56,16 @@
     font-weight: 600;
     font-size: 20px;
     margin-bottom: 60px;
+  }
+  .downloadApp__title {
+    font-size: 48px;
+    width: 626px;
+    height: 164px;
+    margin-bottom: 30px;
+  }
+  .appAddImage {
+    width: 543px;
+    height: 520px;
   }
 }
 

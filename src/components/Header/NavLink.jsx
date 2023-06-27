@@ -1,12 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const NavLink = ({ text, navLinkClassName, scrollFunc, refEl }) => {
+const NavLink = ({
+  text,
+  navLinkClassName,
+  scrollFunc,
+  closeModal,
+  refEl,
+}) => {
   return (
     <button
       className={navLinkClassName}
       onClick={() => {
         scrollFunc(refEl);
+        closeModal();
       }}
     >
       {text}

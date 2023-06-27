@@ -21,7 +21,7 @@
   left: 50%;
   transform: translateX(-50%);
   height: 98%;
-  width: 97%;
+  width: 96%;
   background-color: var(--bgColor);
   position: absolute;
   z-index: 5;

@@ -1,9 +1,12 @@
 .heroImg {
-  padding: 281px 0 253px 120px;
+  padding: 250px 0 10px 20px;
   position: relative;
   margin: 0 auto;
-  width: 1440px;
+  width: 375px;
   height: 960px;
+
+  background-position: 60% 0;
+
   background-size: cover;
   background-repeat: no-repeat;
 
@@ -32,14 +35,14 @@
   height: 426px;
 }
 .heroTitle {
-  width: 494px;
-  height: 218px;
+  width: 271px;
   font-family: 'Orbitron', sans-serif;
   font-weight: 700;
-  font-size: 64px;
+  font-size: 56px;
   margin-bottom: 35px;
 }
 .heroLegend {
+  display: none;
   font-weight: 500;
   margin-bottom: 35px;
 }
@@ -58,104 +61,52 @@
 
 @media screen and (min-width: 768px) {
   .heroImg {
+    background-position: center;
     padding: 100px 0 167px 68px;
-    position: relative;
-    margin: 0 auto;
     width: 768px;
     height: 512px;
-    background-size: cover;
-    background-repeat: no-repeat;
   }
   .heroText {
-    color: var(--primaryWhiteColor);
     width: 455px;
     height: 284px;
   }
   .heroTitle {
     width: 323px;
     height: 145px;
-    font-family: 'Orbitron', sans-serif;
-    font-weight: 700;
     font-size: 42px;
     margin-bottom: 24px;
   }
   .heroLegend {
-    font-weight: 500;
+    display: block;
     margin-bottom: 20px;
     font-size: 12px;
   }
   .gradientBox {
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-    left: 0;
     height: 114px;
-    background-image: linear-gradient(
-      180deg,
-      rgba(24, 23, 26, 0) 0%,
-      #18171a 100%
-    );
   }
 }
 
 @media screen and (min-width: 1440px) {
   .heroImg {
     padding: 281px 0 253px 120px;
-    position: relative;
-    margin: 0 auto;
     width: 1440px;
     height: 960px;
-    background-size: cover;
-    background-repeat: no-repeat;
-
-    background-image: linear-gradient(
-        0deg,
-        rgba(0, 0, 0, 0.2),
-        rgba(0, 0, 0, 0.2)
-      ),
-      url('../../assets/images/hero/heroImage1x-min.jpg');
-  }
-  @media screen and (min-device-pixel-ratio: 2),
-    (min-resolution: 192dpi),
-    (min-resolution: 2dppx) {
-    .authBackgroundImg {
-      background-image: url('../../assets/images/hero/heroImage2x-min.jpg');
-    }
-  }
-  .styledText {
-    color: transparent;
-    -webkit-text-stroke-width: 1.5px;
-    -webkit-text-stroke-color: var(--activeColor);
   }
   .heroText {
-    color: var(--primaryWhiteColor);
     width: 682px;
     height: 426px;
   }
   .heroTitle {
     width: 494px;
     height: 218px;
-    font-family: 'Orbitron', sans-serif;
-    font-weight: 700;
     font-size: 64px;
     margin-bottom: 35px;
   }
   .heroLegend {
-    font-weight: 500;
     font-size: 18px;
-
     margin-bottom: 35px;
   }
   .gradientBox {
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-    left: 0;
     height: 171px;
-    background-image: linear-gradient(
-      180deg,
-      rgba(24, 23, 26, 0) 0%,
-      #18171a 100%
-    );
   }
 }

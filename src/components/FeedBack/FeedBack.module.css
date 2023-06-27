@@ -36,3 +36,14 @@
   height: auto;
   display: block;
 }
+@media screen and (min-width: 768px) and (max-width: 1440px) {
+  .feedBackItem__container {
+    width: 320px;
+  }
+}
+/* 
+@media screen and (min-width: 1440px) {
+  .classItem__thumb {
+    width: 374px;
+  }
+} */

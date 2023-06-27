@@ -19,7 +19,20 @@ const FeedBack = ({ feedbackSectionRef }) => {
       setFeedbackList(res.records);
     });
   }, []);
-
+  const breakpoints = {
+    375: {
+      slidesPerView: 1,
+      spaceBetween: 20,
+    },
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 30,
+    },
+    1440: {
+      slidesPerView: 3,
+      spaceBetween: 60,
+    },
+  };
   return (
     <StyledtWrapper>
       <div className="container">
@@ -40,8 +53,7 @@ const FeedBack = ({ feedbackSectionRef }) => {
             modules={[Pagination, Autoplay]}
             autoplay
             mousewheel={true}
-            spaceBetween={60}
-            slidesPerView={3}
+            breakpoints={breakpoints}
             pagination={{ clickable: true }}
             scrollbar={{ draggable: true }}
             onSlideChange={() => console.log('slide change')}

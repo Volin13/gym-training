@@ -12,13 +12,6 @@ const FreeTrialModal = ({ closeModal, modalIsOpen }) => {
       shouldCloseOnOverlayClick={true}
       isOpen={modalIsOpen}
       ariaHideApp={false}
-      //   //   onAfterOpen={afterOpenModal}
-      //   style={{
-      //     border: 'none',
-      //     padding: 'none',
-      //     width: '1000px',
-      //     height: '600px',
-      //   }}
       contentLabel="Start Free Trial"
       preventScroll={true}
       onRequestClose={closeModal}

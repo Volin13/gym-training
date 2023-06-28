@@ -63,7 +63,6 @@
 
 .qaListItem__answerTextContainer {
   height: 211px;
-  overflow: scroll;
   padding: 17px 50px;
 }
 
@@ -73,6 +72,7 @@
   }
   .qaListItem__answerTextContainer {
     padding: 40px 70px;
+    overflow: scroll;
     height: auto;
   }
 }

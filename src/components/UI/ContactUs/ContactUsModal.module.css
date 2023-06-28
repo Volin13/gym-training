@@ -45,15 +45,15 @@
   inset: 0px;
 }
 .freeTrialModal_modal {
-  width: 920px;
+  width: 300px;
   height: 580px;
-  left: 50%;
-  top: 50%;
+  left: 0;
+  top: 0;
   position: absolute;
   border-radius: 5px;
   z-index: 3;
   background-color: var(--bgColor);
-  transform: translate(-50%, -50%);
+  transform: translate(15%, 15%);
   transition: all 1000ms;
 }
 
@@ -139,6 +139,7 @@
 /* content */
 .content_format {
   display: flex;
+  flex-direction: column;
   gap: 20px;
   color: var(--secondaryWhiteColor);
 }
@@ -159,4 +160,23 @@
   flex-direction: column;
   justify-content: space-between;
   height: 400px;
+}
+
+@media screen and (min-width: 768px) {
+  .freeTrialModal_modal {
+    width: 800px;
+    height: 580px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .content_format {
+    flex-direction: row;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .freeTrialModal_modal {
+    width: 920px;
+  }
 }

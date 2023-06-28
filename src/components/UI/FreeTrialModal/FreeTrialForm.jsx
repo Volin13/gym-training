@@ -16,7 +16,6 @@ let initialValues = {
 const FreeTrialForm = () => {
   const nameInput = useRef(null);
   const emailInput = useRef(null);
-  // const [visibility, setVisibility] = useState(true);
   const [photo, setPhoto] = useState(null);
   const handleImageChange = e => {
     const selectedFile = e.target.files[0];
@@ -83,7 +82,7 @@ const FreeTrialForm = () => {
   const isValid = registrationSchema.isValidSync(formik.values);
   return (
     <div className={css.registrComponent}>
-      <div className="container">
+      <div>
         <div className={css.registrFormatting}>
           <div className={css.registrForm}>
             <form

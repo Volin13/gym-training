@@ -114,14 +114,6 @@ button {
   font: inherit;
 }
 /* Make images and embedded objects responsive */
-/* img,
-embed,
-object,
-video {
-  max-width: 100%;
-  height: auto;
-  display: block;
-} */
 
 input,
 textarea,

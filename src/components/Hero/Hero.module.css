@@ -29,6 +29,45 @@
   -webkit-text-stroke-width: 1.5px;
   -webkit-text-stroke-color: var(--activeColor);
 }
+.styledTextAnimation {
+  animation: fadeInAnimation 6s linear;
+}
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0.5;
+  }
+  20% {
+    opacity: 0.2;
+  }
+  35% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 0.3;
+  }
+  45% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 0.3;
+  }
+  55% {
+    opacity: 0.8;
+  }
+  60% {
+    opacity: 0.3;
+  }
+  65% {
+    opacity: 0.9;
+  }
+  60% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .heroText {
   color: var(--primaryWhiteColor);
   width: 682px;

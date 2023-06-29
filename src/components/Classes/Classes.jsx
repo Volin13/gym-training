@@ -17,7 +17,6 @@ const Classes = ({ classesSectionRef, scrollFunc }) => {
       setClasses(res.records);
     });
   }, []);
-  console.log(classes);
   return (
     <StyledtWrapper>
       <Title text="Classes" ref={classesSectionRef} />

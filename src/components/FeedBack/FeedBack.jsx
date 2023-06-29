@@ -3,6 +3,7 @@ import Title from 'components/UI/Title/Title';
 import StyledtWrapper from 'components/UI/StyledWrapper/StyledWrapper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Autoplay } from 'swiper';
+import { nanoid } from 'nanoid';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/autoplay';
@@ -13,12 +14,13 @@ import FeedBackItem from './FeedBackItem';
 import { getFeedBackList } from 'servises/API';
 const FeedBack = ({ feedbackSectionRef }) => {
   const [feedbackList, setFeedbackList] = useState([]);
-
   useEffect(() => {
     getFeedBackList().then(res => {
       setFeedbackList(res.records);
     });
   }, []);
+
+  console.log(feedbackList);
   const breakpoints = {
     375: {
       slidesPerView: 1,
@@ -63,7 +65,7 @@ const FeedBack = ({ feedbackSectionRef }) => {
               const { starsCount, name, feedBackText, avatar } =
                 values;
               return (
-                <SwiperSlide>
+                <SwiperSlide key={nanoid()}>
                   <FeedBackItem
                     feedBackText={feedBackText}
                     starsCount={starsCount}

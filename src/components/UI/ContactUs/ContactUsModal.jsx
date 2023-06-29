@@ -15,6 +15,7 @@ const ContactUsModal = ({ modalIsOpen, closeModal }) => {
   const apiKey = process.env.REACT_APP_REST_API_KEY;
   const mapStyles = {
     width: '260px',
+    heigh: '100%',
     border: '1px solid #ff4601',
     borderRadius: '5px',
   };

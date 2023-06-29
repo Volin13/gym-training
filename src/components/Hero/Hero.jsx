@@ -2,10 +2,12 @@ import FreeTrialModal from 'components/UI/FreeTrialModal/FreeTrialModal';
 import MainBtn from 'components/UI/MainBtn/MainBtn';
 import React from 'react';
 import { useState } from 'react';
+import { useInView } from 'react-intersection-observer';
 import css from './Hero.module.css';
 
 const Hero = () => {
   const [modalIsOpen, setIsOpen] = useState(false);
+  const [ref, inView] = useInView({});
   function openModal() {
     setIsOpen(true);
   }
@@ -17,8 +19,16 @@ const Hero = () => {
     <div className={css.heroImg}>
       <div className={css.heroText}>
         <h1 className={css.heroTitle}>
-          <span className={css.styledText}> Unleash</span> your Inner
-          Athlete
+          <span
+            ref={ref}
+            className={`${css.styledText} ${
+              inView && css.styledTextAnimation
+            }`}
+          >
+            {' '}
+            Unleash
+          </span>{' '}
+          your Inner Athlete
         </h1>
         <p className={css.heroLegend}>
           Get ready to sweat it out and achieve your fitness goals

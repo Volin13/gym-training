@@ -50,6 +50,7 @@
 @media screen and (min-width: 768px) {
   .styledWrapper__contaner {
     width: 768px;
+    padding: 60px 0 62px;
   }
   .downloadApp__text {
     display: block;
@@ -58,6 +59,8 @@
     margin-bottom: 60px;
   }
   .downloadApp__title {
+    margin: 0;
+
     font-size: 48px;
     width: 626px;
     height: 164px;
@@ -76,8 +79,6 @@
     padding: 80px 0 92px 120px;
   }
   .downloadApp__title {
-    margin: 0;
-    font-weight: 600;
     font-size: 48px;
     width: 626px;
     height: 164px;

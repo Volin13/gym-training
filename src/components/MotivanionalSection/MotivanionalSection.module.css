@@ -106,6 +106,7 @@
   .motivationalSection__image img {
     max-width: 100%;
     top: 0;
+    transform: translate(-50%, 8px);
   }
   .motivationalSection__imageBackground {
     width: 100%;

@@ -49,8 +49,10 @@ const CustomSelect = ({
 
       <div className={css.selected_option} onClick={toggleDropdown}>
         {selectedOption
-          ? classDifficalty || clasesName || selectedOption
-          : `${difficalty ? 'Difficalty' : 'Class'}`}
+          ? selectedOption
+          : classDifficalty ||
+            clasesName ||
+            `${difficalty ? 'Difficalty' : 'Class'}`}
       </div>
       {isOpenSelect && (
         <ul className={css.options}>

@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/gym-training/static/css/main.64ad68c7.css",
-    "main.js": "/gym-training/static/js/main.c2f7211c.js",
+    "main.css": "/gym-training/static/css/main.0cae9a82.css",
+    "main.js": "/gym-training/static/js/main.3316b33b.js",
     "static/media/styledBackground2x-min.jpg": "/gym-training/static/media/styledBackground2x-min.52f671edbe468dca6075.jpg",
     "static/media/desktopAppAdvertising2x-min.png": "/gym-training/static/media/desktopAppAdvertising2x-min.8a158d410b2e9becf10c.png",
     "static/media/heroImage2x-min.jpg": "/gym-training/static/media/heroImage2x-min.30af11716466412032b7.jpg",
@@ -27,6 +27,8 @@
     "static/media/appleStore.svg": "/gym-training/static/media/appleStore.cf92d273fd695713bc2e83dbe25e0d1b.svg",
     "static/media/tiktok-fill-svgrepo-com.svg": "/gym-training/static/media/tiktok-fill-svgrepo-com.d1e0b05cc622711ba538c0eca1f824f1.svg",
     "static/media/twitter-154-svgrepo-com.svg": "/gym-training/static/media/twitter-154-svgrepo-com.6735bbebae6ffc5ecdb59beb190c2a71.svg",
+    "static/media/arrow-down-338-svgrepo-com.svg": "/gym-training/static/media/arrow-down-338-svgrepo-com.8d2b96379ed77012a6b9566b983d896a.svg",
+    "static/media/arrow-up-337-svgrepo-com.svg": "/gym-training/static/media/arrow-up-337-svgrepo-com.5ecf448eaccf320a4ff6e48b00961c9f.svg",
     "index.html": "/gym-training/index.html",
     "static/media/studentIcon.svg": "/gym-training/static/media/studentIcon.2c568f627b5fff76c155a4d83fb49ac7.svg",
     "static/media/timerIcon.svg": "/gym-training/static/media/timerIcon.f12466b177375ceda3b56f0ea46454fc.svg",
@@ -40,11 +42,11 @@
     "static/media/user.svg": "/gym-training/static/media/user.543e22ad53cb6ff2aecb2820d4e94c72.svg",
     "static/media/facebook-svgrepo-com.svg": "/gym-training/static/media/facebook-svgrepo-com.03ba55af26ed64024be6c4742a29bfb4.svg",
     "static/media/menu-hamburger-svgrepo-com.svg": "/gym-training/static/media/menu-hamburger-svgrepo-com.da9ec93d3f785dedf69a0f0009678b13.svg",
-    "main.64ad68c7.css.map": "/gym-training/static/css/main.64ad68c7.css.map",
-    "main.c2f7211c.js.map": "/gym-training/static/js/main.c2f7211c.js.map"
+    "main.0cae9a82.css.map": "/gym-training/static/css/main.0cae9a82.css.map",
+    "main.3316b33b.js.map": "/gym-training/static/js/main.3316b33b.js.map"
   },
   "entrypoints": [
-    "static/css/main.64ad68c7.css",
-    "static/js/main.c2f7211c.js"
+    "static/css/main.0cae9a82.css",
+    "static/js/main.3316b33b.js"
   ]
 }

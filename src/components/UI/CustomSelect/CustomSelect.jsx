@@ -48,8 +48,8 @@ const CustomSelect = ({
       )}
 
       <div className={css.selected_option} onClick={toggleDropdown}>
-        {classDifficalty || clasesName || selectedOption
-          ? selectedOption
+        {selectedOption
+          ? classDifficalty || clasesName || selectedOption
           : `${difficalty ? 'Difficalty' : 'Class'}`}
       </div>
       {isOpenSelect && (

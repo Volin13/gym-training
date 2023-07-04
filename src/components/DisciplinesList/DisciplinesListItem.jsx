@@ -23,8 +23,6 @@ const DisciplinesListItem = forwardRef(function DisciplinesListItem(
 
   useEffect(() => {
     const scaleUpEl = () => {
-      console.log('tap');
-
       if (firstElRef) {
         setScaledEl(true);
 

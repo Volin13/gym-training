@@ -6,17 +6,42 @@ import FormInput from '../FornInput/FormInput';
 import switchImages from '../FornInput/switchImages';
 import HelperText from '../FornInput/HelperText';
 import MainBtn from '../MainBtn/MainBtn';
+import CustomSelect from '../CustomSelect/CustomSelect';
 
 let initialValues = {
   name: '',
   email: '',
-  position_id: null,
+  discipline: '',
+  difficalty: '',
   photo: null,
 };
-const FreeTrialForm = () => {
+const FreeTrialForm = ({ clasesName = '', classDifficalty = '' }) => {
   const nameInput = useRef(null);
   const emailInput = useRef(null);
   const [photo, setPhoto] = useState(null);
+
+  const [selectedOption, setSelectedOption] = useState('');
+
+  const difficalty = ['beginner', 'medium', 'hard'];
+  const disciplines = [
+    'yoga',
+    'fitness',
+    'boxing',
+    'crossfit',
+    'zumba',
+  ];
+  const handleSelectChange = option => {
+    setSelectedOption(option);
+    if (difficalty.indexOf(option) === 1) {
+      formik.setFieldValue('difficalty', option);
+      return;
+    }
+    if (disciplines.indexOf(option) === 1) {
+      formik.setFieldValue('discipline', option);
+      return;
+    }
+  };
+
   const handleImageChange = e => {
     const selectedFile = e.target.files[0];
     if (selectedFile) {
@@ -137,6 +162,22 @@ const FreeTrialForm = () => {
                     />
                   )}
                 </div>
+                <div className={css.selectSection}>
+                  <CustomSelect
+                    options={disciplines}
+                    clasesName={clasesName}
+                    selectedOption={selectedOption}
+                    onChange={handleSelectChange}
+                  />
+                  <CustomSelect
+                    options={difficalty}
+                    difficalty={difficalty}
+                    classDifficalty={classDifficalty}
+                    selectedOption={selectedOption}
+                    onChange={handleSelectChange}
+                  />
+                </div>
+
                 <div className={css.avatarChanger}>
                   <input
                     type="text"

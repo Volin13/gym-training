@@ -20,7 +20,6 @@ const FeedBack = ({ feedbackSectionRef }) => {
     });
   }, []);
 
-  console.log(feedbackList);
   const breakpoints = {
     375: {
       slidesPerView: 1,

@@ -48,6 +48,7 @@
 @media screen and (max-width: 767px) {
   .teamList li {
     margin-bottom: 20px;
+    padding-top: 15px;
   }
   .teamList {
     overflow: hidden;
@@ -58,7 +59,7 @@
   height: auto;
 }
 .teamList_closed {
-  height: 510px;
+  height: 530px;
 }
 
 @media screen and (min-width: 768px) {
@@ -73,6 +74,7 @@
   }
   .teamList li {
     margin-bottom: 20px;
+    padding-top: 0;
   }
 }
 

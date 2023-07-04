@@ -31,7 +31,6 @@ const ContactUsModal = ({ modalIsOpen, closeModal }) => {
       isOpen={modalIsOpen}
       ariaHideApp={false}
       contentLabel="Contact Us Section"
-      preventScroll={true}
       onRequestClose={closeModal}
       className={css.freeTrialModal_modal}
       overlayClassName={css.freeTrialModal__overlay}

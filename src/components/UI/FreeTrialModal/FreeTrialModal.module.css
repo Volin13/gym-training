@@ -47,15 +47,15 @@
   inset: 0px;
 }
 .freeTrialModal_modal {
-  width: 50%;
+  width: 347px;
   height: 580px;
-  left: 0;
-  top: 0;
+  left: 50%;
+  top: 50%;
   position: absolute;
   border-radius: 5px;
   z-index: 3;
   background-color: var(--bgColor);
-  transform: translate(4%, 15%);
+  transform: translate(-50%, -50%);
   transition: all 1000ms;
 }
 
@@ -151,13 +151,20 @@
 .formInputArea {
   position: relative;
   height: 45px;
-  margin-bottom: 40px;
+  margin-bottom: 25px;
 }
+
+.selectSection {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
 .avatarChanger {
   display: flex;
   position: relative;
   flex-direction: row-reverse;
-  margin-bottom: 50px;
+  margin-bottom: 25px;
 }
 .inputTypeFile {
   display: none;
@@ -215,7 +222,7 @@
 }
 .helpInfo {
   position: absolute;
-  bottom: 20px;
+  bottom: 30px;
   font-size: 16px;
   width: 236px;
   left: 50%;
@@ -223,6 +230,9 @@
   color: var(--activeColor);
 }
 @media screen and (min-width: 768px) {
+  .formInputArea {
+    margin-bottom: 25px;
+  }
   .mockButton {
     height: 54px;
     width: 83px;
@@ -243,7 +253,7 @@
   }
   .helpInfo {
     font-size: 18px;
-    width: 300px;
+    width: 320px;
   }
 }
 

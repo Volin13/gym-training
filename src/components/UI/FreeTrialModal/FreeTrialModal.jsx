@@ -6,14 +6,18 @@ import Logo from '../Logo/Logo';
 import FreeTrialForm from './FreeTrialForm';
 import PropTypes from 'prop-types';
 
-const FreeTrialModal = ({ closeModal, modalIsOpen }) => {
+const FreeTrialModal = ({
+  closeModal,
+  modalIsOpen,
+  clasesName = '',
+  difficalty = '',
+}) => {
   return (
     <Modal
       shouldCloseOnOverlayClick={true}
       isOpen={modalIsOpen}
       ariaHideApp={false}
       contentLabel="Start Free Trial"
-      preventScroll={true}
       onRequestClose={closeModal}
       className={css.freeTrialModal_modal}
       overlayClassName={css.freeTrialModal__overlay}
@@ -27,7 +31,10 @@ const FreeTrialModal = ({ closeModal, modalIsOpen }) => {
           <CloseIcon />
         </button>
         <Logo logoFormattingClass={css.freeTrialModal_logo} />
-        <FreeTrialForm />
+        <FreeTrialForm
+          clasesName={clasesName}
+          classDifficalty={difficalty}
+        />
       </div>
       <div className={css.freeTrialModal_container}>
         <div

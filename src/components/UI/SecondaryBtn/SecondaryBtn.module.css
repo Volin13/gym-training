@@ -1,7 +1,7 @@
 .secondaryBtn {
   clip-path: polygon(7% 0, 100% 0%, 93% 100%, 0% 100%);
   font-weight: 500;
-  font-size: 12px;
+  font-size: 16px;
   line-height: 1.25;
   color: var(--primaryWhiteColor);
   transition: all 500ms;
@@ -28,11 +28,6 @@
 }
 .secondaryBtnConatiner {
   position: relative;
-}
-@media screen and (min-width: 768px) {
-  .secondaryBtn {
-    font-size: 14px;
-  }
 }
 
 @media screen and (min-width: 1440px) {

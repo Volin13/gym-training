@@ -127,6 +127,9 @@
   margin-bottom: 20px;
   list-style-type: disc;
 }
+.classItem__list li {
+  margin-left: 20px;
+}
 .classItem__btnGroup {
   display: flex;
   justify-content: space-between;

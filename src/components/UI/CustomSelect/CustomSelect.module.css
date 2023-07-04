@@ -1,0 +1,47 @@
+.custom_select {
+  border: 1px solid var(--activeColor);
+  padding: 7px;
+  padding-right: 25px;
+  text-align: start;
+  border-radius: 5px;
+  color: var(--secondaryWhiteColor);
+  position: relative;
+  width: 50%;
+  opacity: 0.8;
+  cursor: pointer;
+}
+.custom_select:hover,
+.custom_select:focus,
+.custom_select:active {
+  opacity: 1;
+}
+.selectIcon {
+  background-color: transparent;
+  border: none;
+  fill: var(--secondaryWhiteColor);
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  transform: translate(0, -50%);
+  width: 20px;
+  height: 20px;
+}
+
+.selected {
+  color: var(--activeColor);
+}
+.options {
+  position: absolute;
+  left: 0;
+  padding: 10px 0 10px 10px;
+  background-color: var(--bgColor);
+  width: 100%;
+  z-index: 2;
+  border-radius: 5px;
+}
+
+.options li:hover,
+.options li:focus,
+.options li:active {
+  color: var(--activeColor);
+}

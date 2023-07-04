@@ -21,9 +21,11 @@ const ClassItem = ({
   const [modalIsOpen, setIsOpen] = useState(false);
   function openModal() {
     setIsOpen(true);
+    document.body.classList.add('noScroll');
   }
   function closeModal() {
     setIsOpen(false);
+    document.body.classList.remove('noScroll');
   }
   return (
     <div className={css.classItem__thumb}>
@@ -89,6 +91,8 @@ const ClassItem = ({
           secondaryBtnConatiner={css.classItem__freeTrialBtn}
         />
         <FreeTrialModal
+          difficalty={difficalty}
+          clasesName={discipline}
           modalIsOpen={modalIsOpen}
           closeModal={closeModal}
         />

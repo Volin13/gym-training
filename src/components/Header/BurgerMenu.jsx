@@ -17,6 +17,7 @@ const BurgerMenu = ({
   feedbackSectionRef,
   openModal,
   scrollFunc,
+  qASectionRef,
 }) => {
   return (
     <Modal
@@ -60,10 +61,10 @@ const BurgerMenu = ({
             <li className={css.header__navItem}>
               <NavLink
                 navLinkClassName={css.header__navLink}
-                text="About Us"
+                text="Q &#38; A"
                 scrollFunc={scrollFunc}
                 closeModal={closeModal}
-                // refEl={aboutUsSectionRef}
+                refEl={qASectionRef}
               />
             </li>
             <li className={css.header__navItem}>

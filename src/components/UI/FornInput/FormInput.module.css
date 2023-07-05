@@ -1,6 +1,7 @@
 .formIcon {
   position: absolute;
-  top: 28%;
+  top: 50%;
+  transform: translate(0, -50%);
   left: 14px;
   stroke: var(--secondaryWhiteColor);
   opacity: 0.8;
@@ -11,7 +12,7 @@
 
 .formStateIcon {
   position: absolute;
-  top: 50%;
+  top: 45%;
   right: 18px;
   transform: translate(0, -50%);
   border-radius: 50%;
@@ -116,6 +117,7 @@
     left: 5%;
     width: 24px;
     height: 24px;
+    fill: transparent;
   }
 }
 .clearButton {

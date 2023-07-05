@@ -15,7 +15,7 @@
 }
 
 .freeTrialModal_modalContent {
-  padding: 60px 15px 15px;
+  padding: 25px 15px 15px;
   left: 50%;
   transform: translateX(-50%);
   height: 98%;
@@ -133,17 +133,19 @@
 }
 .freeTrialModal_logo {
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 /* content */
 .content_format {
   display: flex;
   flex-direction: column;
-  gap: 20px;
   color: var(--secondaryWhiteColor);
 }
-
+.addressList li {
+  display: flex;
+  align-items: center;
+}
 .addressList li:not(:last-of-type) {
   margin-bottom: 15px;
 }
@@ -151,24 +153,87 @@
   transition: all 500ms;
 }
 
-.addressList a:hover,
-.addressList a:focus {
+.addressList a:hover + .addressIcon *,
+.addressList a:focus + .addressIcon * {
   color: var(--activeColor);
+  fill: var(--secondaryWhiteColor);
+  stroke: var(--activeColor);
 }
 .addressSection {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 400px;
+}
+
+.addressSection address {
+  margin-bottom: 15px;
+}
+
+.addressIcon {
+  width: 30px;
+  height: 30px;
+  fill: var(--activeColor);
+  stroke: var(--secondaryWhiteColor);
+  margin-right: 10px;
+}
+.map {
+  display: none;
+}
+/* ContactUsForm */
+
+.contactUs__Form {
+  margin: 0 auto;
+}
+.formInputArea {
+  width: 100%;
+  height: 100%;
+}
+.formIinputFormat {
+  position: relative;
+  margin-bottom: 27px;
+  width: 260px;
+  height: 30px;
+}
+.contactUs__textArea {
+  width: 260px;
+  padding: 5px;
+  background-color: transparent;
+  outline: none;
+  color: var(--activeColor);
+
+  font-size: 15px;
+  border-radius: 5px;
+  border: 1px solid var(--activeColor);
+}
+.contactUs__textArea::placeholder {
+  color: var(--secondaryWhiteColor);
 }
 
 @media screen and (min-width: 768px) {
+  .freeTrialModal_modalContent {
+    padding: 45px 15px 15px;
+  }
+  .content_format {
+    gap: 20px;
+  }
+  .freeTrialModal_logo {
+    margin-bottom: 20px;
+  }
+  .map {
+    display: block;
+  }
+  .addressSection address {
+    margin-bottom: 30px;
+  }
   .freeTrialModal_modal {
     width: 800px;
     height: 580px;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+  }
+  .addressSection {
+    height: 400px;
   }
   .content_format {
     flex-direction: row;

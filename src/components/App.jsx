@@ -15,7 +15,7 @@ import VideoSection from './VideoSection/VideoSection';
 export const App = () => {
   const classesSection = useRef(null);
   const teamSection = useRef(null);
-  const aboutUsSection = useRef(null);
+  const qASectionRef = useRef(null);
   const feedbackSectionRef = useRef(null);
 
   const handleUsersSectionІScroll = ref => {
@@ -27,7 +27,7 @@ export const App = () => {
         scrollFunc={handleUsersSectionІScroll}
         classesSectionRef={classesSection}
         teamSectionRef={teamSection}
-        aboutUsSectionRef={aboutUsSection}
+        qASectionRef={qASectionRef}
         feedbackSectionRef={feedbackSectionRef}
       />
       <Hero />
@@ -44,7 +44,7 @@ export const App = () => {
       <DownloadApp />
       <VideoSection />
       <FeedBack feedbackSectionRef={feedbackSectionRef} />
-      <QuestionsAndAnswers />
+      <QuestionsAndAnswers qASectionRef={qASectionRef} />
       <FreeTrial />
       <Footer />
     </>

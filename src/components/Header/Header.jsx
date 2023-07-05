@@ -12,7 +12,7 @@ const Header = ({
   scrollFunc,
   classesSectionRef,
   teamSectionRef,
-  // aboutUsSectionRef,
+  qASectionRef,
   feedbackSectionRef,
 }) => {
   const [contactModalIsOpen, setContactsIsOpen] = useState(false);
@@ -66,9 +66,10 @@ const Header = ({
             <li className={css.header__navItem}>
               <NavLink
                 navLinkClassName={css.header__navLink}
-                text="About Us"
+                text="Q &#38; A"
                 scrollFunc={scrollFunc}
-                // refEl={aboutUsSectionRef}
+                closeModal={closeModal}
+                refEl={qASectionRef}
               />
             </li>
             <li className={css.header__navItem}>
@@ -103,6 +104,7 @@ const Header = ({
           scrollFunc={scrollFunc}
           classesSectionRef={classesSectionRef}
           teamSectionRef={teamSectionRef}
+          qASectionRef={qASectionRef}
           feedbackSectionRef={feedbackSectionRef}
           contactModalIsOpen={contactModalIsOpen}
           burgerModalIsOpen={burgerModalIsOpen}

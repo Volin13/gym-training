@@ -8,12 +8,14 @@ const Footer = () => {
     <div className={css.footer}>
       <Logo logoFormattingClass={css.footer__logoFormatting} />
       <p className={css.footer__legend}>
-        Join us today and experience the transformative power of our fitness
-        classes. Don't wait to start your fitness journey. Take the first step
-        towards a healthier, stronger you. Let's sweat, have fun, and make
-        fitness a way of life together!
+        Join us today and experience the transformative power of our
+        fitness classes. Don't wait to start your fitness journey.
+        Take the first step towards a healthier, stronger you. Let's
+        sweat, have fun, and make fitness a way of life together!
       </p>
-      <SocialMediaLinks />
+      <div style={{ marginBottom: '40px' }}>
+        <SocialMediaLinks />
+      </div>
       <hr className={css.footer__horizontalLine} />
       <span className={css.footer__credits}>
         &#169; SPYRO 2023. All rights reserved.

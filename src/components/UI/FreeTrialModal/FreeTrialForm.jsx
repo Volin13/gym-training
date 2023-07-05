@@ -76,7 +76,8 @@ const FreeTrialForm = ({ clasesName = '', classDifficalty = '' }) => {
       .max(254, 'Your email is too long')
       .lowercase()
       .required('Type your email please'),
-    position_id: yup.string().required('Choose your position'),
+    difficalty: yup.string().required('Choose difficalty'),
+    discipline: yup.string().required('Choose discipline'),
     photo: yup
       .mixed()
       .nullable()

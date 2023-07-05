@@ -3,14 +3,14 @@ import React, { useRef } from 'react';
 import css from './QA.module.css';
 import QAListItem from './QAListItem';
 
-const QuestionsAndAnswers = () => {
+const QuestionsAndAnswers = ({ qASectionRef }) => {
   const firstElementRef = useRef(null);
   const secondElementRef = useRef(null);
   const thirdElementRef = useRef(null);
   const fourthElementRef = useRef(null);
   return (
     <div className={`${css.qa__container} container`}>
-      <Title text="Frequently Asked Question" />
+      <Title text="Frequently Asked Question" ref={qASectionRef} />
       <ul className={css.qa__list}>
         <li>
           <QAListItem

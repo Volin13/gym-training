@@ -1,22 +1,19 @@
 {
   "files": {
-    "main.css": "/gym-training/static/css/main.15dd8be1.css",
-    "main.js": "/gym-training/static/js/main.c79ab013.js",
+    "main.css": "/gym-training/static/css/main.b57dde31.css",
+    "main.js": "/gym-training/static/js/main.e96f56e1.js",
     "static/media/styledBackground2x-min.jpg": "/gym-training/static/media/styledBackground2x-min.52f671edbe468dca6075.jpg",
     "static/media/desktopAppAdvertising2x-min.png": "/gym-training/static/media/desktopAppAdvertising2x-min.8a158d410b2e9becf10c.png",
     "static/media/heroImage2x-min.jpg": "/gym-training/static/media/heroImage2x-min.30af11716466412032b7.jpg",
     "static/media/desktopAppAdvertising1x-min.png": "/gym-training/static/media/desktopAppAdvertising1x-min.caff3c475d113b25caab.png",
     "static/media/videoImg2x-min.jpg": "/gym-training/static/media/videoImg2x-min.0e2b9119b6a9761678a5.jpg",
-    "static/media/gymImageDesktop2x-min.jpg": "/gym-training/static/media/gymImageDesktop2x-min.f057a7b5d98698e61cc4.jpg",
     "static/media/heroImage1x-min.jpg": "/gym-training/static/media/heroImage1x-min.a5caea1e094a715cd837.jpg",
-    "static/media/CrossfitImg2x-min.jpg": "/gym-training/static/media/CrossfitImg2x-min.baf8fd83cf2430ee6c42.jpg",
     "static/media/footerImage2x-min.jpg": "/gym-training/static/media/footerImage2x-min.c39d8ebc54e051555314.jpg",
     "static/media/leslieAlexander2x-min.jpg": "/gym-training/static/media/leslieAlexander2x-min.739d497aa6b45981c814.jpg",
     "static/media/videoImg1x-min.jpg": "/gym-training/static/media/videoImg1x-min.41f1310affb315e6f151.jpg",
     "static/media/jacobJones2x-min.jpg": "/gym-training/static/media/jacobJones2x-min.04c940e4777f2a770522.jpg",
     "static/media/janeCooper2x-min.jpg": "/gym-training/static/media/janeCooper2x-min.088bba583f87cd8f3ae1.jpg",
     "static/media/styledBackground1x-min.jpg": "/gym-training/static/media/styledBackground1x-min.ffe999b6122cece74023.jpg",
-    "static/media/CrossfitImg1x-min.jpg": "/gym-training/static/media/CrossfitImg1x-min.0b838c577c8f915ca829.jpg",
     "static/media/cameronWilliamson2x-min.jpg": "/gym-training/static/media/cameronWilliamson2x-min.01b547c73b4191105ef7.jpg",
     "static/media/footerImage1x-min.jpg": "/gym-training/static/media/footerImage1x-min.a500a00c3e96c11526c5.jpg",
     "static/media/leslieAlexander1x-min.jpg": "/gym-training/static/media/leslieAlexander1x-min.a4d47497b4f9c34e4ff9.jpg",
@@ -44,11 +41,11 @@
     "static/media/user.svg": "/gym-training/static/media/user.543e22ad53cb6ff2aecb2820d4e94c72.svg",
     "static/media/facebook-svgrepo-com.svg": "/gym-training/static/media/facebook-svgrepo-com.03ba55af26ed64024be6c4742a29bfb4.svg",
     "static/media/menu-hamburger-svgrepo-com.svg": "/gym-training/static/media/menu-hamburger-svgrepo-com.da9ec93d3f785dedf69a0f0009678b13.svg",
-    "main.15dd8be1.css.map": "/gym-training/static/css/main.15dd8be1.css.map",
-    "main.c79ab013.js.map": "/gym-training/static/js/main.c79ab013.js.map"
+    "main.b57dde31.css.map": "/gym-training/static/css/main.b57dde31.css.map",
+    "main.e96f56e1.js.map": "/gym-training/static/js/main.e96f56e1.js.map"
   },
   "entrypoints": [
-    "static/css/main.15dd8be1.css",
-    "static/js/main.c79ab013.js"
+    "static/css/main.b57dde31.css",
+    "static/js/main.e96f56e1.js"
   ]
 }

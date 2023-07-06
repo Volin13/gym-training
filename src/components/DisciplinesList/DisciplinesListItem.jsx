@@ -1,97 +1,26 @@
-import React, { forwardRef, useEffect, useState } from 'react';
+import React, { useRef } from 'react';
 import css from './DisciplinesList.module.css';
 import PropTypes from 'prop-types';
 
-const DisciplinesListItem = forwardRef(function DisciplinesListItem(
-  props,
-  ref
-) {
-  const {
-    titleText,
-    description,
-    image = '',
-    firstElRef,
-    secondElRef,
-    thirdElRef,
-    fourthElRef,
-  } = props;
-  const [scaledFirstEl, scaleUpFirstEl] = useState(true);
-  const [scaledSecondEl, scaleUpSecondEl] = useState(false);
-  const [scaledThirdEl, scaleUpThirdEl] = useState(false);
-  const [scaledFourth, scaleUpFourthEl] = useState(false);
-  const [scaled, setScaledEl] = useState(false);
+const DisciplinesListItem = ({
+  titleText,
+  description,
+  imageDesktop,
+  imageTablet,
+  imageMobile,
+  onMouseEnter,
+  itemId,
+  activeItemId,
+}) => {
+  const elRef = useRef(null);
 
-  useEffect(() => {
-    const scaleUpEl = () => {
-      if (firstElRef) {
-        setScaledEl(true);
-
-        scaleUpFirstEl(true);
-        scaleUpSecondEl(false);
-        scaleUpThirdEl(false);
-        scaleUpFourthEl(false);
-        console.log('first');
-        return;
-      }
-      if (secondElRef) {
-        setScaledEl(true);
-
-        scaleUpFirstEl(false);
-        scaleUpSecondEl(true);
-        scaleUpThirdEl(false);
-        scaleUpFourthEl(false);
-        console.log('second');
-        return;
-      }
-      if (thirdElRef) {
-        setScaledEl(true);
-
-        scaleUpFirstEl(false);
-        scaleUpSecondEl(false);
-        scaleUpThirdEl(true);
-        scaleUpFourthEl(false);
-        console.log('third');
-        return;
-      }
-      if (fourthElRef) {
-        scaleUpFirstEl(false);
-        setScaledEl(true);
-
-        scaleUpSecondEl(false);
-        scaleUpThirdEl(false);
-        scaleUpFourthEl(true);
-        console.log('fourth');
-        return;
-      }
-      setScaledEl(false);
-
-      return;
-    };
-    if (ref) {
-      ref.current.addEventListener('mouseenter', scaleUpEl);
-    }
-    return () => {
-      document.removeEventListener('mouseenter', scaleUpEl);
-    };
-  }, [
-    setScaledEl,
-    scaledFirstEl,
-    scaledSecondEl,
-    scaledThirdEl,
-    scaledFourth,
-    firstElRef,
-    secondElRef,
-    thirdElRef,
-    fourthElRef,
-    ref,
-    scaled,
-  ]);
+  const scaled = itemId === activeItemId;
 
   return (
     <div
-      // onMouseOver={scaleUpEl}
-      ref={ref}
-      //   onMouseOut={scaleDownEl}
+      onMouseEnter={() => onMouseEnter(itemId)}
+      onClick={() => onMouseEnter(itemId)}
+      ref={elRef}
       className={`${css.disciplinesListItem__container} 
     ${
       scaled
@@ -99,6 +28,11 @@ const DisciplinesListItem = forwardRef(function DisciplinesListItem(
         : css.disciplinesListItem__containerRegular
     }`}
     >
+      <div
+        className={`${css.gradientBox} ${
+          scaled ? css.gradientScaled : css.gradientRegular
+        }`}
+      ></div>
       <div
         className={`${css.disciplinesListItem__imageContainer} 
        ${
@@ -111,53 +45,41 @@ const DisciplinesListItem = forwardRef(function DisciplinesListItem(
           <source
             media="(min-width: 1440px)"
             srcSet={`
-          ${image} 1x,
-          ${image} 2x`}
+          ${imageTablet} 1x,
+          ${imageDesktop} 2x`}
             type="image/png"
           />
-          {/* 
-      <source
-        media="(min-width: 768px)"
-        srcSet="
-          https://dummyimage.com/640x320/81E6D9/1A202C.webp 1x,
-          https://dummyimage.com/1280x640/81E6D9/1A202C.webp 2x"
-        type="image/webp"
-      />
-      <source
-        media="(min-width: 768px)"
-        srcSet="
-          https://dummyimage.com/640x320/81E6D9/1A202C.jpg 1x,
-          https://dummyimage.com/1280x640/81E6D9/1A202C.jpg 2x"
-      /> */}
+
+          <source
+            media="(min-width: 768px)"
+            srcSet={`
+        ${imageMobile} 1x,
+        ${imageTablet} 2x`}
+            type="image/png"
+          />
 
           <source
             media="(min-width: 0px)"
             srcSet={`
-        ${image} 1x,
-        ${image} 2x`}
+        ${imageMobile} 1x,
+        ${imageTablet} 2x`}
             type="image/png"
           />
           <img
             className={`
             ${
-              (scaled && scaledFirstEl) ||
-              (scaled && scaledSecondEl) ||
-              (scaled && scaledThirdEl) ||
-              (scaled && scaledFourth)
+              scaled
                 ? css.disciplinesListItem__imageScaled
                 : css.disciplinesListItem__imageRegular
             }`}
-            src={image}
-            alt="Mobile app advertising"
+            src={imageTablet}
+            alt="Sport discipline"
           />
         </picture>
         <h3
-          className={`${css.disciplinesListItem__imageContainer} 
+          className={`
        ${
-         (scaled && scaledFirstEl) ||
-         (scaled && scaledSecondEl) ||
-         (scaled && scaledThirdEl) ||
-         (scaled && scaledFourth)
+         scaled
            ? css.disciplinesListItem__demoTitleHide
            : css.disciplinesListItem__demoTitleShow
        }`}
@@ -178,7 +100,7 @@ const DisciplinesListItem = forwardRef(function DisciplinesListItem(
       </div>
     </div>
   );
-});
+};
 
 DisciplinesListItem.propTypes = {
   titleText: PropTypes.string,

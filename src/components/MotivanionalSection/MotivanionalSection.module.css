@@ -104,9 +104,9 @@
     height: 400px;
   }
   .motivationalSection__image img {
-    max-width: 100%;
-    top: 0;
-    transform: translate(-50%, 8px);
+    width: 100%;
+    top: 50%;
+    transform: translate(-50%, -50%);
   }
   .motivationalSection__imageBackground {
     width: 100%;

@@ -7,7 +7,6 @@ import Footer from './Footer/Footer';
 import FreeTrial from './FreeTrial/FreeTrial';
 import Header from './Header/Header';
 import Hero from './Hero/Hero';
-import MotivanionalSection from './MotivanionalSection/MotivanionalSection';
 import QuestionsAndAnswers from './Q&A/QA';
 import Team from './Team/Team';
 import VideoSection from './VideoSection/VideoSection';
@@ -32,7 +31,6 @@ export const App = () => {
       />
       <Hero />
       <DisciplinesList />
-      <MotivanionalSection />
       <Classes
         classesSectionRef={classesSection}
         scrollFunc={handleUsersSectionІScroll}

@@ -66,18 +66,18 @@ const Header = ({
             <li className={css.header__navItem}>
               <NavLink
                 navLinkClassName={css.header__navLink}
-                text="Q &#38; A"
+                text="Feedback"
                 scrollFunc={scrollFunc}
-                closeModal={closeModal}
-                refEl={qASectionRef}
+                refEl={feedbackSectionRef}
               />
             </li>
             <li className={css.header__navItem}>
               <NavLink
                 navLinkClassName={css.header__navLink}
-                text="Feedback"
+                text="Q &#38; A"
                 scrollFunc={scrollFunc}
-                refEl={feedbackSectionRef}
+                closeModal={closeModal}
+                refEl={qASectionRef}
               />
             </li>
           </ul>

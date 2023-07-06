@@ -49,10 +49,14 @@ export const getFeedBackList = async () => {
 };
 export const getDisciplinesList = async () => {
   const { data } = await axios.get(
-    `https://quintadb.com.ua/apps/${APP_ID}/entities/${DISCIPLINES_ENTITY_ID}/properties.json`,
+    `https://quintadb.com.ua/apps/${APP_ID}/dtypes/entity/${DISCIPLINES_ENTITY_ID}.json`,
     {
       params: {
         rest_api_key: REST_API_KEY,
+        page: 1,
+        name_value: 1,
+        fetch_all: false,
+        per_page: 20,
       },
     }
   );

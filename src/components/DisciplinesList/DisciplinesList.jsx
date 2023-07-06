@@ -1,66 +1,79 @@
 import Title from 'components/UI/Title/Title';
-import React, { useRef } from 'react';
+import React, { useEffect, useState } from 'react';
 import css from './DisciplinesList.module.css';
 import DisciplinesListItem from './DisciplinesListItem';
-import gymImage from '../../assets/images/Desciplines/gymImageDesktop2x-min.jpg';
-// import zumbaImage from '../../assets/images/downloadApp/desktopAppAdvertising2x-min.png';
-// import yogaImage from '../../assets/images/downloadApp/desktopAppAdvertising2x-min.png';
-// import martialArtsImage from '../../assets/images/downloadApp/desktopAppAdvertising2x-min.png';
+import { getDisciplinesList } from 'servises/API';
+import MotivanionalSection from 'components/MotivanionalSection/MotivanionalSection';
 
 const DisciplinesList = () => {
-  const firstElRef = useRef(null);
-  const secondElRef = useRef(null);
-  const thirdElRef = useRef(null);
-  const fourthElRef = useRef(null);
+  const [disciplines, setDisciplines] = useState([]);
+  const [activeItemId, setActiveItemId] = useState(null);
+
+  const handleMouseEnter = itemId => {
+    setActiveItemId(itemId);
+  };
+
+  useEffect(() => {
+    getDisciplinesList().then(res => {
+      setDisciplines(res.records);
+    });
+  }, []);
+
+  useEffect(() => {
+    const firstItemId = 'Gym';
+    setActiveItemId(firstItemId);
+  }, []);
 
   return (
     <div className={`container ${css.disciplinesList_container}`}>
       <Title text="Find what moves you" />
       <ul className={css.disciplinesList_list}>
-        <li>
-          <DisciplinesListItem
-            ref={firstElRef}
-            firstElRef={firstElRef}
-            image={gymImage}
-            titleText="gym"
-            description="Expect a heart-pumping workout that will 
-            leave you feeling energized and accomplished. 
-            Our supportive community of like-minded individuals."
-          />
-        </li>
-        <li>
-          <DisciplinesListItem
-            ref={secondElRef}
-            secondElRef={secondElRef}
-            image={gymImage}
-            titleText="gym"
-            description="Expect a heart-pumping workout that will 
-            leave you feeling energized and accomplished. 
-            Our supportive community of like-minded individuals."
-          />
-        </li>
-        <li>
-          <DisciplinesListItem
-            ref={thirdElRef}
-            thirdElRef={thirdElRef}
-            image={gymImage}
-            titleText="gym"
-            description="Expect a heart-pumping workout that will 
-            leave you feeling energized and accomplished. 
-            Our supportive community of like-minded individuals."
-          />
-        </li>
-        <li>
-          <DisciplinesListItem
-            ref={fourthElRef}
-            fourthElRef={fourthElRef}
-            image={gymImage}
-            titleText="gym"
-            description="Expect a heart-pumping workout that will 
-            leave you feeling energized and accomplished. 
-            Our supportive community of like-minded individuals."
-          />
-        </li>
+        {disciplines.map(({ values }) => {
+          const {
+            titleText,
+            description,
+            imageDesktop,
+            imageTablet,
+            imageMobile,
+          } = values;
+          return (
+            <li key={titleText}>
+              <DisciplinesListItem
+                itemId={titleText}
+                activeItemId={activeItemId}
+                titleText={titleText}
+                description={description}
+                imageDesktop={imageDesktop}
+                imageTablet={imageTablet}
+                imageMobile={imageMobile}
+                onMouseEnter={handleMouseEnter}
+              />
+            </li>
+          );
+        })}
+      </ul>
+      <ul>
+        {disciplines.map(({ values }) => {
+          const {
+            titleText,
+            motivationText,
+            motivationImgDesktop,
+            motivationImgTablet,
+            motivationImgMobile,
+          } = values;
+          return (
+            <li key={titleText}>
+              <MotivanionalSection
+                itemId={titleText}
+                activeItemId={activeItemId}
+                motivationText={motivationText}
+                imageDesktop={motivationImgDesktop}
+                imageTablet={motivationImgTablet}
+                imageMobile={motivationImgMobile}
+              />
+            </li>
+          );
+        })}
       </ul>
     </div>
   );

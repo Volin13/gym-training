@@ -1,7 +1,7 @@
 .disciplinesList_list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: space-between;
 }
 .disciplinesList_list li:not(:last-of-type) {
   margin-right: 60px;
@@ -22,7 +22,7 @@
 }
 .disciplinesListItem__containerRegular {
   height: 400px;
-  width: 170px;
+  width: 151px;
 }
 .disciplinesListItem__imageContainer {
   border: 1px solid transparent;
@@ -96,14 +96,13 @@
 }
 .disciplinesListItem__title {
   color: var(--secondaryWhiteColor);
-
   text-transform: uppercase;
   font-weight: 400;
   font-size: 30px;
 }
 .disciplinesListItem__textBox {
-  width: 511px;
-
+  width: 343px;
+  gap: 25px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -115,21 +114,47 @@
   font-size: 16px;
   line-height: 1.5;
 }
+.disciplinesList_list li {
+  margin-bottom: 20px;
+}
+.disciplinesListItem__containerScaled {
+  height: 445px;
+  width: 343px;
+}
+@media screen and (max-width: 767px) {
+  .disciplinesListItem__imageScaled {
+    transform: translateX(-104px);
+  }
+}
 
-@media screen and (min-width: 768px) and (max-width: 767px) {
+@media screen and (min-width: 768px) {
+  .disciplinesListItem__containerRegular {
+    width: 170px;
+  }
+  .disciplinesListItem__containerScaled {
+    height: 400px;
+    width: 454px;
+  }
+  .disciplinesList_list {
+    justify-content: space-evenly;
+  }
   .disciplinesListItem__textBox {
-    width: 481px;
+    width: 454px;
   }
-  .disciplinesListItem__imageContainerRegular {
-    width: 481px;
+}
+@media screen and (min-width: 768px) and (max-width: 1439px) {
+  .disciplinesList_list li {
+    margin-bottom: 30px;
   }
-
   .disciplinesList_list li:not(:last-of-type) {
-    margin-right: 5940px;
+    margin-right: 40px;
   }
 }
 
 @media screen and (min-width: 1440px) {
+  .disciplinesListItem__containerScaled {
+    width: 511px;
+  }
   .disciplinesListItem__textBox {
     width: 511px;
   }

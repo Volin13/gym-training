@@ -1,13 +1,3 @@
-/* modal */
-
-.header_modal {
-  width: 100vw;
-  height: 100vh;
-  position: absolute;
-  z-index: 5;
-  background-color: var(--bgColor);
-}
-
 .freeTrialModal_container {
   width: 100%;
   height: 100%;
@@ -15,7 +5,6 @@
   justify-content: center;
   align-items: center;
   left: 50%;
-  box-shadow: 0px 1px 21px var(--activeColor);
   border-radius: 5px;
   overflow: hidden;
   position: relative;
@@ -24,33 +13,6 @@
   transform: translate(-50%, 0);
 }
 
-.freeTrialModal_container {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  left: 50%;
-  box-shadow: 0px 1px 21px var(--activeColor);
-  border-radius: 5px;
-  overflow: hidden;
-  position: relative;
-  z-index: 2;
-  transition: all 500ms;
-  transform: translate(-50%, 0);
-}
-
-.freeTrialModal_modalContent {
-  text-align: center;
-  padding: 60px 15px 15px;
-  left: 50%;
-  transform: translateX(-50%);
-  height: 98%;
-  width: 96%;
-  background-color: var(--bgColor);
-  position: absolute;
-  z-index: 5;
-}
 .freeTrialModal_closeBtn {
   background-color: transparent;
   border: none;
@@ -72,11 +34,16 @@
   inset: 0px;
 }
 .freeTrialModal_modal {
-  width: 920px;
+  width: 347px;
   height: 580px;
+  text-align: center;
+
+  padding-top: 57px;
   left: 50%;
   top: 50%;
   position: absolute;
+  box-shadow: 0px 1px 21px var(--activeColor);
+
   border-radius: 5px;
   z-index: 3;
   background-color: var(--bgColor);
@@ -100,6 +67,7 @@
 .freeTrialModal__imageBackgroundItem {
   height: 13px;
   position: absolute;
+  z-index: 5;
   width: 13px;
   border-radius: 50%;
   background-color: var(--activeColor);
@@ -139,7 +107,7 @@
     transform: translateY(-20px);
   }
   100% {
-    transform: translateY(-960px);
+    transform: translateY(-560px);
   }
 }
 
@@ -158,30 +126,26 @@
 .freeTrialModal_closeBtn:focus {
   box-shadow: 0px 1px 21px var(--activeColor);
 }
-
-/* Menu */
-.header__navList {
-  margin-bottom: 40px;
-  font-size: 25px;
-}
-
 .freeTrialModal_logo {
-  margin-bottom: 100px;
+  display: inline-block;
+  margin: 0 auto 20px;
 }
 
-.header__navItem:not(:last-of-type) {
-  margin-bottom: 20px;
+@media screen and (min-width: 768px) {
+  .formInputArea {
+    margin-bottom: 25px;
+  }
+  .freeTrialModal_modal {
+    width: 700px;
+    height: 580px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
 }
 
-.header__navItem button {
-  border: none;
-  background-color: transparent;
-  color: var(--secondaryWhiteColor);
-}
-.header__navItem button:active {
-  color: var(--activeColor);
-}
-.header__navButton {
-  display: flex;
-  justify-content: center;
+@media screen and (min-width: 1440px) {
+  .freeTrialModal_modal {
+    width: 920px;
+  }
 }

@@ -1,8 +1,5 @@
 import React from 'react';
 import css from './ContactUsModal.module.css';
-import Modal from 'react-modal';
-import { ReactComponent as CloseIcon } from '../../../assets/images/MediaIcons/close-svgrepo-com.svg';
-import Logo from '../Logo/Logo';
 import PropTypes from 'prop-types';
 import {
   GoogleMap,
@@ -14,6 +11,7 @@ import { ReactComponent as LocationIcon } from '../../../assets/images/MediaIcon
 import { ReactComponent as PhoneIcon } from '../../../assets/images/MediaIcons/phone-call-svgrepo-com.svg';
 import { ReactComponent as MailIcon } from '../../../assets/images/MediaIcons/mail.svg';
 import ContactUsForm from './ContactUsForm';
+import ModalEl from '../ModalEl/ModalEl';
 
 const ContactUsModal = ({ modalIsOpen, closeModal }) => {
   const apiKey = process.env.REACT_APP_REST_API_KEY;
@@ -29,25 +27,12 @@ const ContactUsModal = ({ modalIsOpen, closeModal }) => {
   };
 
   return (
-    <Modal
-      shouldCloseOnOverlayClick={true}
-      isOpen={modalIsOpen}
-      ariaHideApp={false}
-      contentLabel="Contact Us Section"
-      onRequestClose={closeModal}
-      className={css.freeTrialModal_modal}
-      overlayClassName={css.freeTrialModal__overlay}
+    <ModalEl
+      closeModal={closeModal}
+      modalIsOpen={modalIsOpen}
+      label="Contact Us Section"
     >
       <div className={css.freeTrialModal_modalContent}>
-        <button
-          type="button"
-          onClick={closeModal}
-          className={css.freeTrialModal_closeBtn}
-        >
-          <CloseIcon />
-        </button>
-        <Logo logoFormattingClass={css.freeTrialModal_logo} />
-
         <div className={css.content_format}>
           <div
             style={{ width: '356px', heigh: '80%' }}
@@ -99,26 +84,11 @@ const ContactUsModal = ({ modalIsOpen, closeModal }) => {
             </div>
           </div>
         </div>
-        <div style={{ width: '300px', display: 'inline-block' }}>
+        <div style={{ width: '300px' }}>
           <SocialMediaLinks />
         </div>
       </div>
-      <div className={css.freeTrialModal_container}>
-        <div
-          className={`${css.freeTrialModal__imageBackgroundItem} ${css.freeTrialModal__imageBackgroundItemFirst}`}
-        ></div>
-        <div
-          className={`${css.freeTrialModal__imageBackgroundItem} ${css.freeTrialModal__imageBackgroundItemSecond}`}
-        ></div>
-        <div
-          className={`${css.freeTrialModal__imageBackgroundItem} ${css.freeTrialModal__imageBackgroundItemThird}`}
-        ></div>
-        <div
-          className={`${css.freeTrialModal__imageBackgroundItem} ${css.freeTrialModal__imageBackgroundItemFourth}`}
-        ></div>
-        <div className={css.freeTrialModal__imageBackground}></div>
-      </div>
-    </Modal>
+    </ModalEl>
   );
 };
 

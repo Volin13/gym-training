@@ -16,7 +16,9 @@ const MotivanionalSection = ({
     <>
       {showed && (
         <div
-          className={`${css.motivationalSection__container} container`}
+          className={`${
+            css.motivationalSection__container
+          } container ${showed ? css.animate : ''}`}
         >
           <Title text="Fit for your lifestyle" />
           <p className={css.motivationalSection__text}>
@@ -47,7 +49,7 @@ const MotivanionalSection = ({
                 type="image/png"
               />
               <img
-                className={css.appAddImage}
+                className={css.motivationPicture}
                 src={imageTablet}
                 alt="Sport discipline"
               />

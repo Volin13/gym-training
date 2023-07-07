@@ -28,31 +28,6 @@
   color: var(--activeColor);
   background-color: var(--primaryWhiteColor);
 }
-@media screen and (min-width: 768px) {
-  .btn__container {
-    position: relative;
-    clip-path: polygon(0 0, 100% 0%, 93% 100%, 0% 100%);
-    background-color: var(--secondaryActiveColir);
-    height: 45px;
-    width: 125px;
-    display: inline-block;
-  }
-  .btnStyleActive {
-    position: absolute;
-    clip-path: polygon(0 0, 100% 0%, 86% 100%, 0% 100%);
-    background-color: var(--activeColor);
-    height: 100%;
-    width: 100%;
-    top: 0;
-    left: 0;
-    border: none;
-    font-weight: 500;
-    font-size: 15px;
-    line-height: 1.25;
-    color: var(--primaryWhiteColor);
-    transition: all 500ms;
-  }
-}
 
 @media screen and (min-width: 1440px) {
   .btn__container {

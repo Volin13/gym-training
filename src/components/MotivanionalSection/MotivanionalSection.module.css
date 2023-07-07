@@ -7,27 +7,58 @@
   text-align: center;
   margin-bottom: 20px;
 }
+.animate {
+  animation: changeElVisibility 0.5s linear normal;
+}
 
+@keyframes changeElVisibility {
+  0% {
+    opacity: 0;
+    transform: translate(-15px, -15px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
 .motivationalSection__image {
   margin: 0 auto;
-  width: 340px;
+  width: 310px;
+  height: 200px;
   align-items: center;
   border-radius: 5px;
   overflow: hidden;
   position: relative;
   z-index: 2;
 }
-.motivationalSection__image img {
+.motivationPicture {
   max-width: 96%;
   height: auto;
   display: block;
   position: relative;
   left: 50%;
-  top: -10px;
+  top: 50%;
 
-  transform: translate(-50%, 0);
+  transform: translate(-50%, -50%);
   border-radius: 5px;
+  z-index: 3;
+}
+.motivationalSection__image::before {
+  content: '';
+  position: absolute;
   z-index: 4;
+  left: 50%;
+  top: 50%;
+
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    180deg,
+    rgba(24, 23, 32, 0) 7%,
+    #181722 140%
+  );
+  pointer-events: none;
 }
 .motivationalSection__imageBackground {
   width: 100%;
@@ -116,7 +147,6 @@
     height: 20px;
   }
 }
-
 @media screen and (min-width: 1440px) {
   .motivationalSection__text {
     width: 784px;

@@ -13,8 +13,12 @@ const DisciplinesListItem = ({
   activeItemId,
 }) => {
   const elRef = useRef(null);
-
-  const scaled = itemId === activeItemId;
+  const BREAKPOINT_SMALL = 768;
+  const windowWidth = window.innerWidth;
+  let scaled = itemId === activeItemId;
+  if (windowWidth < BREAKPOINT_SMALL) {
+    scaled = itemId;
+  }
 
   return (
     <div
@@ -105,7 +109,10 @@ const DisciplinesListItem = ({
 DisciplinesListItem.propTypes = {
   titleText: PropTypes.string,
   description: PropTypes.string,
-  image: PropTypes.string,
-  scaledFirstEl: PropTypes.bool,
+  imageDesktop: PropTypes.string,
+  imageTablet: PropTypes.string,
+  imageMobile: PropTypes.string,
+  onMouseEnter: PropTypes.func,
+  itemId: PropTypes.string,
 };
 export default DisciplinesListItem;

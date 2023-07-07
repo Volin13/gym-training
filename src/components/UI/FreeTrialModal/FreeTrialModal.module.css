@@ -1,147 +1,21 @@
-/* modal */
-
-.freeTrialModal_container {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  left: 50%;
-  box-shadow: 0px 1px 21px var(--activeColor);
-  border-radius: 5px;
-  overflow: hidden;
-  position: relative;
-  z-index: 2;
-  transition: all 500ms;
-  transform: translate(-50%, 0);
+/* freeTrial form */
+.formFromat {
+  margin-bottom: 40px;
 }
 
 .freeTrialModal_modalContent {
-  padding: 60px 15px 15px;
+  padding: 0 15px 15px;
   left: 50%;
   transform: translateX(-50%);
-  height: 98%;
-  width: 96%;
+  height: 88%;
+  width: 92%;
+
   background-color: var(--bgColor);
   position: absolute;
   z-index: 5;
 }
-.freeTrialModal_closeBtn {
-  background-color: transparent;
-  border: none;
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  width: 35px;
-  height: 35px;
-  fill: var(--activeColor);
-  border-radius: 50%;
-  transition: all 500ms;
-}
-
-.freeTrialModal__overlay {
-  backdrop-filter: blur(10px);
-  transition: all 500ms;
-  position: fixed;
-  z-index: 3;
-  inset: 0px;
-}
-.freeTrialModal_modal {
-  width: 347px;
-  height: 580px;
-  left: 50%;
-  top: 50%;
-  position: absolute;
-  border-radius: 5px;
-  z-index: 3;
-  background-color: var(--bgColor);
-  transform: translate(-50%, -50%);
-  transition: all 1000ms;
-}
-
-.freeTrialModal__imageBackground {
-  width: 100%;
-  height: 100%;
-  top: 0;
-  display: flex;
-  justify-content: space-between;
-  background-color: var(--activeColor);
-  position: absolute;
-  clip-path: polygon(0 35%, 100% 73%, 100% 100%, 0% 100%);
-  transition: all 500ms;
-  animation: changeBackground 5s infinite ease-out;
-}
-
-.freeTrialModal__imageBackgroundItem {
-  height: 13px;
-  position: absolute;
-  width: 13px;
-  border-radius: 50%;
-  background-color: var(--activeColor);
-}
-.freeTrialModal__imageBackgroundItemFirst {
-  left: 1px;
-  bottom: 0px;
-  animation: changeItemPosition 6s infinite linear normal;
-  animation-delay: 4s;
-}
-.freeTrialModal__imageBackgroundItemThird {
-  left: 1px;
-  bottom: 0px;
-  animation: changeItemPosition 5s infinite linear normal;
-  animation-delay: 2s;
-}
-.freeTrialModal__imageBackgroundItemSecond {
-  right: 1px;
-  bottom: 0px;
-  animation: changeItemPosition 7s infinite linear normal;
-  animation-delay: 3s;
-}
-.freeTrialModal__imageBackgroundItemFourth {
-  right: 1px;
-  bottom: 0px;
-  animation: changeItemPosition 5s infinite linear normal;
-  animation-delay: 2s;
-}
-@keyframes changeItemPosition {
-  0% {
-    transform: translateY(-5px);
-  }
-  30% {
-    transform: translateY(-5px);
-  }
-  50% {
-    transform: translateY(-20px);
-  }
-  100% {
-    transform: translateY(-560px);
-  }
-}
-
-@keyframes changeBackground {
-  0% {
-    clip-path: polygon(0 35%, 100% 73%, 100% 100%, 0% 100%);
-  }
-  50% {
-    clip-path: polygon(0 81%, 100% 33%, 100% 100%, 0% 100%);
-  }
-  100% {
-    clip-path: polygon(0 35%, 100% 73%, 100% 100%, 0% 100%);
-  }
-}
-.freeTrialModal_closeBtn:hover,
-.freeTrialModal_closeBtn:focus {
-  box-shadow: 0px 1px 21px var(--activeColor);
-}
-.freeTrialModal_logo {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-/* freeTrial form */
-
 .freeTrialForm {
-  width: 300px;
+  width: 290px;
   margin: 0 auto;
   text-align: center;
 }
@@ -175,7 +49,7 @@
   opacity: 0.5;
 
   height: 45px;
-  width: 216px;
+  width: 207px;
   padding-left: 16px;
   border-top-right-radius: 4px;
   border-bottom-right-radius: 4px;
@@ -230,6 +104,9 @@
   color: var(--activeColor);
 }
 @media screen and (min-width: 768px) {
+  .freeTrialModal_modalContent {
+    width: 96%;
+  }
   .formInputArea {
     margin-bottom: 25px;
   }

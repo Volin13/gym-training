@@ -58,13 +58,16 @@ const BurgerMenu = ({
                 refEl={teamSectionRef}
               />
             </li>
-            <NavLink
-              navLinkClassName={css.header__navLink}
-              text="Feedback"
-              closeModal={closeModal}
-              scrollFunc={scrollFunc}
-              refEl={feedbackSectionRef}
-            />
+            <li className={css.header__navItem}>
+              <NavLink
+                navLinkClassName={css.header__navLink}
+                text="Feedback"
+                closeModal={closeModal}
+                scrollFunc={scrollFunc}
+                refEl={feedbackSectionRef}
+              />
+            </li>
+
             <li className={css.header__navItem}>
               <NavLink
                 navLinkClassName={css.header__navLink}

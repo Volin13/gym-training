@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/gym-training/static/css/main.b57dde31.css",
-    "main.js": "/gym-training/static/js/main.e96f56e1.js",
+    "main.css": "/gym-training/static/css/main.dcc3b416.css",
+    "main.js": "/gym-training/static/js/main.98be65fd.js",
     "static/media/styledBackground2x-min.jpg": "/gym-training/static/media/styledBackground2x-min.52f671edbe468dca6075.jpg",
     "static/media/desktopAppAdvertising2x-min.png": "/gym-training/static/media/desktopAppAdvertising2x-min.8a158d410b2e9becf10c.png",
     "static/media/heroImage2x-min.jpg": "/gym-training/static/media/heroImage2x-min.30af11716466412032b7.jpg",
@@ -41,11 +41,11 @@
     "static/media/user.svg": "/gym-training/static/media/user.543e22ad53cb6ff2aecb2820d4e94c72.svg",
     "static/media/facebook-svgrepo-com.svg": "/gym-training/static/media/facebook-svgrepo-com.03ba55af26ed64024be6c4742a29bfb4.svg",
     "static/media/menu-hamburger-svgrepo-com.svg": "/gym-training/static/media/menu-hamburger-svgrepo-com.da9ec93d3f785dedf69a0f0009678b13.svg",
-    "main.b57dde31.css.map": "/gym-training/static/css/main.b57dde31.css.map",
-    "main.e96f56e1.js.map": "/gym-training/static/js/main.e96f56e1.js.map"
+    "main.dcc3b416.css.map": "/gym-training/static/css/main.dcc3b416.css.map",
+    "main.98be65fd.js.map": "/gym-training/static/js/main.98be65fd.js.map"
   },
   "entrypoints": [
-    "static/css/main.b57dde31.css",
-    "static/js/main.e96f56e1.js"
+    "static/css/main.dcc3b416.css",
+    "static/js/main.98be65fd.js"
   ]
 }

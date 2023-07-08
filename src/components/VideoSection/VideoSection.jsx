@@ -41,37 +41,39 @@ const VideoSection = () => {
     }
   };
   return (
-    <div className={`${css.vidSection__container} container`}>
-      <div
-        style={{
-          position: 'relative',
-          width: '100%',
-          height: '100%',
-        }}
-      >
-        <YouTube
-          opts={opts}
-          style={styles}
-          videoId="wnHW6o8WMas"
-          onReady={onPlayerReady}
-          className={`${css.vidSection__youtubeVideo}`}
-          ref={playerRef}
-        />
+    <>
+      <div className={`${css.vidSection__container} container`}>
         <div
-          style={{ display: hiddenPreview ? 'none' : 'block' }}
-          className={css.vidSection__mockPreview}
+          style={{
+            position: 'relative',
+            width: '100%',
+            height: '100%',
+          }}
         >
-          <button
-            type="button"
-            onClick={hendlePlayBtnClick}
-            className={css.vidSection__mockBtn}
+          <YouTube
+            opts={opts}
+            style={styles}
+            videoId="wnHW6o8WMas"
+            onReady={onPlayerReady}
+            className={`${css.vidSection__youtubeVideo}`}
+            ref={playerRef}
+          />
+          <div
+            style={{ display: hiddenPreview ? 'none' : 'block' }}
+            className={css.vidSection__mockPreview}
           >
-            <PlayIcon />
-            <div className={css.vidSection__mockBtn_thumb}></div>
-          </button>
+            <button
+              type="button"
+              onClick={hendlePlayBtnClick}
+              className={css.vidSection__mockBtn}
+            >
+              <PlayIcon />
+              <div className={css.vidSection__mockBtn_thumb}></div>
+            </button>
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 export default VideoSection;

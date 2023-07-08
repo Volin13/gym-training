@@ -1,0 +1,17 @@
+.animatedBlockSection {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  height: 300px;
+  z-index: -1;
+}
+
+.animatedBlock {
+  background-color: rgba(52, 28, 21, 0.5);
+  height: 96px;
+  transition: all 1s;
+}
+.animatedBlockFirst {
+  margin-bottom: 53px;
+}

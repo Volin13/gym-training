@@ -3,6 +3,7 @@ import css from './Team.module.css';
 import InstructorCard from './InstructorCard';
 import Title from 'components/UI/Title/Title';
 import MainBtn from 'components/UI/MainBtn/MainBtn';
+import AnimatedBlocks from 'components/UI/AnimatedBlocks/AnimatedBlocks';
 const Team = ({ teamSectionRef, scrollFunc }) => {
   const [openSection, setOpenSection] = useState(false);
   const changeStyle = () => {
@@ -61,6 +62,7 @@ const Team = ({ teamSectionRef, scrollFunc }) => {
           />
         </div>
       </div>
+      <AnimatedBlocks topPosition="3865" format="flex-start" />
     </>
   );
 };

@@ -2,9 +2,12 @@ import React, { useRef, useState } from 'react';
 import css from './VideoSection.module.css';
 import YouTube from 'react-youtube';
 import { ReactComponent as PlayIcon } from '../../assets/images/MediaIcons/ph_play-fill.svg';
+import { useInView } from 'react-intersection-observer';
 
 const VideoSection = () => {
   const [hiddenPreview, setHiddenPreview] = useState(false);
+  const [ref, inView] = useInView({});
+
   const playerRef = useRef(null);
 
   const opts = {
@@ -42,7 +45,12 @@ const VideoSection = () => {
   };
   return (
     <>
-      <div className={`${css.vidSection__container} container`}>
+      <div
+        ref={ref}
+        className={`${css.vidSection__container} container ${
+          inView && 'animate'
+        } `}
+      >
         <div
           style={{
             position: 'relative',

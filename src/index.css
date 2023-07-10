@@ -142,6 +142,7 @@ body.openModal {
 }
 :root {
   --bgColor: #18171a;
+  --disabledColor: #999993;
   --primaryWhiteColor: #ffffff;
   --secondaryWhiteColor: rgba(255, 255, 255, 0.8);
   --titleColor: rgba(255, 255, 255, 0.9);
@@ -188,10 +189,17 @@ body.openModal {
   display: none !important;
 }
 
-/* modal
-.freeTrialModal__overlay {
-  backdrop-filter: blur(10px);
-  transition: all 500ms;
-  position: fixed;
-  inset: 0px;
-} */
+.animate {
+  animation: changeElVisibility 0.8s linear normal;
+}
+
+@keyframes changeElVisibility {
+  0% {
+    opacity: 0;
+    transform: translate(-15px, -15px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}

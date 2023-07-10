@@ -4,10 +4,19 @@ import { ReactComponent as GooglePlayIcon } from '../../assets/images/MediaIcons
 import { ReactComponent as AppleStoreIcon } from '../../assets/images/MediaIcons/appleStore.svg';
 import appAddDesktop1x from '../../assets/images/downloadApp/desktopAppAdvertising1x-min.png';
 import appAddDesktop2x from '../../assets/images/downloadApp/desktopAppAdvertising2x-min.png';
+import { useInView } from 'react-intersection-observer';
 
 const DownloadApp = () => {
+  const [ref, inView] = useInView({});
+
   return (
-    <div className={`${css.downloadApp__container} container`}>
+    <div
+      ref={ref}
+      className={`${css.downloadApp__container} container
+     ${inView && 'animate'}
+
+     `}
+    >
       <h2 className={css.downloadApp__title}>
         Download the most loved fitness app
       </h2>

@@ -1,10 +1,13 @@
 import AnimatedBlocks from 'components/UI/AnimatedBlocks/AnimatedBlocks';
 import Title from 'components/UI/Title/Title';
 import React, { useRef } from 'react';
+import { useInView } from 'react-intersection-observer';
 import css from './QA.module.css';
 import QAListItem from './QAListItem';
 
 const QuestionsAndAnswers = ({ qASectionRef }) => {
+  const [ref, inView] = useInView({});
+
   const firstElementRef = useRef(null);
   const secondElementRef = useRef(null);
   const thirdElementRef = useRef(null);
@@ -13,7 +16,12 @@ const QuestionsAndAnswers = ({ qASectionRef }) => {
     <>
       <AnimatedBlocks topPosition="6200" format="flex-end" />
 
-      <div className={`${css.qa__container} container`}>
+      <div
+        ref={ref}
+        className={`${css.qa__container} container ${
+          inView && 'animate'
+        }`}
+      >
         <Title text="Frequently Asked Question" ref={qASectionRef} />
         <ul className={css.qa__list}>
           <li>

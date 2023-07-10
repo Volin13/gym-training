@@ -1,6 +1,7 @@
 import StyledtWrapper from 'components/UI/StyledWrapper/StyledWrapper';
 import Title from 'components/UI/Title/Title';
 import React, { useEffect, useState } from 'react';
+import { useInView } from 'react-intersection-observer';
 import ClassItem from './ClassItem';
 import css from './Classes.module.css';
 import MainBtn from 'components/UI/MainBtn/MainBtn';
@@ -8,6 +9,8 @@ import { getClassesList } from 'servises/API';
 const Classes = ({ classesSectionRef, scrollFunc }) => {
   const [openSection, setOpenSection] = useState(false);
   const [classes, setClasses] = useState([]);
+  const [ref, inView] = useInView({});
+
   const changeStyle = () => {
     setOpenSection(!openSection);
     if (openSection === true) scrollFunc(classesSectionRef);
@@ -20,7 +23,12 @@ const Classes = ({ classesSectionRef, scrollFunc }) => {
   return (
     <StyledtWrapper>
       <Title text="Classes" ref={classesSectionRef} />
-      <div className={`container ${css.classes__container}`}>
+      <div
+        ref={ref}
+        className={`container ${css.classes__container}
+      ${inView && 'animate'}
+      `}
+      >
         <ul
           className={`${css.classes__classesList} ${
             openSection

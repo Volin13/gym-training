@@ -7,6 +7,7 @@ import switchImages from '../FornInput/switchImages';
 import HelperText from '../FornInput/HelperText';
 import MainBtn from '../MainBtn/MainBtn';
 import CustomSelect from '../CustomSelect/CustomSelect';
+import { addFreeTrial } from 'servises/API';
 
 let initialValues = {
   name: '',
@@ -32,11 +33,11 @@ const FreeTrialForm = ({ clasesName = '', classDifficalty = '' }) => {
   ];
   const handleSelectChange = option => {
     setSelectedOption(option);
-    if (difficalty.indexOf(option) === 1) {
+    if (difficalty.indexOf(option) !== -1) {
       formik.setFieldValue('difficalty', option);
       return;
     }
-    if (disciplines.indexOf(option) === 1) {
+    if (disciplines.indexOf(option) !== -1) {
       formik.setFieldValue('discipline', option);
       return;
     }
@@ -54,7 +55,7 @@ const FreeTrialForm = ({ clasesName = '', classDifficalty = '' }) => {
   };
   const myEmailRegex =
     /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/;
-  let registrationSchema = yup.object().shape({
+  let freeTrialSchema = yup.object().shape({
     name: yup
       .string()
       .trim()
@@ -98,22 +99,25 @@ const FreeTrialForm = ({ clasesName = '', classDifficalty = '' }) => {
 
   const formik = useFormik({
     initialValues,
-    validationSchema: registrationSchema,
+    validationSchema: freeTrialSchema,
 
     onSubmit: (values, { setSubmitting, resetForm }) => {
+      addFreeTrial(values);
       setSubmitting(false);
+      resetForm();
     },
   });
 
-  const isValid = registrationSchema.isValidSync(formik.values);
+  const isValid = freeTrialSchema.isValidSync(formik.values);
   return (
     <div className={css.registrComponent}>
       <div>
         <div className={css.registrFormatting}>
           <div className={css.registrForm}>
             <form
-              schema={registrationSchema}
+              schema={freeTrialSchema}
               className={css.freeTrialForm}
+              onSubmit={formik.handleSubmit}
             >
               <div className={css.formFromat}>
                 <div className={css.formIinputFormat}>
@@ -214,13 +218,15 @@ const FreeTrialForm = ({ clasesName = '', classDifficalty = '' }) => {
                   </label>
                 </div>
               </div>
-              <MainBtn text="Get" />
-              {!isValid && (
-                <p className={css.helpInfo}>
-                  Fill up your data to get a free trial. We will send
-                  one-time pass to your email.
-                </p>
-              )}
+              <MainBtn
+                text={!isValid ? 'Fiil your data' : 'Get'}
+                disabled={!isValid}
+                type="submit"
+              />
+              <p className={css.helpInfo}>
+                Fill up your data to get a free trial. We will send
+                one-time pass to your email.
+              </p>
             </form>
           </div>
         </div>

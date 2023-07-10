@@ -10,6 +10,8 @@ import Hero from './Hero/Hero';
 import QuestionsAndAnswers from './Q&A/QA';
 import Team from './Team/Team';
 import VideoSection from './VideoSection/VideoSection';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export const App = () => {
   const classesSection = useRef(null);
@@ -45,6 +47,7 @@ export const App = () => {
       <QuestionsAndAnswers qASectionRef={qASectionRef} />
       <FreeTrial />
       <Footer />
+      <ToastContainer />
     </>
   );
 };

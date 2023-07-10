@@ -2,13 +2,14 @@ import React from 'react';
 import css from './MainBtn.module.css';
 import PropTypes from 'prop-types';
 
-const MainBtn = ({ text, onClickFnc }) => {
+const MainBtn = ({ text, onClickFnc, type = 'button', disabled }) => {
   return (
     <div className={css.btn__container}>
       <button
         onClick={onClickFnc}
-        type="button"
+        type={type}
         className={css.btnStyleActive}
+        disabled={disabled}
       >
         {text}
       </button>

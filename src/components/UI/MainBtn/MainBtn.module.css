@@ -29,6 +29,10 @@
   background-color: var(--primaryWhiteColor);
 }
 
+.btnStyleActive:disabled {
+  background-color: var(--disabledColor);
+}
+
 @media screen and (min-width: 1440px) {
   .btn__container {
     position: relative;

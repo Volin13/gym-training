@@ -7,13 +7,15 @@ import { nanoid } from 'nanoid';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/autoplay';
-
 import css from './FeedBack.module.css';
-
 import FeedBackItem from './FeedBackItem';
 import { getFeedBackList } from 'servises/API';
+import { useInView } from 'react-intersection-observer';
+
 const FeedBack = ({ feedbackSectionRef }) => {
   const [feedbackList, setFeedbackList] = useState([]);
+  const [ref, inView] = useInView({});
+
   useEffect(() => {
     getFeedBackList().then(res => {
       setFeedbackList(res.records);
@@ -36,7 +38,7 @@ const FeedBack = ({ feedbackSectionRef }) => {
   };
   return (
     <StyledtWrapper>
-      <div className="container">
+      <div ref={ref} className={`container ${inView && 'animate'}`}>
         <Title text="Client’s Feedback" ref={feedbackSectionRef} />
         <div className={css.sliderWrapper}>
           <Swiper

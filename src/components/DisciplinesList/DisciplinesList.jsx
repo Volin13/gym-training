@@ -1,14 +1,16 @@
 import Title from 'components/UI/Title/Title';
 import React, { useEffect, useState } from 'react';
-import css from './DisciplinesList.module.css';
-import DisciplinesListItem from './DisciplinesListItem';
+import { useInView } from 'react-intersection-observer';
 import { getDisciplinesList } from 'servises/API';
+import DisciplinesListItem from './DisciplinesListItem';
 import MotivanionalSection from 'components/MotivanionalSection/MotivanionalSection';
 import AnimatedBlocks from 'components/UI/AnimatedBlocks/AnimatedBlocks';
+import css from './DisciplinesList.module.css';
 
 const DisciplinesList = () => {
   const [disciplines, setDisciplines] = useState([]);
   const [activeItemId, setActiveItemId] = useState(null);
+  const [ref, inView] = useInView({});
 
   const handleMouseEnter = itemId => {
     setActiveItemId(itemId);
@@ -29,7 +31,12 @@ const DisciplinesList = () => {
     <>
       <AnimatedBlocks topPosition="1770" format="flex-end" />
 
-      <div className={`container ${css.disciplinesList_container}`}>
+      <div
+        ref={ref}
+        className={`container ${css.disciplinesList_container} ${
+          inView && 'animate'
+        }`}
+      >
         <Title text="Find what moves you" />
         <ul className={css.disciplinesList_list}>
           {disciplines.map(({ values }) => {

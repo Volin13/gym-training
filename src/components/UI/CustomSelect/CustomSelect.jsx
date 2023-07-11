@@ -12,8 +12,6 @@ const CustomSelect = ({
 }) => {
   const [isOpenSelect, setIsOpenSelect] = useState(false);
   const [selectedOption, setSelectedOption] = useState('');
-  console.log(classDifficalty);
-  console.log(clasesName);
   const toggleDropdown = () => {
     setIsOpenSelect(!isOpenSelect);
   };

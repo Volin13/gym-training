@@ -6,8 +6,11 @@ import { ReactComponent as StudentIcon } from '../../assets/images/MediaIcons/st
 import { ReactComponent as TimerIcon } from '../../assets/images/MediaIcons/timerIcon.svg';
 import SecondaryBtn from 'components/UI/SecondaryBtn/SecondaryBtn';
 import FreeTrialModal from 'components/UI/FreeTrialModal/FreeTrialModal';
+import LearnMoreModal from 'components/UI/LearnMoreModal/LearnMoreModal';
 
 const ClassItem = ({
+  day,
+  time,
   clasesName,
   studentsQnt,
   discipline,
@@ -18,14 +21,33 @@ const ClassItem = ({
   difficalty,
   noOfClasses,
 }) => {
-  const [modalIsOpen, setIsOpen] = useState(false);
-  function openModal() {
-    setIsOpen(true);
-    document.body.classList.add('noScroll');
+  const [freeTrialModalIsOpen, setFreeTrialModalIsOpen] =
+    useState(false);
+  const [learnMoreModalIsOpen, setLearnMoreModalIsOpen] =
+    useState(false);
+  function openModal(name) {
+    if (name === 'free trial') {
+      setFreeTrialModalIsOpen(true);
+      return;
+    }
+    if (name === 'learn more') {
+      setLearnMoreModalIsOpen(true);
+      return;
+    }
   }
-  function closeModal() {
-    setIsOpen(false);
-    document.body.classList.remove('noScroll');
+
+  function closeModal(name) {
+    if (name === 'free trial') {
+      setFreeTrialModalIsOpen(false);
+      return;
+    }
+    if (name === 'learn more') {
+      setLearnMoreModalIsOpen(false);
+      return;
+    }
+    setFreeTrialModalIsOpen(false);
+    setLearnMoreModalIsOpen(false);
+    return;
   }
   return (
     <div className={css.classItem__thumb}>
@@ -82,18 +104,29 @@ const ClassItem = ({
       <div className={css.classItem__btnGroup}>
         <SecondaryBtn
           text="Learn more"
+          onClickFunc={() => openModal('learn more')}
           activeColor
           secondaryBtnConatiner={css.classItem__learnMoreBtn}
         />
+        <LearnMoreModal
+          modalIsOpen={learnMoreModalIsOpen}
+          closeModal={closeModal}
+          classImage={classImage}
+          classImg2x={classImg2x}
+          day={day}
+          time={time}
+          discipline={discipline}
+          difficalty={difficalty}
+        />
         <SecondaryBtn
-          onClickFunc={openModal}
+          onClickFunc={() => openModal('free trial')}
           text="Start a free trail"
           secondaryBtnConatiner={css.classItem__freeTrialBtn}
         />
         <FreeTrialModal
           difficalty={difficalty}
           clasesName={discipline}
-          modalIsOpen={modalIsOpen}
+          modalIsOpen={freeTrialModalIsOpen}
           closeModal={closeModal}
         />
       </div>

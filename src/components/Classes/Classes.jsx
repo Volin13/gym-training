@@ -47,6 +47,8 @@ const Classes = ({ classesSectionRef, scrollFunc }) => {
               duration,
               difficalty,
               noOfClasses,
+              day,
+              time,
             } = values;
             return (
               <li key={noOfClasses}>
@@ -60,6 +62,8 @@ const Classes = ({ classesSectionRef, scrollFunc }) => {
                   duration={duration}
                   difficalty={difficalty}
                   noOfClasses={noOfClasses}
+                  day={day}
+                  time={time}
                 />
               </li>
             );

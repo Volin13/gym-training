@@ -12,13 +12,9 @@ const LearnMoreModal = ({
   day,
   time,
 }) => {
-  // console.log(day);
-  // console.log(time);
-
-  // const hendleScheduleInfo = () => {
-  //   let a = day.split(',');
-  // };
-
+  let daySchedule = day.trim().split(' ');
+  const timeShedule = time.trim().split(' ');
+  console.log(timeShedule);
   return (
     <ModalEl
       closeModal={closeModal}
@@ -27,7 +23,7 @@ const LearnMoreModal = ({
     >
       <div className={css.modal_modalContent}>
         <h3 className={css.modal_title}>
-          Start your {discipline} class - with {difficalty} lvl.
+          Start your {discipline} class - on {difficalty} lvl.
         </h3>
         <div className={css.learnMore_format}>
           <picture>
@@ -48,24 +44,26 @@ const LearnMoreModal = ({
             {legendTextSwitcher(discipline)}
           </p>
         </div>
-        <table border="1">
+        <table className={css.learnMore__table} border="1">
           <thead>
             <tr>
-              <th colspan="2">Scledule</th>
+              <th className={css.learnMore__Title} colSpan="4">
+                Scledule
+              </th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <th>Day</th>
-              <th>Time</th>
+              <th className={css.learnMore__subTitle}>Day</th>
+              {daySchedule.map(item => {
+                return <td key={item}>{item}</td>;
+              })}
             </tr>
             <tr>
-              <td>Апельсин</td>
-              <td>Гарбуз</td>
-            </tr>
-            <tr>
-              <td>Груша</td>
-              <td>Капуста</td>
+              <th className={css.learnMore__subTitle}>Time</th>
+              {timeShedule.map(item => {
+                return <td key={item}>{item}</td>;
+              })}
             </tr>
           </tbody>
         </table>

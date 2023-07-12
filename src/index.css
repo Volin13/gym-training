@@ -142,6 +142,7 @@ body.openModal {
 }
 :root {
   --bgColor: #18171a;
+  --blureColor: rgba(24, 23, 26, 0.5);
   --disabledColor: #999993;
   --primaryWhiteColor: #ffffff;
   --secondaryWhiteColor: rgba(255, 255, 255, 0.8);

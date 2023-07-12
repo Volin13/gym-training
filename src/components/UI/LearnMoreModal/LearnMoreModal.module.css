@@ -12,32 +12,83 @@
 
 .learnMore__picture {
   border-radius: 5px;
-  margin-right: 15px;
+  width: 100%;
 }
 .learnMore_format {
-  display: flex;
+  position: relative;
 }
+
 .modal_title {
-  margin-bottom: 20px;
-  font-size: 30px;
+  margin-bottom: 15px;
+  font-size: 28px;
 }
 .learnMore__legend {
   text-align: start;
 }
-table caption {
+.learnMore__table {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+@media screen and (max-width: 768px) {
+}
+.learnMore__subTitle {
+  width: 100px;
+  color: var(--primaryWhiteColor);
+}
+.learnMore__Title {
   color: var(--activeColor);
+  font-size: 24px;
+}
+.learnMore__table td {
+  padding: 5px;
+
+  width: 100px;
+}
+
+@media screen and (max-width: 767px) {
+  .learnMore__legend {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    overflow: scroll;
+    padding: 11px;
+    background-color: var(--blureColor);
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1439px) {
+  .learnMore_format picture {
+    float: left;
+  }
+  .learnMore__picture {
+    float: left;
+  }
 }
 
 @media screen and (min-width: 768px) {
+  .learnMore_format {
+    padding: 10px;
+  }
   .modal_modalContent {
     width: 97%;
   }
   .learnMore__picture {
     width: 320px;
+    margin-right: 15px;
+  }
+  .modal_title {
+    font-size: 30px;
   }
 }
 @media screen and (min-width: 1440px) {
   .learnMore__picture {
-    width: 387px;
+    width: 400px;
+  }
+  .learnMore_format {
+    display: flex;
+    justify-content: space-between;
+    font-size: 19px;
   }
 }

@@ -38,10 +38,9 @@ const Team = ({ teamSectionRef, scrollFunc }) => {
           }`}
         >
           {teamList.map(({ values }) => {
-            const { id, name, position, legend, photo, photo2x } =
-              values;
+            const { name, position, legend, photo, photo2x } = values;
             return (
-              <li key={id}>
+              <li key={name}>
                 <InstructorCard
                   name={name}
                   position={position}

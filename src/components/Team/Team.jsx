@@ -22,16 +22,15 @@ const Team = ({ teamSectionRef, scrollFunc }) => {
     });
   }, []);
   return (
-    <>
+    <div
+      ref={ref}
+      className={`
+        ${inView && 'animate'}
+  `}
+    >
       <Title text="instructors" ref={teamSectionRef} />
 
-      <div
-        ref={ref}
-        className={`${css.team__container} container
-            ${inView && 'animate'}
-
-      `}
-      >
+      <div className={`${css.team__container} container`}>
         <ul
           className={`${css.teamList} ${
             openSection ? css.teamList_openned : css.teamList_closed
@@ -60,7 +59,7 @@ const Team = ({ teamSectionRef, scrollFunc }) => {
         </div>
       </div>
       <AnimatedBlocks topPosition="3865" format="flex-start" />
-    </>
+    </div>
   );
 };
 export default Team;

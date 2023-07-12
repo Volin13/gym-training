@@ -10,32 +10,28 @@ const DownloadApp = () => {
   const [ref, inView] = useInView({});
 
   return (
-    <div
-      ref={ref}
-      className={`${css.downloadApp__container} container
-     ${inView && 'animate'}
-
-     `}
-    >
-      <h2 className={css.downloadApp__title}>
-        Download the most loved fitness app
-      </h2>
-      <p className={css.downloadApp__text}>
-        Start your fitness journey with us. Join the cult!
-      </p>
-      <div className={css.downloadApp__storeLinks}>
-        <a
-          className={css.downloadApp__links}
-          href="https://play.google.com/store/games"
-        >
-          <GooglePlayIcon />
-        </a>
-        <a
-          className={css.downloadApp__links}
-          href="https://www.apple.com/store"
-        >
-          <AppleStoreIcon />
-        </a>
+    <div className={`${css.downloadApp__container} container`}>
+      <div ref={ref} className={`${inView && 'animate'}`}>
+        <h2 className={css.downloadApp__title}>
+          Download the most loved fitness app
+        </h2>
+        <p className={css.downloadApp__text}>
+          Start your fitness journey with us. Join the cult!
+        </p>
+        <div className={css.downloadApp__storeLinks}>
+          <a
+            className={css.downloadApp__links}
+            href="https://play.google.com/store/games"
+          >
+            <GooglePlayIcon />
+          </a>
+          <a
+            className={css.downloadApp__links}
+            href="https://www.apple.com/store"
+          >
+            <AppleStoreIcon />
+          </a>
+        </div>
       </div>
 
       <picture>
@@ -46,21 +42,6 @@ const DownloadApp = () => {
           ${appAddDesktop2x} 2x`}
           type="image/png"
         />
-        {/* 
-      <source
-        media="(min-width: 768px)"
-        srcSet="
-          https://dummyimage.com/640x320/81E6D9/1A202C.webp 1x,
-          https://dummyimage.com/1280x640/81E6D9/1A202C.webp 2x"
-        type="image/webp"
-      />
-      <source
-        media="(min-width: 768px)"
-        srcSet="
-          https://dummyimage.com/640x320/81E6D9/1A202C.jpg 1x,
-          https://dummyimage.com/1280x640/81E6D9/1A202C.jpg 2x"
-      /> */}
-
         <source
           media="(min-width: 0px)"
           srcSet={`

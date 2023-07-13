@@ -136,6 +136,7 @@
   color: var(--errorColor);
   position: absolute;
   width: 100%;
+  font-size: 15px;
   left: 0;
-  bottom: -27px;
+  bottom: -26px;
 }

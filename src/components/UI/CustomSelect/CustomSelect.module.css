@@ -38,6 +38,7 @@
   width: 100%;
   z-index: 2;
   border-radius: 5px;
+  box-shadow: 10px 5px 5px var(--primaryDarkColor);
 }
 
 .options li:hover,

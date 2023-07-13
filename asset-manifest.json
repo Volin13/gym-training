@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/gym-training/static/css/main.77c08b46.css",
+    "main.css": "/gym-training/static/css/main.63bcacf3.css",
     "main.js": "/gym-training/static/js/main.6582981b.js",
     "static/media/styledBackground2x-min.jpg": "/gym-training/static/media/styledBackground2x-min.52f671edbe468dca6075.jpg",
     "static/media/desktopAppAdvertising2x-min.png": "/gym-training/static/media/desktopAppAdvertising2x-min.8a158d410b2e9becf10c.png",
@@ -33,11 +33,11 @@
     "static/media/user.svg": "/gym-training/static/media/user.543e22ad53cb6ff2aecb2820d4e94c72.svg",
     "static/media/facebook-svgrepo-com.svg": "/gym-training/static/media/facebook-svgrepo-com.03ba55af26ed64024be6c4742a29bfb4.svg",
     "static/media/menu-hamburger-svgrepo-com.svg": "/gym-training/static/media/menu-hamburger-svgrepo-com.da9ec93d3f785dedf69a0f0009678b13.svg",
-    "main.77c08b46.css.map": "/gym-training/static/css/main.77c08b46.css.map",
+    "main.63bcacf3.css.map": "/gym-training/static/css/main.63bcacf3.css.map",
     "main.6582981b.js.map": "/gym-training/static/js/main.6582981b.js.map"
   },
   "entrypoints": [
-    "static/css/main.77c08b46.css",
+    "static/css/main.63bcacf3.css",
     "static/js/main.6582981b.js"
   ]
 }
